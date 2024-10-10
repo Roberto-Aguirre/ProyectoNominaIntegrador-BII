@@ -1,0 +1,50 @@
+﻿@model List<SistemaNomina.Models.PayrollModel>
+
+<h2>Lista de Nóminas Generadas</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Nómina</th>
+            <th>Empleado</th>
+            <th>Sueldo Base</th>
+            <th>Aguinaldo</th>
+            <th>Prima Vacacional</th>
+            <th>Otras Percepciones</th>
+            <th>Total Percepciones</th>
+            <th>ISR</th>
+            <th>IMSS</th>
+            <th>Infonavit</th>
+            <th>Fonacot</th>
+            <th>Otras Deducciones</th>
+            <th>Total Deducciones</th>
+            <th>Salario Neto</th>
+            <th>Fecha de Pago</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var payroll in Model)
+        {
+            <tr>
+                <td>@payroll.Id</td>
+                <td>@payroll.Employee.Nombre</td>
+                <td>@payroll.SueldoBase.ToString("C")</td>
+                <td>@payroll.Aguinaldo.ToString("C")</td>
+                <td>@payroll.PrimaVacacional.ToString("C")</td>
+                <td>@payroll.OtrasPercepciones.ToString("C")</td>
+                <td>@payroll.TotalPercepciones.ToString("C")</td>
+                <td>@payroll.ISR.ToString("C")</td>
+                <td>@payroll.IMSS.ToString("C")</td>
+                <td>@payroll.Infonavit.ToString("C")</td>
+                <td>@payroll.Fonacot.ToString("C")</td>
+                <td>@payroll.OtrasDeducciones.ToString("C")</td>
+                <td>@payroll.TotalDeducciones.ToString("C")</td>
+                <td>@payroll.SalarioNeto.ToString("C")</td>
+                <td>@payroll.FechaPago.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("ExportToPDF", "Payroll")" class="btn btn-success">Exportar a PDF</a>
+

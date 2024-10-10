@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ProyectoNominaINTBII.Models;
+using SistemaNomina.Models;
 using System.Diagnostics;
 
-namespace ProyectoNominaINTBII.Controllers
+namespace SistemaNomina.Controllers
 {
     public class HomeController : Controller
     {

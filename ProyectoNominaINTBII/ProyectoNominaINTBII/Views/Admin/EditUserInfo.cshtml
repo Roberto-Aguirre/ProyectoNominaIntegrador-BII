@@ -1,0 +1,167 @@
+﻿@model SistemaNomina.Models.UserModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="text-center">Editar Información del Usuario</h2>
+
+<div class="form-container">
+    <form asp-action="EditUserInfo" method="post" class="container">
+        <input type="hidden" asp-for="Id" />
+
+        <!-- Fila 1 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Número de Empleado</label>
+                    <input asp-for="NumeroEmpleado" class="form-control" disabled />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>RFC</label>
+                    <input asp-for="RFC" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>CURP</label>
+                    <input asp-for="CURP" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>No. IMSS</label>
+                    <input asp-for="NoIMSS" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input asp-for="FechaInicio" type="date" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Puesto</label>
+                    <input asp-for="Puesto" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Departamento</label>
+                    <input asp-for="Departamento" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Regimen</label>
+                    <input asp-for="Regimen" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 4 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Tipo de Jornada</label>
+                    <input asp-for="TipoJornada" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>SBC</label>
+                    <input asp-for="SBC" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>SDI</label>
+                    <input asp-for="SDI" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 5 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Salario Diario</label>
+                    <input asp-for="SalarioDiario" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Ejercicio</label>
+                    <input asp-for="Ejercicio" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Folio</label>
+                    <input asp-for="Folio" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 6 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Período de Pago</label>
+                    <input asp-for="PeriodoPago" type="date" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Fecha de Pago</label>
+                    <input asp-for="FechaPago" type="date" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Periodicidad</label>
+                    <input asp-for="Periodicidad" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila 7 -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Días Pagados</label>
+                    <input asp-for="DiasPagados" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Faltas</label>
+                    <input asp-for="Faltas" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para guardar -->
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+    </form>
+</div>

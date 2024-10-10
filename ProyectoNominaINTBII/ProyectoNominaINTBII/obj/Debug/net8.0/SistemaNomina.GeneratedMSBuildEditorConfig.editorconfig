@@ -1,0 +1,143 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SistemaNomina
+build_property.RootNamespace = SistemaNomina
+build_property.ProjectDir = C:\Users\aldo-\source\repos\SolucionSistemaNomina\SistemaNomina\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\aldo-\source\repos\SolucionSistemaNomina\SistemaNomina
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xIb21lXFByaXZhY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/AdminDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/EditUserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXJJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/MainMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbk1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Admin/MenuPrincipal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVudVByaW5jaXBhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Payroll/Generate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxHZW5lcmF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Payroll/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Sistema/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lzdGVtYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/User/UserDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/User/ViewUserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3VXNlckluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJveWVjdG9Ob21pbmFJbnRlZ3JhZG9yLUJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxQcm95ZWN0b05vbWluYUlOVEJJSVxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-lbvf4ntuhw
+
+[C:/Users/aldo-/source/repos/SolucionSistemaNomina/SistemaNomina/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mv145gcryv

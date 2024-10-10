@@ -1,0 +1,132 @@
+/* Estilos generales con imagen de fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+    width: 500px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+    /* Título */
+    .login-container h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #343a40;
+    }
+
+    /* Estilo de las etiquetas */
+    .login-container label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        color: #495057;
+    }
+
+    /* Campos de texto (usuario y contraseña) */
+    .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #495057;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    }
+
+/* Contenedor del campo de contraseña e ícono */
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    /* Campo de contraseña (con espacio para el ícono a la derecha) */
+    .password-container input {
+        width: 100%;
+        padding-right: 45px; /* Espacio suficiente para el ícono */
+        padding-left: 10px;
+        height: 40px;
+        box-sizing: border-box; /* Consistencia en el tamaño con el campo de usuario */
+    }
+
+    /* Estilo del ícono de ojo dentro del campo de contraseña */
+    .password-container i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #007bff;
+        font-size: 16px;
+    }
+
+/* Botón */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .login-container button:hover {
+        background-color: #0056b3;
+    }
+
+/* Mensaje de error */
+.error-message p {
+    margin: 0;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilo del enlace de recuperación de contraseña */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+    .forgot-password a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }

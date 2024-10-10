@@ -3,47 +3,87 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProyectoNominaINTBII</title>
+    <title>@ViewData["Title"] - SistemaNomina</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ProyectoNominaINTBII.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <!-- FontAwesome para las flechas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProyectoNominaINTBII</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+    <div class="container-fluid">
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <!-- Menú lateral (derecho) -->
+        <div class="side-panel">
+            <h3>Opciones</h3>
+            <ul>
+                <li>
+                    <a href="@Url.Action("AdminDashboard", "Admin")">Menú Principal</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubmenu('userManagement', 'userArrow')">
+                        Gestión de Usuarios <i id="userArrow" class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul id="userManagement" class="submenu">
+                        <li><a href="@Url.Action("Create", "Admin")">Agregar Usuario</a></li>
+                        <li><a href="@Url.Action("Index", "Admin")">Ver Usuarios</a></li>
+                        <li><a href="@Url.Action("EditUserInfo", "Admin")">Editar Información de Usuario</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubmenu('payroll', 'payrollArrow')">
+                        Nómina <i id="payrollArrow" class="fas fa-chevron-right"></i>
+                    </a>
+                    <ul id="payroll" class="submenu">
+                        <li><a href="@Url.Action("Generate", "Payroll")">Generar Nómina</a></li>
+                        <li><a href="@Url.Action("Index", "Payroll")">Ver Nóminas Generadas</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Botón de salida -->
+            <form asp-action="Logout" asp-controller="Account" method="post">
+                <button type="submit" class="logout-button">Salir</button>
+            </form>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
+
+
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2024 - ProyectoNominaINTBII - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - SistemaNomina - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // Función para desplegar y contraer submenús y cambiar la dirección de la flecha
+        function toggleSubmenu(id, arrowId) {
+            var submenu = document.getElementById(id);
+            var arrow = document.getElementById(arrowId);
+
+            if (submenu.style.display === "none" || submenu.style.display === "") {
+                submenu.style.display = "block";
+                arrow.classList.remove('fa-chevron-right');
+                arrow.classList.add('fa-chevron-down');
+            } else {
+                submenu.style.display = "none";
+                arrow.classList.remove('fa-chevron-down');
+                arrow.classList.add('fa-chevron-right');
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+﻿@model SistemaNomina.Models.UserModel
+
+<h2>Información del Usuario</h2>
+
+<div class="container">
+    <!-- Fila 1 -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Número de Empleado</label>
+                <input asp-for="NumeroEmpleado" class="form-control" disabled />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input asp-for="Nombre" class="form-control" disabled />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>RFC</label>
+                <input asp-for="RFC" class="form-control" disabled />
+            </div>
+        </div>
+    </div>
+
+    <!-- Fila 2 (continuar con otros campos en modo solo lectura) -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>CURP</label>
+                <input asp-for="CURP" class="form-control" disabled />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>No. IMSS</label>
+                <input asp-for="NoIMSS" class="form-control" disabled />
+            </div>
+        </div>
+        <!-- Continuar con más campos deshabilitados para el usuario -->
+    </div>
+</div>

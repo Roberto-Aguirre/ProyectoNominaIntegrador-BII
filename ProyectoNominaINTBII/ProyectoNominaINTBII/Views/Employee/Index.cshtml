@@ -1,0 +1,35 @@
+﻿@model List<SistemaNomina.Models.EmployeeModel>
+
+<h2>Lista de Empleados</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>CURP</th>
+            <th>Departamento</th>
+            <th>Puesto</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Nombre</td>
+                <td>@employee.CURP</td>
+                <td>@employee.Departamento</td>
+                <td>@employee.Puesto</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@employee.Id">Ver Detalles</a> |
+                    <a asp-action="Edit" asp-route-id="@employee.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@employee.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Agregar Nuevo Empleado</a>

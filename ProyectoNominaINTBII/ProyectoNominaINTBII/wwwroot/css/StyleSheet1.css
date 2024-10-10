@@ -1,0 +1,107 @@
+﻿/* General container */
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Side panel (right) */
+.side-panel {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+    .side-panel h3 {
+        margin-top: 0;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        color: #ecf0f1;
+    }
+
+    .side-panel ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .side-panel ul li {
+            margin: 15px 0;
+        }
+
+            .side-panel ul li a {
+                color: #ecf0f1;
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+                transition: background-color 0.3s ease;
+            }
+
+                .side-panel ul li a:hover {
+                    background-color: #34495e;
+                    border-radius: 5px;
+                }
+
+/* Submenu style */
+.submenu {
+    margin-left: 20px;
+    list-style-type: circle;
+    display: none; /* Hidden by default */
+}
+
+    .submenu li a {
+        padding: 5px 10px;
+    }
+
+.side-panel ul li a i {
+    margin-left: 10px; /* Espacio entre el texto y la flecha */
+    transition: transform 0.3s ease; /* Transición suave para la flecha */
+}
+
+/* Logout button */
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+    .logout-button:hover {
+        background-color: #c82333;
+    }
+
+/* Form container */
+.form-container {
+    max-height: 80vh; /* Limitar la altura máxima del formulario */
+    overflow-y: auto; /* Habilitar scroll en el formulario si es necesario */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

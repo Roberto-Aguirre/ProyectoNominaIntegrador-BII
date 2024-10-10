@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;  // Ajusta el layout si usas uno global
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <h2>Bienvenido, Usuario</h2>
+            <p>Aquí puedes acceder a tus opciones.</p>
+
+            <!-- Contenido que cambiará según las acciones -->
+            <div id="content-area">
+                <!-- Aquí se cargarán las vistas dinámicamente -->
+                @RenderBody()  <!-- O cualquier contenido dinámico que necesites mostrar -->
+            </div>
+        </div>
+
+        <!-- Panel lateral derecho con opciones -->
+        <div class="side-panel">
+            <h3>Opciones</h3>
+            <ul>
+                <li><a href="#" onclick="toggleSubmenu('payroll')">Nómina</a></li>
+                <ul id="payroll" class="submenu" style="display: none;">
+                    <li><a href="#">Imprimir Nómina</a></li>
+                    <li><a href="#">Ver Nómina</a></li>
+                    <!-- Otras opciones que puedas añadir para el usuario -->
+                </ul>
+
+                <li><a href="#" onclick="toggleSubmenu('personalInfo')">Información Personal</a></li>
+                <ul id="personalInfo" class="submenu" style="display: none;">
+                    <li><a href="#">Actualizar Información</a></li>
+                    <li><a href="#">Ver Información</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Función para desplegar y contraer submenús
+        function toggleSubmenu(id) {
+            var submenu = document.getElementById(id);
+            if (submenu.style.display === "none") {
+                submenu.style.display = "block";
+            } else {
+                submenu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

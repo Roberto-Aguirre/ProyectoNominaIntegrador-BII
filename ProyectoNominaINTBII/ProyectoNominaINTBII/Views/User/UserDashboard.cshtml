@@ -1,0 +1,110 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- Si prefieres usar FontAwesome para las flechas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <h2>Bienvenido al Panel de Usuario</h2>
+            <p>Aquí puedes gestionar tu información personal y nómina.</p>
+        </div>
+
+        <!-- Panel lateral derecho con opciones -->
+        <div class="side-panel">
+            <h3>Opciones</h3>
+            <ul>
+                <li><a href="#" onclick="toggleSubmenu('payroll', 'payrollArrow')">Nómina <i id="payrollArrow" class="fas fa-chevron-right"></i></a></li>
+                <ul id="payroll" class="submenu" style="display: none;">
+                    <li><a href="#">Imprimir Nómina</a></li>
+                    <li><a href="#">Ver Nómina</a></li>
+                </ul>
+
+                <li><a href="#" onclick="toggleSubmenu('personalInfo', 'personalInfoArrow')">Información Personal <i id="personalInfoArrow" class="fas fa-chevron-right"></i></a></li>
+                <ul id="personalInfo" class="submenu" style="display: none;">
+                    <li><a href="#">Actualizar Información</a></li>
+                    <li><a href="#">Ver Información</a></li>
+                </ul>
+            </ul>
+
+
+            <script>
+                // Función para desplegar y contraer submenús y cambiar la dirección de la flecha
+                function toggleSubmenu(id, arrowId) {
+                    var submenu = document.getElementById(id);
+                    var arrow = document.getElementById(arrowId);
+
+                    if (submenu.style.display === "none") {
+                        submenu.style.display = "block";
+                        arrow.classList.remove('fa-chevron-right');
+                        arrow.classList.add('fa-chevron-down'); // Flecha hacia abajo al desplegar
+                    } else {
+                        submenu.style.display = "none";
+                        arrow.classList.remove('fa-chevron-down');
+                        arrow.classList.add('fa-chevron-right'); // Flecha hacia la derecha al contraer
+                    }
+                }
+            </script>
+
+            <script>
+                (function (global) {
+                    if (typeof (global) === "undefined") {
+                        throw new Error("window is undefined");
+                    }
+
+                    var _hash = "!";
+                    var noBackPlease = function () {
+                        global.location.href += "#";
+
+                        // Deshabilitar retroceso
+                        global.setTimeout(function () {
+                            global.location.href += "!";
+                        }, 50);
+                    };
+
+                    // Detectar cuando se usa el botón de retroceso y redirigir al dashboard
+                    global.onhashchange = function () {
+                        if (global.location.hash !== _hash) {
+                            global.location.hash = _hash;
+                        }
+                    };
+
+                    global.onload = function () {
+                        noBackPlease();
+
+                        // Deshabilitar la función de retroceso
+                        document.body.onkeydown = function (e) {
+                            var elm = e.target.nodeName.toLowerCase();
+                            if (e.which === 8 && (elm !== 'input' && elm !== 'textarea')) {
+                                e.preventDefault();
+                            }
+
+                            // En caso de que quieran usar el botón de retroceso del navegador
+                            if (e.keyCode === 116 || (e.ctrlKey && e.keyCode === 82)) {
+                                // Redirigir al dashboard
+                                window.location.href = "/User/UserDashboard"; // Redirige al dashboard de usuario
+                            }
+                        };
+                    };
+                })(window);
+            </script>
+
+            <div style="position: fixed; bottom: 20px; right: 20px;">
+                <form asp-action="Logout" asp-controller="Account" method="post">
+                    <button type="submit" class="logout-button">Salir</button>
+                </form>
+            </div>
+
+
+</body>
+</html>
