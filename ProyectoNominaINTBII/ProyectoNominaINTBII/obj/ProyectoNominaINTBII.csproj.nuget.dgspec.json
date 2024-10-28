@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
+    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
+    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "projectUniqueName": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
         "projectName": "ProyectoNominaINTBII",
-        "projectPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "projectPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
         "packagesPath": "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
+        "outputPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ivan Aguirre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

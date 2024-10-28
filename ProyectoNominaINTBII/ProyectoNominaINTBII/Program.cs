@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ProyectoNominaINTBII.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ProyectoNominaINTBIIContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyectoNominaINTBIIContext") ?? throw new InvalidOperationException("Connection string 'ProyectoNominaINTBIIContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
