@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\",
+  "WorkspaceRootPath": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\data\\proybd2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\data\\proybd2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\areageograficacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\areageograficacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\alexd\\onedrive\\documents\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\tipoempresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\tipoempresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Program.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Program.cs",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Program.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T04:27:16.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\appsettings.json",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\appsettings.json",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\appsettings.json",
-              "RelativeToolTip": "ProyectoNominaINTBII\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-05T04:27:14.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProyBd2bContext.cs",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyBd2bContext.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Data\\ProyBd2bContext.cs",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyBd2bContext.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Data\\ProyBd2bContext.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAA8wEkAAAA+AAAAAAAAAA==",
+              "Title": "TipoEmpresasController.cs",
+              "DocumentMoniker": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TipoEmpresasController.cs",
+              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\TipoEmpresasController.cs",
+              "ToolTip": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TipoEmpresasController.cs",
+              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\TipoEmpresasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T04:25:39.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AreaGeograficaController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\AreaGeograficaController.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\AreaGeograficaController.cs",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\AreaGeograficaController.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\AreaGeograficaController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T04:24:22.367Z",
+              "WhenOpened": "2024-11-05T05:40:51.343Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProyectoNominaINTBII.Data;
+using ProyectoNominaINTBII.Models;
+
+namespace ProyectoNominaINTBII.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class EmpresaRegPatsController : ControllerBase
+    {
+        private readonly ProyBd2bContext _context;
+
+        public EmpresaRegPatsController(ProyBd2bContext context)
+        {
+            _context = context;
+        }
+
+        // GET: api/EmpresaRegPats
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<EmpresaRegPat>>> GetEmpresaRegPats()
+        {
+            return await _context.EmpresaRegPats.ToListAsync();
+        }
+
+        // GET: api/EmpresaRegPats/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<EmpresaRegPat>> GetEmpresaRegPat(int id)
+        {
+            var empresaRegPat = await _context.EmpresaRegPats.FindAsync(id);
+
+            if (empresaRegPat == null)
+            {
+                return NotFound();
+            }
+
+            return empresaRegPat;
+        }
+
+        // PUT: api/EmpresaRegPats/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutEmpresaRegPat(int id, EmpresaRegPat empresaRegPat)
+        {
+            if (id != empresaRegPat.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(empresaRegPat).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmpresaRegPatExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/EmpresaRegPats
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<EmpresaRegPat>> PostEmpresaRegPat(EmpresaRegPat empresaRegPat)
+        {
+            _context.EmpresaRegPats.Add(empresaRegPat);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (EmpresaRegPatExists(empresaRegPat.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtAction("GetEmpresaRegPat", new { id = empresaRegPat.Id }, empresaRegPat);
+        }
+
+        // DELETE: api/EmpresaRegPats/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmpresaRegPat(int id)
+        {
+            var empresaRegPat = await _context.EmpresaRegPats.FindAsync(id);
+            if (empresaRegPat == null)
+            {
+                return NotFound();
+            }
+
+            _context.EmpresaRegPats.Remove(empresaRegPat);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool EmpresaRegPatExists(int id)
+        {
+            return _context.EmpresaRegPats.Any(e => e.Id == id);
+        }
+    }
+}
