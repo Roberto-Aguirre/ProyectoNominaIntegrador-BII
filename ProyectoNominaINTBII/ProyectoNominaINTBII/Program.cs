@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using ProyectoNominaINTBII.Data;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<ProyectoNominaINTBIIContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyectoNominaINTBIIContext") ?? throw new InvalidOperationException("Connection string 'ProyectoNominaINTBIIContext' not found.")));
+builder.Services.AddDbContext<ProyBd2bContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyBd2bContext") ?? throw new InvalidOperationException("Connection string 'ProyBd2bContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
