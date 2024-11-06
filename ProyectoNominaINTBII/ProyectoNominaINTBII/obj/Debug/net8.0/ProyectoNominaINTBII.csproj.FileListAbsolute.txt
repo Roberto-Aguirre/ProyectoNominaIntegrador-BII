@@ -516,3 +516,4 @@ C:\Users\alexd\OneDrive\Documents\ProyectoNominaIntegrador-BII\ProyectoNominaINT
 C:\Users\alexd\OneDrive\Documents\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\obj\Debug\net8.0\ProyectoNominaINTBII.pdb
 C:\Users\alexd\OneDrive\Documents\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\obj\Debug\net8.0\ProyectoNominaINTBII.genruntimeconfig.cache
 C:\Users\alexd\OneDrive\Documents\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\obj\Debug\net8.0\ref\ProyectoNominaINTBII.dll
+C:\Users\Ivan Aguirre\Desktop\Codes\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\bin\Debug\net8.0\AutoMapper.dll

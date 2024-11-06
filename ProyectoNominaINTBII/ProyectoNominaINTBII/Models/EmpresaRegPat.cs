@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoNominaINTBII.Models;
+using System;
 using System.Collections.Generic;
 
 namespace ProyectoNominaINTBII;

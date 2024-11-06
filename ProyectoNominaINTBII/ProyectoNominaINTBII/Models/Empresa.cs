@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
 
 public partial class Empresa
 {
@@ -13,17 +13,17 @@ public partial class Empresa
 
     public string Nombre { get; set; } = null!;
 
-    public string? Calle { get; set; }
+    public string Calle { get; set; }
 
-    public string? NumeroExt { get; set; }
+    public string NumeroExt { get; set; }
 
-    public string? NumeroInt { get; set; }
+    public string NumeroInt { get; set; }
 
-    public string? Colonia { get; set; }
+    public string Colonia { get; set; }
 
     public string Cp { get; set; } = null!;
 
-    public string? Curp { get; set; }
+    public string Curp { get; set; }
 
     public int MunicipioId { get; set; }
 
@@ -31,21 +31,21 @@ public partial class Empresa
 
     public int PaisId { get; set; }
 
-    public string? Email { get; set; }
+    public string Email { get; set; }
 
-    public string? TipoComprobante { get; set; }
+    public string TipoComprobante { get; set; }
 
-    public string? PathLogo { get; set; }
+    public string PathLogo { get; set; }
 
-    public string? PathCertificadoSat { get; set; }
+    public string PathCertificadoSat { get; set; }
 
-    public string? PathLlaveSat { get; set; }
+    public string PathLlaveSat { get; set; }
 
-    public string? ContraseñaSat { get; set; }
+    public string ContraseñaSat { get; set; }
 
-    public string? ProveedorSat { get; set; }
+    public string ProveedorSat { get; set; }
 
-    public string? PathTimbrado { get; set; }
+    public string PathTimbrado { get; set; }
 
     public int MonedaId { get; set; }
 
@@ -53,29 +53,29 @@ public partial class Empresa
 
     public bool CumpleReqCuotas { get; set; }
 
-    public string? ClaveImss { get; set; }
+    public string ClaveImss { get; set; }
 
-    public string? ClaveInfonavit { get; set; }
+    public string ClaveInfonavit { get; set; }
 
-    public string? ClaveFonacot { get; set; }
+    public string ClaveFonacot { get; set; }
 
-    public string? LugarExpedicion { get; set; }
+    public string LugarExpedicion { get; set; }
 
     public int TipoEmpresaId { get; set; }
 
     public int TipoHoraId { get; set; }
 
-    public decimal? PorcentajePresFed { get; set; }
+    public decimal PorcentajePresFed { get; set; }
 
-    public string? TelefonoWhatsApp { get; set; }
+    public string TelefonoWhatsApp { get; set; }
 
-    public string? TelefonoFijo { get; set; }
+    public string TelefonoFijo { get; set; }
 
     public int TipoConstitucionId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
+    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = null!;
 
     public virtual SatEstado Estado { get; set; } = null!;
 
@@ -85,17 +85,17 @@ public partial class Empresa
 
     public virtual SatPai Pais { get; set; } = null!;
 
-    public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
+    public virtual ICollection<Puesto> Puestos { get; set; } = null!;
 
     public virtual SatRegimenFiscal RegimenFiscal { get; set; } = null!;
 
     public virtual TipoConstitucion TipoConstitucion { get; set; } = null!;
 
-    public virtual ICollection<TipoEmpleado> TipoEmpleados { get; set; } = new List<TipoEmpleado>();
+    public virtual ICollection<TipoEmpleado> TipoEmpleados { get; set; } = null!;
 
     public virtual TipoEmpresa TipoEmpresa { get; set; } = null!;
 
     public virtual SatTipoHora TipoHora { get; set; } = null!;
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = null!;
 }

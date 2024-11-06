@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII;
+using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII.DTOS;
+using ProyectoNominaINTBII.Data;
 
 namespace ProyectoNominaINTBII.Data
 {

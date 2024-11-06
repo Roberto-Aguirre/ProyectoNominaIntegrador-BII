@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
 
 public partial class AreaGeografica
 {
@@ -13,5 +13,5 @@ public partial class AreaGeografica
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
+    public ICollection<EmpresaRegPat>? EmpresaRegPats { get; set; } = null;
 }

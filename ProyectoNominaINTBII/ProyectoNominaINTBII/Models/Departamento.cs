@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
 
 public partial class Departamento
 {
@@ -9,9 +9,9 @@ public partial class Departamento
 
     public string Descripcion { get; set; } = null!;
 
-    public int? EmpresaId { get; set; }
+    public int EmpresaId { get; set; }
 
-    public decimal? MontoPropio { get; set; }
+    public decimal MontoPropio { get; set; }
 
     public string Estatus { get; set; } = null!;
 

@@ -5,7 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII;
+using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII.DTOS;
+using ProyectoNominaINTBII.Data;
+using AutoMapper;
+using ProyectoNominaINTBII.Controllers;
+using ProyectoNominaINTBII.Generics;
+
 
 namespace ProyectoNominaINTBII.Data
 {
@@ -14,9 +20,11 @@ namespace ProyectoNominaINTBII.Data
     public class AreaGeograficasController : ControllerBase
     {
         private readonly Prueba3Context _context;
+        private readonly IMapper _automapper;
 
-        public AreaGeograficasController(Prueba3Context context)
+        public AreaGeograficasController(Prueba3Context context,IMapper mapper)
         {
+            _automapper = mapper;
             _context = context;
         }
 
@@ -24,15 +32,19 @@ namespace ProyectoNominaINTBII.Data
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AreaGeografica>>> GetAreaGeograficas()
         {
-            //var areaGeograficas = _context.AreaGeograficas.Where(area=>area.Id || area.)
-            return await _context.AreaGeograficas.ToListAsync();
+            var lista = _automapper.Map<List< AreaGeograficaDTO >> (await _context.AreaGeograficas.ToListAsync());
+
+            //Console.WriteLine(_context.AreaGeograficas.ToListAsync());
+
+            return Ok(lista);
         }
 
         // GET: api/AreaGeograficas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<AreaGeografica>> GetAreaGeografica(int id)
+        public async Task<ActionResult<AreaGeograficaDTO>> GetAreaGeografica(int id)
         {
-            var areaGeografica = await _context.AreaGeograficas.FindAsync(id);
+
+            var areaGeografica = _automapper.Map<AreaGeograficaDTO>(await _context.AreaGeograficas.FindAsync(id));
 
             if (areaGeografica == null)
             {
@@ -76,12 +88,12 @@ namespace ProyectoNominaINTBII.Data
         // POST: api/AreaGeograficas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<AreaGeografica>> PostAreaGeografica(AreaGeografica areaGeografica)
+        public async Task<ActionResult<Created>> PostAreaGeografica(AreaGeografica areaGeografica)
         {
             _context.AreaGeograficas.Add(areaGeografica);
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetAreaGeografica", new { id = areaGeografica.Id }, areaGeografica);
+            CreatedAtAction("GetAreaGeografica", new { id = areaGeografica.Id }, areaGeografica);
+            return new Created();
         }
 
         // DELETE: api/AreaGeograficas/5

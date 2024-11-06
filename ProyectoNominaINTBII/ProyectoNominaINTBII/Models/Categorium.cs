@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
+
 
 public partial class Categorium
 {
@@ -13,5 +14,5 @@ public partial class Categorium
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
+    public virtual ICollection<Puesto> Puestos { get; set; } = null;
 }

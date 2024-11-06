@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
 
 public partial class Puesto
 {
@@ -11,13 +11,13 @@ public partial class Puesto
 
     public string Descripcion { get; set; } = null!;
 
-    public decimal? SalarioIni { get; set; }
+    public decimal SalarioIni { get; set; }
 
-    public decimal? SalarioFin { get; set; }
+    public decimal SalarioFin { get; set; }
 
-    public int? EmpresaId { get; set; }
+    public int EmpresaId { get; set; }
 
-    public string Estatus { get; set; } = null!;
+    public string Estatus { get; set; }
 
     public virtual Categorium CategoriaNavigation { get; set; } = null!;
 

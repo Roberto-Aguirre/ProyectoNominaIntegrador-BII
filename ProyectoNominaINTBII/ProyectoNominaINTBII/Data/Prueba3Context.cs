@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-
+using ProyectoNominaINTBII.Models;
 namespace ProyectoNominaINTBII.Data;
 
-public partial class Prueba3Context : DbContext 
+public partial class Prueba3Context : DbContext
 {
     public Prueba3Context()
     {
@@ -72,14 +72,17 @@ public partial class Prueba3Context : DbContext
     public virtual DbSet<Trabajador> Trabajadors { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=DESKTOP-F3JTBSV;Initial Catalog=PRUEBA3;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         modelBuilder.Entity<AreaGeografica>(entity =>
         {
+
             entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC0728130A4B");
+
 
             entity.ToTable("AreaGeografica");
 
@@ -92,6 +95,7 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+
         });
 
         modelBuilder.Entity<BaseCotizacion>(entity =>
@@ -294,7 +298,7 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.VigenciaInicial).HasColumnType("datetime");
 
             entity.HasOne(d => d.AreaGeografica).WithMany(p => p.EmpresaRegPats)
-                .HasForeignKey(d => d.AreaGeograficaId)
+                .HasForeignKey(d => d.AreaGeograficaId).IsRequired()
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_EmpresaRegPat_AreaGeografica");
 

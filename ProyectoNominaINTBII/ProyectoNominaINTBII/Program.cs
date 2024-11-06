@@ -7,7 +7,7 @@ builder.Services.AddDbContext<Prueba3Context>(options =>
 
 
 
-
+builder.Services.AddAutoMapper(typeof(Program));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

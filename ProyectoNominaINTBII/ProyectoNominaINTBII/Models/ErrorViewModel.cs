@@ -1,6 +1,6 @@
 ﻿namespace ProyectoNominaINTBII.Models
 {
-    public class ErrorViewModel
+    public class ErrorViewModelDTO
     {
         public string? RequestId { get; set; }
 

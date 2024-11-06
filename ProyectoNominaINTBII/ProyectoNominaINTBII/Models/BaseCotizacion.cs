@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII;
+namespace ProyectoNominaINTBII.Models;
+
 
 public partial class BaseCotizacion
 {
@@ -11,5 +12,5 @@ public partial class BaseCotizacion
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = null;
 }
