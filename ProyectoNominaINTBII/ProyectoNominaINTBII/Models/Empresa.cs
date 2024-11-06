@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
+namespace ProyectoNominaINTBII;
+
 public partial class Empresa
 {
     public int Id { get; set; }
@@ -24,11 +25,11 @@ public partial class Empresa
 
     public string? Curp { get; set; }
 
-    public int Municipio { get; set; }
+    public int MunicipioId { get; set; }
 
-    public int Estado { get; set; }
+    public int EstadoId { get; set; }
 
-    public int Pais { get; set; }
+    public int PaisId { get; set; }
 
     public string? Email { get; set; }
 
@@ -46,9 +47,9 @@ public partial class Empresa
 
     public string? PathTimbrado { get; set; }
 
-    public int Moneda { get; set; }
+    public int MonedaId { get; set; }
 
-    public int RegimenFiscal { get; set; }
+    public int RegimenFiscalId { get; set; }
 
     public bool CumpleReqCuotas { get; set; }
 
@@ -60,9 +61,9 @@ public partial class Empresa
 
     public string? LugarExpedicion { get; set; }
 
-    public int TipoEmpresa { get; set; }
+    public int TipoEmpresaId { get; set; }
 
-    public int TipoHora { get; set; }
+    public int TipoHoraId { get; set; }
 
     public decimal? PorcentajePresFed { get; set; }
 
@@ -70,33 +71,31 @@ public partial class Empresa
 
     public string? TelefonoFijo { get; set; }
 
-    public int TipoConstitucion { get; set; }
+    public int TipoConstitucionId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Categorias? Categorium { get; set; }
+    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 
-    public virtual Departamento? Departamento { get; set; }
+    public virtual SatEstado Estado { get; set; } = null!;
 
-    public virtual EmpresaRegPat? EmpresaRegPat { get; set; }
+    public virtual SatMonedum Moneda { get; set; } = null!;
 
-    public virtual SatMoneda Id1 { get; set; } = null!;
+    public virtual SatMunicipio Municipio { get; set; } = null!;
 
-    public virtual SatMunicipio Id2 { get; set; } = null!;
+    public virtual SatPai Pais { get; set; } = null!;
 
-    public virtual SatPais Id3 { get; set; } = null!;
+    public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
 
-    public virtual SatRegimenFiscal Id4 { get; set; } = null!;
+    public virtual SatRegimenFiscal RegimenFiscal { get; set; } = null!;
 
-    public virtual SatTipoHora Id5 { get; set; } = null!;
+    public virtual TipoConstitucion TipoConstitucion { get; set; } = null!;
 
-    public virtual TipoConstitucion Id6 { get; set; } = null!;
+    public virtual ICollection<TipoEmpleado> TipoEmpleados { get; set; } = new List<TipoEmpleado>();
 
-    public virtual TipoEmpresa Id7 { get; set; } = null!;
+    public virtual TipoEmpresa TipoEmpresa { get; set; } = null!;
 
-    public virtual SatEstado IdNavigation { get; set; } = null!;
+    public virtual SatTipoHora TipoHora { get; set; } = null!;
 
-    public virtual TipoEmpleado? TipoEmpleado { get; set; }
-
-    public virtual Trabajador? Trabajador { get; set; }
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

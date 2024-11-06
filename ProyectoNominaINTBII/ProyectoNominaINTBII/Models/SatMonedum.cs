@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
-public partial class SatMoneda
+namespace ProyectoNominaINTBII;
+
+public partial class SatMonedum
 {
     public int Id { get; set; }
 
@@ -20,5 +21,5 @@ public partial class SatMoneda
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Empresa? Empresa { get; set; }
+    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
 }

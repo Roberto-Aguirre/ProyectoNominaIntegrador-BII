@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
+namespace ProyectoNominaINTBII;
+
 public partial class EmpresaRegPat
 {
     public int Id { get; set; }
 
-    public int Empresa { get; set; }
+    public int EmpresaId { get; set; }
 
-    public int AreaGeografica { get; set; }
+    public int AreaGeograficaId { get; set; }
 
-    public int RiesgoPuesto { get; set; }
+    public int RiesgoPuestoId { get; set; }
 
     public string? RegistroPatronal { get; set; }
 
@@ -28,11 +29,11 @@ public partial class EmpresaRegPat
 
     public string? NumeroSerie { get; set; }
 
-    public virtual Empresa Id1 { get; set; } = null!;
+    public virtual AreaGeografica AreaGeografica { get; set; } = null!;
 
-    public virtual SatRiesgoPuesto Id2 { get; set; } = null!;
+    public virtual Empresa Empresa { get; set; } = null!;
 
-    public virtual AreaGeografica IdNavigation { get; set; } = null!;
+    public virtual SatRiesgoPuesto RiesgoPuesto { get; set; } = null!;
 
-    public virtual Trabajador? Trabajador { get; set; }
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

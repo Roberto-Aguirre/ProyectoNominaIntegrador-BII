@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII.Models;
-
 
 namespace ProyectoNominaINTBII.Data;
 
-public partial class ProyBd2bContext : DbContext
+public partial class Prueba3Context : DbContext 
 {
-    public ProyBd2bContext()
+    public Prueba3Context()
     {
     }
 
-    public ProyBd2bContext(DbContextOptions<ProyBd2bContext> options)
+    public Prueba3Context(DbContextOptions<Prueba3Context> options)
         : base(options)
     {
     }
@@ -21,7 +19,7 @@ public partial class ProyBd2bContext : DbContext
 
     public virtual DbSet<BaseCotizacion> BaseCotizacions { get; set; }
 
-    public virtual DbSet<Categorias> Categoria { get; set; }
+    public virtual DbSet<Categorium> Categoria { get; set; }
 
     public virtual DbSet<Departamento> Departamentos { get; set; }
 
@@ -41,13 +39,13 @@ public partial class ProyBd2bContext : DbContext
 
     public virtual DbSet<SatFormaPago> SatFormaPagos { get; set; }
 
-    public virtual DbSet<SatMoneda> SatMoneda { get; set; }
+    public virtual DbSet<SatMonedum> SatMoneda { get; set; }
 
     public virtual DbSet<SatMunicipio> SatMunicipios { get; set; }
 
     public virtual DbSet<SatOrigenRecurso> SatOrigenRecursos { get; set; }
 
-    public virtual DbSet<SatPais> SatPais { get; set; }
+    public virtual DbSet<SatPai> SatPais { get; set; }
 
     public virtual DbSet<SatPeriocidadPago> SatPeriocidadPagos { get; set; }
 
@@ -59,9 +57,9 @@ public partial class ProyBd2bContext : DbContext
 
     public virtual DbSet<SatTipoHora> SatTipoHoras { get; set; }
 
-    public virtual DbSet<SatTipoJornada> SatTipoJornada { get; set; }
+    public virtual DbSet<SatTipoJornadum> SatTipoJornada { get; set; }
 
-    public virtual DbSet<SatTipoRegimen> SatTipoRegimen { get; set; }
+    public virtual DbSet<SatTipoRegiman> SatTipoRegimen { get; set; }
 
     public virtual DbSet<Sexo> Sexos { get; set; }
 
@@ -74,13 +72,15 @@ public partial class ProyBd2bContext : DbContext
     public virtual DbSet<Trabajador> Trabajadors { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-F3JTBSV;Initial Catalog=PROY_BD_2B;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-F3JTBSV;Initial Catalog=PRUEBA3;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<AreaGeografica>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC0728130A4B");
+
             entity.ToTable("AreaGeografica");
 
             entity.Property(e => e.Clave)
@@ -96,6 +96,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<BaseCotizacion>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__BaseCoti__3214EC0722CBCE26");
+
             entity.ToTable("BaseCotizacion");
 
             entity.Property(e => e.Descripcion)
@@ -106,44 +108,37 @@ public partial class ProyBd2bContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Categorias>(entity =>
+        modelBuilder.Entity<Categorium>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.HasKey(e => e.Id).HasName("PK__Categori__3214EC0749A1A383");
+
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(60)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Categorium)
-                .HasForeignKey<Categorias>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Categoria_Empresa");
         });
 
         modelBuilder.Entity<Departamento>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.HasKey(e => e.Id).HasName("PK__Departam__3214EC07D31100DB");
+
             entity.Property(e => e.Descripcion)
-                .HasMaxLength(60)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
             entity.Property(e => e.MontoPropio).HasColumnType("decimal(15, 3)");
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Departamento)
-                .HasForeignKey<Departamento>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Departamentos_Empresa");
         });
 
         modelBuilder.Entity<Empresa>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC07E6618C6B");
+
             entity.ToTable("Empresa");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Calle)
                 .HasMaxLength(50)
                 .IsUnicode(false);
@@ -226,49 +221,51 @@ public partial class ProyBd2bContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.Estado).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.EstadoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_SatEstados");
 
-            entity.HasOne(d => d.Id1).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.Moneda).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.MonedaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_SatMoneda");
 
-            entity.HasOne(d => d.Id2).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.Municipio).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.MunicipioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_SatMunicipios");
 
-            entity.HasOne(d => d.Id3).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.Pais).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.PaisId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_SatPais");
 
-            entity.HasOne(d => d.Id4).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.RegimenFiscal).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.RegimenFiscalId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_SatRegimenFiscal");
 
-            entity.HasOne(d => d.Id5).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Empresa_SatTipoHoras");
-
-            entity.HasOne(d => d.Id6).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.TipoConstitucion).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.TipoConstitucionId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_TipoConstitucion");
 
-            entity.HasOne(d => d.Id7).WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(d => d.Id)
+            entity.HasOne(d => d.TipoEmpresa).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.TipoEmpresaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Empresa_tipoEmpresa");
+
+            entity.HasOne(d => d.TipoHora).WithMany(p => p.Empresas)
+                .HasForeignKey(d => d.TipoHoraId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Empresa_SatTipoHoras1");
         });
 
         modelBuilder.Entity<EmpresaRegPat>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__EmpresaR__3214EC07C8ED09D3");
+
             entity.ToTable("EmpresaRegPat");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
@@ -296,24 +293,26 @@ public partial class ProyBd2bContext : DbContext
             entity.Property(e => e.VigenciaFinal).HasColumnType("datetime");
             entity.Property(e => e.VigenciaInicial).HasColumnType("datetime");
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.EmpresaRegPat)
-                .HasForeignKey<EmpresaRegPat>(d => d.Id)
+            entity.HasOne(d => d.AreaGeografica).WithMany(p => p.EmpresaRegPats)
+                .HasForeignKey(d => d.AreaGeograficaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_EmpresaRegPat_AreaGeografica");
 
-            entity.HasOne(d => d.Id1).WithOne(p => p.EmpresaRegPat)
-                .HasForeignKey<EmpresaRegPat>(d => d.Id)
+            entity.HasOne(d => d.Empresa).WithMany(p => p.EmpresaRegPats)
+                .HasForeignKey(d => d.EmpresaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_EmpresaRegPat_Empresa");
 
-            entity.HasOne(d => d.Id2).WithOne(p => p.EmpresaRegPat)
-                .HasForeignKey<EmpresaRegPat>(d => d.Id)
+            entity.HasOne(d => d.RiesgoPuesto).WithMany(p => p.EmpresaRegPats)
+                .HasForeignKey(d => d.RiesgoPuestoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_EmpresaRegPat_SatRiesgoPuesto");
         });
 
         modelBuilder.Entity<EstadoCivil>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__EstadoCi__3214EC072470DFA3");
+
             entity.ToTable("EstadoCivil");
 
             entity.Property(e => e.Descripcion)
@@ -326,6 +325,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<MotivoNoTimbrar>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__MotivoNo__3214EC07E376655C");
+
             entity.ToTable("MotivoNoTimbrar");
 
             entity.Property(e => e.Descripcion)
@@ -338,11 +339,12 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<Puesto>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__Puesto__3214EC079B0FCEFD");
+
             entity.ToTable("Puesto");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Descripcion)
-                .HasMaxLength(60)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
@@ -350,14 +352,20 @@ public partial class ProyBd2bContext : DbContext
             entity.Property(e => e.SalarioFin).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.SalarioIni).HasColumnType("decimal(18, 2)");
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Puesto)
-                .HasForeignKey<Puesto>(d => d.Id)
+            entity.HasOne(d => d.CategoriaNavigation).WithMany(p => p.Puestos)
+                .HasForeignKey(d => d.Categoria)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Puesto_Categoria");
+
+            entity.HasOne(d => d.Empresa).WithMany(p => p.Puestos)
+                .HasForeignKey(d => d.EmpresaId)
+                .HasConstraintName("FK_Puesto_Empresa");
         });
 
         modelBuilder.Entity<SatBanco>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatBanco__3214EC07675CD85A");
+
             entity.Property(e => e.ClaveAbm).HasColumnName("ClaveABM");
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -384,7 +392,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatEstado>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.HasKey(e => e.Id).HasName("PK__SatEstad__3214EC07E99789D7");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -403,15 +412,12 @@ public partial class ProyBd2bContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("FechaInicioVigenciaSAT");
             entity.Property(e => e.FolioInegi).HasColumnName("FolioINEGI");
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.SatEstado)
-                .HasForeignKey<SatEstado>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SatEstados_SatPais");
         });
 
         modelBuilder.Entity<SatFormaPago>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatForma__3214EC07FF92B882");
+
             entity.ToTable("SatFormaPago");
 
             entity.Property(e => e.BancarizadoSat)
@@ -440,8 +446,10 @@ public partial class ProyBd2bContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<SatMoneda>(entity =>
+        modelBuilder.Entity<SatMonedum>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatMoned__3214EC07E95704C3");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -465,7 +473,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatMunicipio>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.HasKey(e => e.Id).HasName("PK__SatMunic__3214EC07569A6B07");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -483,15 +492,12 @@ public partial class ProyBd2bContext : DbContext
             entity.Property(e => e.FechaInicioVigenciaSat)
                 .HasColumnType("datetime")
                 .HasColumnName("FechaInicioVigenciaSAT");
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.SatMunicipio)
-                .HasForeignKey<SatMunicipio>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SatMunicipios_SatEstados");
         });
 
         modelBuilder.Entity<SatOrigenRecurso>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatOrige__3214EC0780E00745");
+
             entity.ToTable("SatOrigenRecurso");
 
             entity.Property(e => e.DscripcionSat)
@@ -507,8 +513,10 @@ public partial class ProyBd2bContext : DbContext
                 .HasColumnName("OrigenRecursoSAT");
         });
 
-        modelBuilder.Entity<SatPais>(entity =>
+        modelBuilder.Entity<SatPai>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatPais__3214EC07479F8E10");
+
             entity.Property(e => e.AgrupacionesSat)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -540,6 +548,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatPeriocidadPago>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatPerio__3214EC075D3DC8F8");
+
             entity.ToTable("SatPeriocidadPago");
 
             entity.Property(e => e.ClaveSat)
@@ -566,6 +576,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatRegimenFiscal>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatRegim__3214EC070D3A67B8");
+
             entity.ToTable("SatRegimenFiscal");
 
             entity.Property(e => e.ClaveSat)
@@ -597,6 +609,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatRiesgoPuesto>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatRiesg__3214EC07BE2D9C89");
+
             entity.ToTable("SatRiesgoPuesto");
 
             entity.Property(e => e.ClaveSat)
@@ -615,6 +629,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatTipoContrato>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoC__3214EC07537A20F4");
+
             entity.ToTable("SatTipoContrato");
 
             entity.Property(e => e.ClaveSat)
@@ -622,7 +638,7 @@ public partial class ProyBd2bContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("ClaveSAT");
             entity.Property(e => e.Descripcion)
-                .HasMaxLength(60)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
@@ -631,6 +647,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<SatTipoHora>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoH__3214EC07749474C7");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(10)
                 .IsUnicode(false)
@@ -645,8 +663,10 @@ public partial class ProyBd2bContext : DbContext
             entity.Property(e => e.Monto).HasColumnType("decimal(15, 2)");
         });
 
-        modelBuilder.Entity<SatTipoJornada>(entity =>
+        modelBuilder.Entity<SatTipoJornadum>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoJ__3214EC07ED3CB037");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -661,8 +681,10 @@ public partial class ProyBd2bContext : DbContext
             entity.Property(e => e.Horas).HasColumnType("decimal(15, 3)");
         });
 
-        modelBuilder.Entity<SatTipoRegimen>(entity =>
+        modelBuilder.Entity<SatTipoRegiman>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoR__3214EC07B4DFFAFC");
+
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -684,6 +706,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<Sexo>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__Sexo__3214EC0756EA4E2D");
+
             entity.ToTable("Sexo");
 
             entity.Property(e => e.Descipcion)
@@ -696,6 +720,8 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<TipoConstitucion>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__TipoCons__3214EC07B6AD2DC9");
+
             entity.ToTable("TipoConstitucion");
 
             entity.Property(e => e.Descripcion)
@@ -708,9 +734,10 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<TipoEmpleado>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpl__3214EC07BE6D5EA4");
+
             entity.ToTable("TipoEmpleado");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Descipcion)
                 .HasMaxLength(50)
                 .IsUnicode(false);
@@ -718,15 +745,16 @@ public partial class ProyBd2bContext : DbContext
                 .HasMaxLength(1)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.TipoEmpleado)
-                .HasForeignKey<TipoEmpleado>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+            entity.HasOne(d => d.Empresa).WithMany(p => p.TipoEmpleados)
+                .HasForeignKey(d => d.EmpresaId)
                 .HasConstraintName("FK_TipoEmpleado_Empresa");
         });
 
         modelBuilder.Entity<TipoEmpresa>(entity =>
         {
-            entity.ToTable("tipoEmpresa");
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpr__3214EC0722008C8F");
+
+            entity.ToTable("TipoEmpresa");
 
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(30)
@@ -738,9 +766,10 @@ public partial class ProyBd2bContext : DbContext
 
         modelBuilder.Entity<Trabajador>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__Trabajad__3214EC07E42F74AC");
+
             entity.ToTable("Trabajador");
 
-            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.ApellidoMaterno)
                 .HasMaxLength(35)
                 .IsUnicode(false);
@@ -806,100 +835,99 @@ public partial class ProyBd2bContext : DbContext
                 .HasMaxLength(15)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_BaseCotizacion");
-
-            entity.HasOne(d => d.Id1).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_Departamentos");
-
-            entity.HasOne(d => d.Id2).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_Empresa");
-
-            entity.HasOne(d => d.Id3).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_EmpresaRegPat");
-
-            entity.HasOne(d => d.Id4).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_EstadoCivil");
-
-            entity.HasOne(d => d.Id5).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_MotivoNoTimbrar");
-
-            entity.HasOne(d => d.Id6).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_Puesto");
-
-            entity.HasOne(d => d.Id7).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.Banco).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.BancoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatBancos");
 
-            entity.HasOne(d => d.Id8).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.BaseCotizacion).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.BaseCotizacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_BaseCotizacion");
+
+            entity.HasOne(d => d.Departamento).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.DepartamentoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_Departamentos");
+
+            entity.HasOne(d => d.Empresa).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.EmpresaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_Empresa");
+
+            entity.HasOne(d => d.EmpresaRegimenPat).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.EmpresaRegimenPatId)
+                .HasConstraintName("FK_Trabajador_EmpresaRegPat");
+
+            entity.HasOne(d => d.EstadoCivil).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.EstadoCivilId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_EstadoCivil");
+
+            entity.HasOne(d => d.Estado).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.EstadoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatEstados");
 
-            entity.HasOne(d => d.Id9).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.FormaPago).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.FormaPagoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatFormaPago");
 
-            entity.HasOne(d => d.Id10).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.MotivoNoTimbrar).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.MotivoNoTimbrarId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_MotivoNoTimbrar");
+
+            entity.HasOne(d => d.Municipio).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.MunicipioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatMunicipios");
 
-            entity.HasOne(d => d.Id11).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.OrigenRecurso).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.OrigenRecursoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatOrigenRecurso");
 
-            entity.HasOne(d => d.Id12).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.Pais).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.PaisId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatPais");
 
-            entity.HasOne(d => d.Id13).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.PeriocidadPago).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.PeriocidadPagoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_SatPeriocidadPago");
 
-            entity.HasOne(d => d.Id14).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.Puesto).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.PuestoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_SatTipoContrato");
+                .HasConstraintName("FK_Trabajador_Puesto");
 
-            entity.HasOne(d => d.Id15).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_SatTipoJornada");
-
-            entity.HasOne(d => d.Id16).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Trabajador_SatTipoRegimen");
-
-            entity.HasOne(d => d.Id17).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.Sexo).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.SexoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_Sexo");
 
-            entity.HasOne(d => d.Id18).WithOne(p => p.Trabajador)
-                .HasForeignKey<Trabajador>(d => d.Id)
+            entity.HasOne(d => d.TipoContrato).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.TipoContratoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_SatTipoContrato");
+
+            entity.HasOne(d => d.TipoEmpleado).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.TipoEmpleadoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_TipoEmpleado");
+
+            entity.HasOne(d => d.TipoJornada).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.TipoJornadaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_SatTipoJornada");
+
+            entity.HasOne(d => d.TipoRegimen).WithMany(p => p.Trabajadors)
+                .HasForeignKey(d => d.TipoRegimenId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Trabajador_SatTipoRegimen");
         });
 
         OnModelCreatingPartial(modelBuilder);

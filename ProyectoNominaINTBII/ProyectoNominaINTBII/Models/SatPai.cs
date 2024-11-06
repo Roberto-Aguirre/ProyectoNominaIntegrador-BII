@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
-public partial class SatPais
+namespace ProyectoNominaINTBII;
+
+public partial class SatPai
 {
     public int Id { get; set; }
 
@@ -20,9 +21,7 @@ public partial class SatPais
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Empresa? Empresa { get; set; }
+    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
 
-    public virtual SatEstado? SatEstado { get; set; }
-
-    public virtual Trabajador? Trabajador { get; set; }
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

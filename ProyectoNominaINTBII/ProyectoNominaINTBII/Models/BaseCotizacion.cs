@@ -1,11 +1,15 @@
-﻿namespace ProyectoNominaINTBII.Models
-{
-    public class BaseCotizacion
-    {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public char Estatus { get; set; }
-        public virtual Trabajador? Trabajador { get; set; }
+﻿using System;
+using System.Collections.Generic;
 
-    }
+namespace ProyectoNominaINTBII;
+
+public partial class BaseCotizacion
+{
+    public int Id { get; set; }
+
+    public string Descripcion { get; set; } = null!;
+
+    public string Estatus { get; set; } = null!;
+
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

@@ -7714,19 +7714,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexd\\.nuget\\packages\\": {}
+    "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+      "projectUniqueName": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
       "projectName": "ProyectoNominaINTBII",
-      "projectPath": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-      "packagesPath": "C:\\Users\\alexd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexd\\OneDrive\\Documents\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
+      "projectPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+      "packagesPath": "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ivan Aguirre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7792,7 +7792,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

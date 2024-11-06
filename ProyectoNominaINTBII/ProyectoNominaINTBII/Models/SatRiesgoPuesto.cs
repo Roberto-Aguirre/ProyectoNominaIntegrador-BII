@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
+namespace ProyectoNominaINTBII;
+
 public partial class SatRiesgoPuesto
 {
     public int Id { get; set; }
@@ -16,5 +17,5 @@ public partial class SatRiesgoPuesto
 
     public string Estatus { get; set; } = null!;
 
-    public virtual EmpresaRegPat? EmpresaRegPat { get; set; }
+    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoNominaINTBII.Models;
-public partial class SatTipoJornada
+namespace ProyectoNominaINTBII;
+
+public partial class SatTipoJornadum
 {
     public int Id { get; set; }
 
@@ -14,5 +15,5 @@ public partial class SatTipoJornada
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Trabajador? Trabajador { get; set; }
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

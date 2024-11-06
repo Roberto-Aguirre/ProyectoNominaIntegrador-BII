@@ -5,30 +5,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII.Data;
-using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII;
 
-namespace ProyectoNominaINTBII.Controllers
+namespace ProyectoNominaINTBII.Data
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoConstitucionesController : ControllerBase
+    public class TipoConstitucionController : ControllerBase
     {
-        private readonly ProyBd2bContext _context;
+        private readonly Prueba3Context _context;
 
-        public TipoConstitucionesController(ProyBd2bContext context)
+        public TipoConstitucionController(Prueba3Context context)
         {
             _context = context;
         }
 
-        // GET: api/TipoConstituciones
+        // GET: api/TipoConstitucion
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TipoConstitucion>>> GetTipoConstitucions()
         {
             return await _context.TipoConstitucions.ToListAsync();
         }
 
-        // GET: api/TipoConstituciones/5
+        // GET: api/TipoConstitucion/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TipoConstitucion>> GetTipoConstitucion(int id)
         {
@@ -42,7 +41,7 @@ namespace ProyectoNominaINTBII.Controllers
             return tipoConstitucion;
         }
 
-        // PUT: api/TipoConstituciones/5
+        // PUT: api/TipoConstitucion/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTipoConstitucion(int id, TipoConstitucion tipoConstitucion)
@@ -73,7 +72,7 @@ namespace ProyectoNominaINTBII.Controllers
             return NoContent();
         }
 
-        // POST: api/TipoConstituciones
+        // POST: api/TipoConstitucion
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TipoConstitucion>> PostTipoConstitucion(TipoConstitucion tipoConstitucion)
@@ -84,7 +83,7 @@ namespace ProyectoNominaINTBII.Controllers
             return CreatedAtAction("GetTipoConstitucion", new { id = tipoConstitucion.Id }, tipoConstitucion);
         }
 
-        // DELETE: api/TipoConstituciones/5
+        // DELETE: api/TipoConstitucion/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTipoConstitucion(int id)
         {

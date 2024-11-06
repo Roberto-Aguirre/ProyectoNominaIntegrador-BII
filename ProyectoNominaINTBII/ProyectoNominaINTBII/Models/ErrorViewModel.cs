@@ -1,4 +1,4 @@
-namespace ProyectoNominaINTBII.Models
+﻿namespace ProyectoNominaINTBII.Models
 {
     public class ErrorViewModel
     {

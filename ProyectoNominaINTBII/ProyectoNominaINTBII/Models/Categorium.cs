@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace ProyectoNominaINTBII;
 
-public partial class MotivoNoTimbrar
+public partial class Categorium
 {
     public int Id { get; set; }
 
     public string Descripcion { get; set; } = null!;
 
+    public int? EmpresaId { get; set; }
+
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
 }

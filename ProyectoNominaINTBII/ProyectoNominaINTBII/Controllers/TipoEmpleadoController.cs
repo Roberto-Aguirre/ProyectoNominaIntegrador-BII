@@ -5,30 +5,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII.Data;
-using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII;
 
-namespace ProyectoNominaINTBII.Controllers
+namespace ProyectoNominaINTBII.Data
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoEmpleadosController : ControllerBase
+    public class TipoEmpleadoController : ControllerBase
     {
-        private readonly ProyBd2bContext _context;
+        private readonly Prueba3Context _context;
 
-        public TipoEmpleadosController(ProyBd2bContext context)
+        public TipoEmpleadoController(Prueba3Context context)
         {
             _context = context;
         }
 
-        // GET: api/TipoEmpleados
+        // GET: api/TipoEmpleado
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TipoEmpleado>>> GetTipoEmpleados()
         {
             return await _context.TipoEmpleados.ToListAsync();
         }
 
-        // GET: api/TipoEmpleados/5
+        // GET: api/TipoEmpleado/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TipoEmpleado>> GetTipoEmpleado(int id)
         {
@@ -42,7 +41,7 @@ namespace ProyectoNominaINTBII.Controllers
             return tipoEmpleado;
         }
 
-        // PUT: api/TipoEmpleados/5
+        // PUT: api/TipoEmpleado/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTipoEmpleado(int id, TipoEmpleado tipoEmpleado)
@@ -73,7 +72,7 @@ namespace ProyectoNominaINTBII.Controllers
             return NoContent();
         }
 
-        // POST: api/TipoEmpleados
+        // POST: api/TipoEmpleado
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TipoEmpleado>> PostTipoEmpleado(TipoEmpleado tipoEmpleado)
@@ -84,7 +83,7 @@ namespace ProyectoNominaINTBII.Controllers
             return CreatedAtAction("GetTipoEmpleado", new { id = tipoEmpleado.Id }, tipoEmpleado);
         }
 
-        // DELETE: api/TipoEmpleados/5
+        // DELETE: api/TipoEmpleado/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTipoEmpleado(int id)
         {

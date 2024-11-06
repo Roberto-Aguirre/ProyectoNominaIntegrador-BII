@@ -5,18 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII.Data;
-using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII;
 
-namespace ProyectoNominaINTBII.Controllers
+namespace ProyectoNominaINTBII.Data
 {
     [Route("api/[controller]")]
     [ApiController]
     public class TrabajadoresController : ControllerBase
     {
-        private readonly ProyBd2bContext _context;
+        private readonly Prueba3Context _context;
 
-        public TrabajadoresController(ProyBd2bContext context)
+        public TrabajadoresController(Prueba3Context context)
         {
             _context = context;
         }

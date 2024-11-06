@@ -5,30 +5,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoNominaINTBII.Data;
-using ProyectoNominaINTBII.Models;
+using ProyectoNominaINTBII;
 
-namespace ProyectoNominaINTBII.Controllers
+namespace ProyectoNominaINTBII.Data
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AreaGeograficaController : ControllerBase
+    public class AreaGeograficasController : ControllerBase
     {
-        private readonly ProyBd2bContext _context;
+        private readonly Prueba3Context _context;
 
-        public AreaGeograficaController(ProyBd2bContext context)
+        public AreaGeograficasController(Prueba3Context context)
         {
             _context = context;
         }
 
-        // GET: api/AreaGeografica
+        // GET: api/AreaGeograficas
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AreaGeografica>>> GetAreaGeograficas()
         {
+            //var areaGeograficas = _context.AreaGeograficas.Where(area=>area.Id || area.)
             return await _context.AreaGeograficas.ToListAsync();
         }
 
-        // GET: api/AreaGeografica/5
+        // GET: api/AreaGeograficas/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AreaGeografica>> GetAreaGeografica(int id)
         {
@@ -42,7 +42,7 @@ namespace ProyectoNominaINTBII.Controllers
             return areaGeografica;
         }
 
-        // PUT: api/AreaGeografica/5
+        // PUT: api/AreaGeograficas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAreaGeografica(int id, AreaGeografica areaGeografica)
@@ -73,7 +73,7 @@ namespace ProyectoNominaINTBII.Controllers
             return NoContent();
         }
 
-        // POST: api/AreaGeografica
+        // POST: api/AreaGeograficas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<AreaGeografica>> PostAreaGeografica(AreaGeografica areaGeografica)
@@ -84,7 +84,7 @@ namespace ProyectoNominaINTBII.Controllers
             return CreatedAtAction("GetAreaGeografica", new { id = areaGeografica.Id }, areaGeografica);
         }
 
-        // DELETE: api/AreaGeografica/5
+        // DELETE: api/AreaGeograficas/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAreaGeografica(int id)
         {
