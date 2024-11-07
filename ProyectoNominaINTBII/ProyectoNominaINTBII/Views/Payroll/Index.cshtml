@@ -1,0 +1,183 @@
+﻿@model List<ProyectoNominaINTBII.Models.PayrollModel>
+
+<h2>Nóminas generadas</h2>
+
+<!-- Barra de búsqueda -->
+<div class="search-bar-nominas mb-4">
+    <button class="btn-search-nominas">Buscar</button>
+    <input type="text" id="searchInput" placeholder="Buscar por nombre de empleado" class="search-input-nominas" onkeyup="filterTable()" />
+</div>
+
+<table class="table" id="payrollTable">
+    <thead>
+        <tr>
+            <th>Empleado</th>
+            <th>Periodo de Pago</th>
+            <th>Salario Diario</th>
+            <th>Deducciones</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            var nomina = Model[i];
+
+            <tr data-payroll-id="@nomina.Id">
+                <td>@nomina.Empleado</td>
+                <td>@nomina.PeriodoPago</td>
+                <td>@String.Format("{0:C}", nomina.SalarioDiario)</td>
+                <td>@String.Format("{0:C}", nomina.TotalDeducciones)</td>
+                <td>
+                    <a asp-controller="Payroll" asp-action="Detail" asp-route-id="@nomina.Id" class="btn btn-info">Ver Detalle</a>
+                    <a asp-controller="Payroll" asp-action="Edit" asp-route-id="@nomina.Id" class="btn btn-warning">Editar</a>
+                    <button type="button" class="btn btn-danger" onclick="openDeleteModal(@nomina.Id)">Eliminar</button>
+                    <a asp-controller="Payroll" asp-action="DownloadPdf" asp-route-id="@nomina.Id" class="btn btn-success">Descargar PDF</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal de confirmación para eliminar nómina -->
+<div id="confirmDeleteModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>¿Estás seguro de que deseas eliminar esta nómina?</h3>
+        <div class="delete-icon">
+            <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="modal-buttons">
+            <button class="modal-button btn-confirm" onclick="confirmDeletePayroll()">Eliminar</button>
+            <button class="modal-button btn-cancel" onclick="closeDeleteModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Notificación emergente -->
+<div id="notification" class="notificacion-nominagenerada hidden">Nómina eliminada correctamente.</div>
+
+<script>
+    let payrollIdToDelete = null;
+
+    function openDeleteModal(payrollId) {
+        payrollIdToDelete = payrollId;
+        document.getElementById('confirmDeleteModal').style.display = 'flex';
+    }
+
+    function closeDeleteModal() {
+        document.getElementById('confirmDeleteModal').style.display = 'none';
+    }
+
+    function showNotification(message) {
+        const notification = document.getElementById("notification");
+        notification.textContent = message;
+        notification.classList.remove("hidden");
+        notification.classList.add("show");
+
+        setTimeout(() => {
+            notification.classList.remove("show");
+            notification.classList.add("hidden");
+        }, 3000);
+    }
+
+    function confirmDeletePayroll() {
+        if (payrollIdToDelete) {
+            fetch(`/Payroll/Delete?id=${payrollIdToDelete}`, {
+                method: 'POST'
+            }).then(response => {
+                if (response.ok) {
+                    const row = document.querySelector(`tr[data-payroll-id="${payrollIdToDelete}"]`);
+                    if (row) row.remove();
+                    showNotification("Nómina eliminada correctamente.");
+                } else {
+                    alert("Error al eliminar la nómina.");
+                }
+                closeDeleteModal();
+            }).catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema al procesar la solicitud.");
+            });
+        }
+    }
+
+    // Función para filtrar la tabla
+    function filterTable() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const rows = document.querySelectorAll("#payrollTable tbody tr");
+
+        rows.forEach(row => {
+            const employeeName = row.querySelector("td").textContent.toLowerCase();
+            row.style.display = employeeName.includes(input) ? "" : "none";
+        });
+    }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector(".search-input-nominas");
+        const searchButton = document.querySelector(".btn-search-nominas");
+
+        searchButton.addEventListener("click", function () {
+            const searchText = searchInput.value.toLowerCase();
+            const rows = document.querySelectorAll("table tbody tr");
+
+            rows.forEach(row => {
+                const employeeName = row.querySelector("td").textContent.toLowerCase(); // Asume que el nombre del empleado está en la primera columna
+                if (employeeName.includes(searchText)) {
+                    row.style.display = ""; // Muestra la fila si coincide con la búsqueda
+                } else {
+                    row.style.display = "none"; // Oculta la fila si no coincide
+                }
+            });
+        });
+    });
+
+
+</script>
+
+<style>
+    .search-bar-nominas {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center; /* Centra la barra de búsqueda */
+    }
+
+
+    .btn-search-nominas {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .search-input-nominas {
+        width: 250px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .notificacion-nominagenerada {
+        position: fixed;
+        top: 20px;
+        left: -300px;
+        padding: 15px;
+        background-color: #28a745;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        z-index: 1000;
+        transition: left 0.5s ease, opacity 0.5s ease;
+    }
+
+        .notificacion-nominagenerada.show {
+            left: 20px;
+            opacity: 1;
+        }
+
+        .notificacion-nominagenerada.hidden {
+            opacity: 0;
+        }
+</style>

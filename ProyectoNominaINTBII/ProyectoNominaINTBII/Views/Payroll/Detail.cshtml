@@ -1,0 +1,122 @@
+﻿@model ProyectoNominaINTBII.Models.PayrollModel
+
+<div class="container mt-4">
+    <div class="text-center mb-4">
+        <h2>Empleado: <strong>@Model.Empleado</strong></h2>
+        <h5 class="text-muted">Número de Empleado: @Model.NumeroEmpleado</h5>
+    </div>
+
+    <div class="row">
+        <!-- Información de la Empresa -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Información de la Empresa</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Nombre de la Empresa:</strong> @Model.NombreEmpresa</p>
+                    <p><strong>RFC de la Empresa:</strong> @Model.RFC_Empresa</p>
+                    <p><strong>Dirección de la Empresa:</strong> @Model.DireccionEmpresa</p>
+                    <p><strong>Lugar de Expedición:</strong> @Model.LugarExpedicion</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información del Empleado -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Información del Empleado</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>RFC del Empleado:</strong> @Model.RFCEmpleado</p>
+                    <p><strong>CURP:</strong> @Model.CURP</p>
+                    <p><strong>Número IMSS:</strong> @Model.NumeroIMSS</p>
+                    <p><strong>Departamento:</strong> @Model.Departamento</p>
+                    <p><strong>Puesto:</strong> @Model.Puesto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Información de la Nómina -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Información de la Nómina</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Periodo de Pago:</strong> @Model.PeriodoPago</p>
+                    <p><strong>Fecha de Pago:</strong> @Model.FechaPago?.ToString("dd/MM/yyyy")</p>
+                    <p><strong>Días Laborados:</strong> @Model.DiasLaborados</p>
+                    <p><strong>Días Pagados:</strong> @Model.DiasPagados</p>
+                    <p><strong>Salario Diario:</strong> @String.Format("{0:C}", Model.SalarioDiario)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Totales -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Totales</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Total Percepciones:</strong> @String.Format("{0:C}", Model.TotalPercepciones)</p>
+                    <p><strong>Total Deducciones:</strong> @String.Format("{0:C}", Model.TotalDeducciones)</p>
+                    <p><strong>Total Neto:</strong> @String.Format("{0:C}", Model.TotalNeto)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payroll-boton-container">
+        <a asp-action="Index" class="btn payroll-btn-secondary">
+            <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Regresar
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn payroll-btn-primary">
+            <i class="fas fa-edit" style="margin-right: 8px;"></i> Editar
+        </a>
+    </div>
+
+
+    <style>
+        /* Estilos específicos para los botones en esta vista */
+        .payroll-boton-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 40px; /* Espacio adicional para separar del footer */
+        }
+
+        .payroll-btn-primary,
+        .payroll-btn-secondary {
+            padding: 8px 16px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .payroll-btn-primary {
+            background-color: #007bff; /* Azul */
+        }
+
+            .payroll-btn-primary:hover {
+                background-color: #4da3ff; /* Azul claro para hover */
+            }
+
+        .payroll-btn-secondary {
+            background-color: #6c757d; /* Gris */
+        }
+
+            .payroll-btn-secondary:hover {
+                background-color: #d3d3d3; /* Gris claro para hover */
+            }
+    </style>

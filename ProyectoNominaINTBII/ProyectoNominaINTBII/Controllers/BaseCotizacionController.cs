@@ -10,7 +10,7 @@ using ProyectoNominaINTBII.DTOS;
 using ProyectoNominaINTBII.Data;
 using AutoMapper;
 using ProyectoNominaINTBII.Generics;
-using AutoMapper; 
+
 
 namespace ProyectoNominaINTBII.Controllers
 {
