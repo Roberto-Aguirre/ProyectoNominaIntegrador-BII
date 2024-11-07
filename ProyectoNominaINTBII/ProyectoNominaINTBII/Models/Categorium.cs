@@ -10,9 +10,9 @@ public partial class Categorium
 
     public string Descripcion { get; set; } = null!;
 
-    public int? EmpresaId { get; set; }
+    public required int EmpresaId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Puesto> Puestos { get; set; } = null;
+    public virtual ICollection<Puesto>? Puestos { get; set; } = new List<Puesto>();
 }

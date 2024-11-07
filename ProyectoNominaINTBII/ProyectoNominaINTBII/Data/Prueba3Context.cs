@@ -72,17 +72,14 @@ public partial class Prueba3Context : DbContext
     public virtual DbSet<Trabajador> Trabajadors { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=DESKTOP-F3JTBSV;Initial Catalog=PRUEBA3;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
         modelBuilder.Entity<AreaGeografica>(entity =>
         {
-
-            entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC0728130A4B");
-
+            entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC078CDFB954");
 
             entity.ToTable("AreaGeografica");
 
@@ -95,12 +92,11 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
-
         });
 
         modelBuilder.Entity<BaseCotizacion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__BaseCoti__3214EC0722CBCE26");
+            entity.HasKey(e => e.Id).HasName("PK__BaseCoti__3214EC07FD714EE0");
 
             entity.ToTable("BaseCotizacion");
 
@@ -114,7 +110,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<Categorium>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Categori__3214EC0749A1A383");
+            entity.HasKey(e => e.Id).HasName("PK__Categori__3214EC07534C5BE5");
 
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(60)
@@ -126,7 +122,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<Departamento>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Departam__3214EC07D31100DB");
+            entity.HasKey(e => e.Id).HasName("PK__Departam__3214EC071B0464FC");
 
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(100)
@@ -134,12 +130,12 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
-            entity.Property(e => e.MontoPropio).HasColumnType("decimal(15, 3)");
+            entity.Property(e => e.MontoPropio).HasColumnType("decimal(15, 3)").IsRequired(true);
         });
 
         modelBuilder.Entity<Empresa>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC07E6618C6B");
+            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC0741E1CD59");
 
             entity.ToTable("Empresa");
 
@@ -268,7 +264,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<EmpresaRegPat>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__EmpresaR__3214EC07C8ED09D3");
+            entity.HasKey(e => e.Id).HasName("PK__EmpresaR__3214EC0738218455");
 
             entity.ToTable("EmpresaRegPat");
 
@@ -298,7 +294,7 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.VigenciaInicial).HasColumnType("datetime");
 
             entity.HasOne(d => d.AreaGeografica).WithMany(p => p.EmpresaRegPats)
-                .HasForeignKey(d => d.AreaGeograficaId).IsRequired()
+                .HasForeignKey(d => d.AreaGeograficaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_EmpresaRegPat_AreaGeografica");
 
@@ -315,7 +311,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<EstadoCivil>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__EstadoCi__3214EC072470DFA3");
+            entity.HasKey(e => e.Id).HasName("PK__EstadoCi__3214EC071C523635");
 
             entity.ToTable("EstadoCivil");
 
@@ -329,7 +325,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<MotivoNoTimbrar>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__MotivoNo__3214EC07E376655C");
+            entity.HasKey(e => e.Id).HasName("PK__MotivoNo__3214EC070FB1E5C4");
 
             entity.ToTable("MotivoNoTimbrar");
 
@@ -343,7 +339,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<Puesto>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Puesto__3214EC079B0FCEFD");
+            entity.HasKey(e => e.Id).HasName("PK__Puesto__3214EC0762B9311C");
 
             entity.ToTable("Puesto");
 
@@ -356,19 +352,20 @@ public partial class Prueba3Context : DbContext
             entity.Property(e => e.SalarioFin).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.SalarioIni).HasColumnType("decimal(18, 2)");
 
-            entity.HasOne(d => d.CategoriaNavigation).WithMany(p => p.Puestos)
-                .HasForeignKey(d => d.Categoria)
+            entity.HasOne(d => d.Categoria).WithMany(p => p.Puestos)
+                .HasForeignKey(d => d.CategoriaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Puesto_Categoria");
 
             entity.HasOne(d => d.Empresa).WithMany(p => p.Puestos)
                 .HasForeignKey(d => d.EmpresaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Puesto_Empresa");
         });
 
         modelBuilder.Entity<SatBanco>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatBanco__3214EC07675CD85A");
+            entity.HasKey(e => e.Id).HasName("PK__SatBanco__3214EC07C70C43B2");
 
             entity.Property(e => e.ClaveAbm).HasColumnName("ClaveABM");
             entity.Property(e => e.ClaveSat)
@@ -396,7 +393,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatEstado>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatEstad__3214EC07E99789D7");
+            entity.HasKey(e => e.Id).HasName("PK__SatEstad__3214EC0794816D66");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -420,7 +417,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatFormaPago>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatForma__3214EC07FF92B882");
+            entity.HasKey(e => e.Id).HasName("PK__SatForma__3214EC07B07706B2");
 
             entity.ToTable("SatFormaPago");
 
@@ -452,7 +449,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatMonedum>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatMoned__3214EC07E95704C3");
+            entity.HasKey(e => e.Id).HasName("PK__SatMoned__3214EC07A64E60AF");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -477,7 +474,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatMunicipio>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatMunic__3214EC07569A6B07");
+            entity.HasKey(e => e.Id).HasName("PK__SatMunic__3214EC0791466ACB");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -500,7 +497,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatOrigenRecurso>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatOrige__3214EC0780E00745");
+            entity.HasKey(e => e.Id).HasName("PK__SatOrige__3214EC076736D59B");
 
             entity.ToTable("SatOrigenRecurso");
 
@@ -519,7 +516,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatPai>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatPais__3214EC07479F8E10");
+            entity.HasKey(e => e.Id).HasName("PK__SatPais__3214EC0712955279");
 
             entity.Property(e => e.AgrupacionesSat)
                 .HasMaxLength(50)
@@ -552,7 +549,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatPeriocidadPago>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatPerio__3214EC075D3DC8F8");
+            entity.HasKey(e => e.Id).HasName("PK__SatPerio__3214EC0718BE1F93");
 
             entity.ToTable("SatPeriocidadPago");
 
@@ -580,7 +577,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatRegimenFiscal>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatRegim__3214EC070D3A67B8");
+            entity.HasKey(e => e.Id).HasName("PK__SatRegim__3214EC074604F1C9");
 
             entity.ToTable("SatRegimenFiscal");
 
@@ -613,7 +610,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatRiesgoPuesto>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatRiesg__3214EC07BE2D9C89");
+            entity.HasKey(e => e.Id).HasName("PK__SatRiesg__3214EC07ACA33F99");
 
             entity.ToTable("SatRiesgoPuesto");
 
@@ -621,19 +618,19 @@ public partial class Prueba3Context : DbContext
                 .HasMaxLength(5)
                 .IsUnicode(false)
                 .HasColumnName("ClaveSAT");
-            entity.Property(e => e.DechaFinVigencia).HasColumnType("datetime");
-            entity.Property(e => e.DechaInicioVigencia).HasColumnType("datetime");
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(20)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+            entity.Property(e => e.FechaFinVigencia).HasColumnType("datetime");
+            entity.Property(e => e.FechaInicioVigencia).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<SatTipoContrato>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoC__3214EC07537A20F4");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoC__3214EC078E837AFF");
 
             entity.ToTable("SatTipoContrato");
 
@@ -651,7 +648,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatTipoHora>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoH__3214EC07749474C7");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoH__3214EC0780F05EE9");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(10)
@@ -669,7 +666,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatTipoJornadum>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoJ__3214EC07ED3CB037");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoJ__3214EC07D92BB009");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -687,7 +684,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<SatTipoRegiman>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoR__3214EC07B4DFFAFC");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoR__3214EC0731F5BB49");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -710,7 +707,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<Sexo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Sexo__3214EC0756EA4E2D");
+            entity.HasKey(e => e.Id).HasName("PK__Sexo__3214EC078398C340");
 
             entity.ToTable("Sexo");
 
@@ -724,7 +721,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<TipoConstitucion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoCons__3214EC07B6AD2DC9");
+            entity.HasKey(e => e.Id).HasName("PK__TipoCons__3214EC0709C33A0C");
 
             entity.ToTable("TipoConstitucion");
 
@@ -738,7 +735,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<TipoEmpleado>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoEmpl__3214EC07BE6D5EA4");
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpl__3214EC0746321B0D");
 
             entity.ToTable("TipoEmpleado");
 
@@ -751,12 +748,13 @@ public partial class Prueba3Context : DbContext
 
             entity.HasOne(d => d.Empresa).WithMany(p => p.TipoEmpleados)
                 .HasForeignKey(d => d.EmpresaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_TipoEmpleado_Empresa");
         });
 
         modelBuilder.Entity<TipoEmpresa>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoEmpr__3214EC0722008C8F");
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpr__3214EC07723FB68D");
 
             entity.ToTable("TipoEmpresa");
 
@@ -770,7 +768,7 @@ public partial class Prueba3Context : DbContext
 
         modelBuilder.Entity<Trabajador>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Trabajad__3214EC07E42F74AC");
+            entity.HasKey(e => e.Id).HasName("PK__Trabajad__3214EC073726F55B");
 
             entity.ToTable("Trabajador");
 
@@ -861,6 +859,7 @@ public partial class Prueba3Context : DbContext
 
             entity.HasOne(d => d.EmpresaRegimenPat).WithMany(p => p.Trabajadors)
                 .HasForeignKey(d => d.EmpresaRegimenPatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Trabajador_EmpresaRegPat");
 
             entity.HasOne(d => d.EstadoCivil).WithMany(p => p.Trabajadors)

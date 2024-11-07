@@ -11,11 +11,11 @@ public partial class SatRiesgoPuesto
 
     public string Descripcion { get; set; } = null!;
 
-    public DateTime? DechaInicioVigencia { get; set; }
+    public required DateTime FechaInicioVigencia { get; set; }
 
-    public DateTime? DechaFinVigencia { get; set; }
+    public required DateTime FechaFinVigencia { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
+    public virtual ICollection<EmpresaRegPat>? EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 }

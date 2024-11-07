@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ProyectoNominaINTBII.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<Prueba3Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Prueba3Context") ?? throw new InvalidOperationException("Connection string 'Prueba3Context' not found.")));
-
-
 
 builder.Services.AddAutoMapper(typeof(Program));
 

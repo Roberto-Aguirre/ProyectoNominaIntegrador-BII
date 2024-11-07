@@ -11,15 +11,15 @@ public partial class SatPeriocidadPago
 
     public string DescripcionSat { get; set; } = null!;
 
-    public DateTime? FechaInicioVigenciaSat { get; set; }
+    public required DateTime FechaInicioVigenciaSat { get; set; }
 
-    public DateTime? FechaFinVigenciaSat { get; set; }
+    public required DateTime FechaFinVigenciaSat { get; set; }
 
     public int Dias { get; set; }
 
-    public string? DiasValidos { get; set; }
+    public string DiasValidos { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
 }

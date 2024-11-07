@@ -118,7 +118,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.BaseCotizacion, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.BaseCotizacionDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -144,7 +144,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.BaseCotizacion",
+        "Type": "ProyectoNominaINTBII.Generics.Created",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -170,7 +170,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.BaseCotizacion",
+        "Type": "ProyectoNominaINTBII.DTOS.BaseCotizacionDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -227,7 +227,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Categorium, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.CategoriumDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -279,7 +279,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Categorium",
+        "Type": "ProyectoNominaINTBII.DTOS.CategoriumDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -336,7 +336,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Departamento, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.DepartamentoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -388,7 +388,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Departamento",
+        "Type": "ProyectoNominaINTBII.DTOS.DepartamentoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -445,7 +445,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.EmpresaRegPat, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.EmpresaRegPatDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -497,7 +497,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.DTOS.EmpresaRegPatDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -554,7 +554,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Empresa, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.EmpresaDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -606,7 +606,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Empresa",
+        "Type": "ProyectoNominaINTBII.DTOS.EmpresaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -663,7 +663,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.EstadoCivil, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.EstadoCivilDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -715,7 +715,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.EstadoCivil",
+        "Type": "ProyectoNominaINTBII.DTOS.EstadoCivilDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -772,7 +772,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.MotivoNoTimbrar, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.MotivoNoTimbrarDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -824,7 +824,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.MotivoNoTimbrar",
+        "Type": "ProyectoNominaINTBII.DTOS.MotivoNoTimbrarDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -881,7 +881,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Puesto, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.PuestoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -933,7 +933,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Puesto",
+        "Type": "ProyectoNominaINTBII.DTOS.PuestoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -990,7 +990,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatBanco, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatBancoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1042,7 +1042,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatBanco",
+        "Type": "ProyectoNominaINTBII.DTOS.SatBancoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1099,7 +1099,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatEstado, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatBancoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1151,7 +1151,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatEstado",
+        "Type": "ProyectoNominaINTBII.DTOS.SatBancoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1208,7 +1208,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatFormaPago, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatFormaPagoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1260,7 +1260,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatFormaPago",
+        "Type": "ProyectoNominaINTBII.DTOS.SatFormaPagoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1317,7 +1317,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatMonedum, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatMonedumDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1369,7 +1369,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatMonedum",
+        "Type": "ProyectoNominaINTBII.DTOS.SatMonedumDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1426,7 +1426,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatMunicipio, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatMunicipioDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1478,7 +1478,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatMunicipio",
+        "Type": "ProyectoNominaINTBII.DTOS.SatMunicipioDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1535,7 +1535,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatOrigenRecurso, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatOrigenRecursoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1587,7 +1587,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatOrigenRecurso",
+        "Type": "ProyectoNominaINTBII.DTOS.SatOrigenRecursoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1644,7 +1644,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatPai, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatPaiDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1696,7 +1696,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatPai",
+        "Type": "ProyectoNominaINTBII.DTOS.SatPaiDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1753,7 +1753,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatPeriocidadPago, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatPeriocidadPagoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1805,7 +1805,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatPeriocidadPago",
+        "Type": "ProyectoNominaINTBII.DTOS.SatPeriocidadPagoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1862,7 +1862,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatRegimenFiscal, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatRegimenFiscalDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1914,7 +1914,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatRegimenFiscal",
+        "Type": "ProyectoNominaINTBII.DTOS.SatRegimenFiscalDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1971,7 +1971,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatRiesgoPuesto, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatRiesgoPuestoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2023,7 +2023,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatRiesgoPuesto",
+        "Type": "ProyectoNominaINTBII.DTOS.SatRiesgoPuestoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2080,7 +2080,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatTipoContrato, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatTipoContratoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2132,7 +2132,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatTipoContrato",
+        "Type": "ProyectoNominaINTBII.DTOS.SatTipoContratoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2189,7 +2189,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatTipoHora, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatTipoHoraDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2241,7 +2241,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatTipoHora",
+        "Type": "ProyectoNominaINTBII.DTOS.SatTipoHoraDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2298,7 +2298,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatTipoJornadum, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatTipoJornadumDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2350,7 +2350,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatTipoJornadum",
+        "Type": "ProyectoNominaINTBII.DTOS.SatTipoJornadumDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2407,7 +2407,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.SatTipoRegiman, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SatTipoRegimanDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2459,7 +2459,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.SatTipoRegiman",
+        "Type": "ProyectoNominaINTBII.DTOS.SatTipoRegimanDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2516,7 +2516,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Sexo, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.SexoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2568,7 +2568,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Sexo",
+        "Type": "ProyectoNominaINTBII.DTOS.SexoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2625,7 +2625,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.TipoConstitucion, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.TipoConstitucionDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2677,7 +2677,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.TipoConstitucion",
+        "Type": "ProyectoNominaINTBII.DTOS.TipoConstitucionDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2734,7 +2734,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.TipoEmpleado, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.TipoEmpleadoDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2786,7 +2786,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.TipoEmpleado",
+        "Type": "ProyectoNominaINTBII.DTOS.TipoEmpleadoDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2843,7 +2843,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.TipoEmpresa, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.TipoEmpresaDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2895,7 +2895,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.TipoEmpresa",
+        "Type": "ProyectoNominaINTBII.DTOS.TipoEmpresaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -2952,7 +2952,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Trabajador, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.DTOS.TrabajadorDTO, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -3004,7 +3004,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.Models.Trabajador",
+        "Type": "ProyectoNominaINTBII.DTOS.TrabajadorDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -9,11 +9,11 @@ public partial class TipoEmpleado
 
     public string Descipcion { get; set; } = null!;
 
-    public int? EmpresaId { get; set; }
+    public required int EmpresaId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
     public virtual Empresa? Empresa { get; set; }
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
 }

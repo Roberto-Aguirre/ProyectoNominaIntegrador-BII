@@ -13,13 +13,13 @@ public partial class SatBanco
 
     public string RazonSocialSat { get; set; } = null!;
 
-    public DateTime? FechaInicioVigenciaSat { get; set; }
+    public required DateTime FechaInicioVigenciaSat { get; set; }
 
-    public DateTime? FehcaFinVigenciaSat { get; set; }
+    public required DateTime FehcaFinVigenciaSat { get; set; }
 
     public int ClaveAbm { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
 }
