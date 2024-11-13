@@ -37,5 +37,7 @@ public partial class InicioNomina
 
     public virtual EmpresaRegPat EmpresaRegPat { get; set; } = null!;
 
+    public virtual Periodo Periodo { get; set; } = null!;
+
     public virtual SatPeriocidadPago SatPeriocidadPago { get; set; } = null!;
 }

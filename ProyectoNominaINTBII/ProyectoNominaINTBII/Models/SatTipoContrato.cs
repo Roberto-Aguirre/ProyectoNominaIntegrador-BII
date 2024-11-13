@@ -13,5 +13,7 @@ public partial class SatTipoContrato
 
     public string Estatus { get; set; } = null!;
 
+    public virtual ICollection<Nomina> Nominas { get; set; } = new List<Nomina>();
+
     public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

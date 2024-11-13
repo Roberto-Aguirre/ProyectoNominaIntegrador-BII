@@ -465,13 +465,13 @@
     "Parameters": [
       {
         "Name": "empresaRegPat",
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -522,7 +522,7 @@
       },
       {
         "Name": "empresaRegPat",
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "IsRequired": true
       }
     ],

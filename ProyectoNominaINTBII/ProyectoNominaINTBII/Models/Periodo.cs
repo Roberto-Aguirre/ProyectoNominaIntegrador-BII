@@ -17,5 +17,11 @@ public partial class Periodo
 
     public virtual Empresa? Empresa { get; set; }
 
+    public virtual ICollection<InicioNomina> InicioNominas { get; set; } = new List<InicioNomina>();
+
+    public virtual ICollection<NominaDetalle> NominaDetalles { get; set; } = new List<NominaDetalle>();
+
+    public virtual ICollection<Nomina> Nominas { get; set; } = new List<Nomina>();
+
     public virtual SatPeriocidadPago? SatPeriocidadPago { get; set; }
 }
