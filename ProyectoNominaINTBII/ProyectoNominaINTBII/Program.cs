@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDistributedMemoryCache();
 
-builder.Services.AddDbContext<Prueba3Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Prueba3Context") ?? throw new InvalidOperationException("Connection string 'Prueba3Context' not found.")));
+builder.Services.AddDbContext<ProyDb2bContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyDb2bContext") ?? throw new InvalidOperationException("Connection string 'ProyDb2bContext' not found.")));
 
 builder.Services.AddAutoMapper(typeof(Program));
 

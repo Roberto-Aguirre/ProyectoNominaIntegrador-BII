@@ -13,5 +13,5 @@ public partial class SatOrigenRecurso
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

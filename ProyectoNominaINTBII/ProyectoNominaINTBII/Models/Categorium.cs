@@ -3,16 +3,15 @@ using System.Collections.Generic;
 
 namespace ProyectoNominaINTBII.Models;
 
-
 public partial class Categorium
 {
     public int Id { get; set; }
 
     public string Descripcion { get; set; } = null!;
 
-    public required int EmpresaId { get; set; }
+    public int EmpresaId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Puesto>? Puestos { get; set; } = new List<Puesto>();
+    public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
 }

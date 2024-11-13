@@ -11,5 +11,5 @@ public partial class TipoEmpresa
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Empresa>? Empresas { get; set; } = new List<Empresa>();
+    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
 }

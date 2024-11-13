@@ -13,5 +13,5 @@ public partial class AreaGeografica
 
     public string Estatus { get; set; } = null!;
 
-    public ICollection<EmpresaRegPat>? EmpresaRegPats { get; set; } = null;
+    public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 }

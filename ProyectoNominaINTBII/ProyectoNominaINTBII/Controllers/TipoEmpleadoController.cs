@@ -16,9 +16,9 @@ namespace ProyectoNominaINTBII.Data
     [ApiController]
     public class TipoEmpleadoController : ControllerBase
     {
-        private readonly Prueba3Context _context;
+        private readonly ProyDb2bContext _context;
         private readonly IMapper _automapper;
-        public TipoEmpleadoController(Prueba3Context context, IMapper mapper)
+        public TipoEmpleadoController(ProyDb2bContext context, IMapper mapper)
         {
              _context = context;            _automapper = mapper;   
         }

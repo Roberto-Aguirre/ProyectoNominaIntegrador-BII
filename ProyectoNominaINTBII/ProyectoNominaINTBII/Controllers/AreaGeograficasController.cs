@@ -19,10 +19,10 @@ namespace ProyectoNominaINTBII.Data
     [ApiController]
     public class AreaGeograficasController : ControllerBase
     {
-        private readonly Prueba3Context _context;
+        private readonly ProyDb2bContext _context;
         private readonly IMapper _automapper;
 
-        public AreaGeograficasController(Prueba3Context context,IMapper mapper)
+        public AreaGeograficasController(ProyDb2bContext context,IMapper mapper)
         {
             _automapper = mapper;
             _context = context;

@@ -9,11 +9,11 @@ public partial class Departamento
 
     public string Descripcion { get; set; } = null!;
 
-    public required int EmpresaId { get; set; } 
+    public int EmpresaId { get; set; }
 
-    public required decimal MontoPropio { get; set; } 
+    public decimal MontoPropio { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

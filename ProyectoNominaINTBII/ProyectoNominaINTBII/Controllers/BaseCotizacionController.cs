@@ -18,11 +18,11 @@ namespace ProyectoNominaINTBII.Controllers
     [ApiController]
     public class BaseCotizacionController : ControllerBase
     {
-        private readonly Prueba3Context _context;
+        private readonly ProyDb2bContext _context;
         private readonly IMapper _automapper;
 
 
-        public BaseCotizacionController(Prueba3Context context, IMapper mapper)
+        public BaseCotizacionController(ProyDb2bContext context, IMapper mapper)
         {
             _automapper = mapper;
             _context = context;

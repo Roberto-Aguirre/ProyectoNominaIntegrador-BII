@@ -15,9 +15,9 @@ using AutoMapper; namespace ProyectoNominaINTBII.Controllers
     [ApiController]
     public class SatRiesgoPuestoController : ControllerBase
     {
-        private readonly Prueba3Context _context;  private readonly IMapper _automapper;
+        private readonly ProyDb2bContext _context;  private readonly IMapper _automapper;
 
-        public SatRiesgoPuestoController(Prueba3Context context, IMapper mapper)
+        public SatRiesgoPuestoController(ProyDb2bContext context, IMapper mapper)
         {
              _context = context;            _automapper = mapper;   
         }

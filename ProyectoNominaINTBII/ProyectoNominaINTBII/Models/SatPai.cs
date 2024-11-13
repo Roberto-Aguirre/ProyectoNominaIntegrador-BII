@@ -11,17 +11,17 @@ public partial class SatPai
 
     public string DescripcionSat { get; set; } = null!;
 
-    public string FmtoCodPostalSat { get; set; }
+    public string? FmtoCodPostalSat { get; set; }
 
-    public string FmotRegIdenTribSat { get; set; }
+    public string? FmotRegIdenTribSat { get; set; }
 
-    public string ValidaRegIdenTribSat { get; set; }
+    public string? ValidaRegIdenTribSat { get; set; }
 
-    public string AgrupacionesSat { get; set; }
+    public string? AgrupacionesSat { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Empresa>? Empresas { get; set; } = new List<Empresa>();
+    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
 
-    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

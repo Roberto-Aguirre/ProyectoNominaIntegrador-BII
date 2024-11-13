@@ -16,10 +16,10 @@ namespace ProyectoNominaINTBII.Controllers
     [ApiController]
     public class EmpresaRegimenController : ControllerBase
     {
-        private readonly Prueba3Context _context;
+        private readonly ProyDb2bContext _context;
         private readonly IMapper _automapper;
 
-        public EmpresaRegimenController(Prueba3Context context, IMapper mapper)
+        public EmpresaRegimenController(ProyDb2bContext context, IMapper mapper)
         {
             _automapper = mapper;
             _context = context;

@@ -16,11 +16,11 @@ namespace ProyectoNominaINTBII.Controllers
     [ApiController]
     public class DepartamentosController : ControllerBase
     {
-        private readonly Prueba3Context _context;
+        private readonly ProyDb2bContext _context;
 
         private readonly IMapper _automapper;
 
-        public DepartamentosController(Prueba3Context context, IMapper mapper)
+        public DepartamentosController(ProyDb2bContext context, IMapper mapper)
         {
             _automapper = mapper;
             _context = context;
@@ -28,9 +28,10 @@ namespace ProyectoNominaINTBII.Controllers
 
         // GET: api/Departamentos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<DepartamentoDTO>>> GetDepartamentos()
+        public async Task<ActionResult<IEnumerable<Departamento>>> GetDepartamentos()
         {
-            return _automapper.Map<List<DepartamentoDTO>>(await _context.Departamentos.ToListAsync());
+            return await _context.Departamentos.ToListAsync();
+            //return _automapper.Map<List<DepartamentoDTO>>(await _context.Departamentos.ToListAsync());
         }
 
         // GET: api/Departamentos/5

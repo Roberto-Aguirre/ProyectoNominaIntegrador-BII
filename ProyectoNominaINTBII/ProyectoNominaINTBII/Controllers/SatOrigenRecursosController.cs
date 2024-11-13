@@ -15,9 +15,9 @@ using AutoMapper; namespace ProyectoNominaINTBII.Controllers
     [ApiController]
     public class SatOrigenRecursosController : ControllerBase
     {
-        private readonly Prueba3Context _context;  private readonly IMapper _automapper;
+        private readonly ProyDb2bContext _context;  private readonly IMapper _automapper;
 
-        public SatOrigenRecursosController(Prueba3Context context, IMapper mapper)
+        public SatOrigenRecursosController(ProyDb2bContext context, IMapper mapper)
         {
              _context = context;            _automapper = mapper;   
         }

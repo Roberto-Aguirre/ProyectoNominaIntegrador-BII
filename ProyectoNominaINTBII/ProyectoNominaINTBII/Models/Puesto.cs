@@ -7,7 +7,7 @@ public partial class Puesto
 {
     public int Id { get; set; }
 
-    public required int CategoriaId { get; set; }
+    public int Categoria { get; set; }
 
     public string Descripcion { get; set; } = null!;
 
@@ -15,14 +15,13 @@ public partial class Puesto
 
     public decimal? SalarioFin { get; set; }
 
-    public required int EmpresaId { get; set; }
+    public int EmpresaId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Categorium Categoria { get; set; } 
-        //= null!;
+    public virtual Categorium CategoriaNavigation { get; set; } = null!;
 
-    public virtual Empresa? Empresa { get; set; }
+    public virtual Empresa Empresa { get; set; } = null!;
 
-    public virtual ICollection<Trabajador>? Trabajadors { get; set; } = new List<Trabajador>();
+    public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();
 }

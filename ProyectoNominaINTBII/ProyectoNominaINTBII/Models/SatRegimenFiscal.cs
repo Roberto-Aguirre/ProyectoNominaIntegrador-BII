@@ -15,11 +15,11 @@ public partial class SatRegimenFiscal
 
     public string PersonaMoralSat { get; set; } = null!;
 
-    public required DateTime FechaInicioVigenciaSat { get; set; }
+    public DateTime FechaInicioVigenciaSat { get; set; }
 
-    public required DateTime FechaFinVigenciaSat { get; set; }
+    public DateTime FechaFinVigenciaSat { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual ICollection<Empresa>? Empresas { get; set; } = new List<Empresa>();
+    public virtual ICollection<Empresa> Empresas { get; set; } = new List<Empresa>();
 }
