@@ -1,0 +1,301 @@
+﻿@model ProyectoNominaINTBII.Models.PayrollModel
+
+<h2>Generar Nómina</h2>
+
+<form asp-action="Generate" method="post">
+    <!-- Información de la Empresa -->
+    <div class="generate-section-title">Información de la Empresa</div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="NombreEmpresa">Nombre de la Empresa</label>
+            <input type="text" class="form-control generate-input" id="NombreEmpresa" name="NombreEmpresa" value="Nombre Predeterminado Empresa" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="RFC_Empresa">RFC de la Empresa</label>
+            <input type="text" class="form-control generate-input" id="RFC_Empresa" name="RFC_Empresa" value="RFC123456789" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="DireccionEmpresa">Dirección de la Empresa</label>
+            <input type="text" class="form-control generate-input" id="DireccionEmpresa" name="DireccionEmpresa" value="Dirección Predeterminada" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="LugarExpedicion">Lugar de Expedición</label>
+            <input type="text" class="form-control generate-input" id="LugarExpedicion" name="LugarExpedicion" value="Lugar de Expedición Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="RegistroPatronal">Registro Patronal</label>
+            <input type="text" class="form-control generate-input" id="RegistroPatronal" name="RegistroPatronal" value="Registro12345" />
+        </div>
+    </div>
+
+    <!-- Información del Empleado -->
+    <div class="generate-section-title">Información del Empleado</div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="NumeroEmpleado">Número de Empleado</label>
+            <input type="text" class="form-control generate-input" id="NumeroEmpleado" name="NumeroEmpleado" value="0001" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="Empleado">Nombre del Empleado</label>
+            <input type="text" class="form-control generate-input" id="Empleado" name="Empleado" value="Nombre Empleado Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="RFCEmpleado">RFC del Empleado</label>
+            <input type="text" class="form-control generate-input" id="RFCEmpleado" name="RFCEmpleado" value="RFCEmpleado123456" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="CURP">CURP</label>
+            <input type="text" class="form-control generate-input" id="CURP" name="CURP" value="CURP123456789" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="NumeroIMSS">Número IMSS</label>
+            <input type="text" class="form-control generate-input" id="NumeroIMSS" name="NumeroIMSS" value="IMSS123456789" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="FechaInicioRelacion">Fecha de Inicio de Relación</label>
+            <input type="date" class="form-control generate-input" id="FechaInicioRelacion" name="FechaInicioRelacion" value="2022-01-01" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="Puesto">Puesto</label>
+            <input type="text" class="form-control generate-input" id="Puesto" name="Puesto" value="Puesto Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="Departamento">Departamento</label>
+            <input type="text" class="form-control generate-input" id="Departamento" name="Departamento" value="Departamento Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="RegimenFiscal">Régimen Fiscal</label>
+            <input type="text" class="form-control generate-input" id="RegimenFiscal" name="RegimenFiscal" value="Régimen Fiscal Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="TipoDeJornada">Tipo de Jornada</label>
+            <input type="text" class="form-control generate-input" id="TipoDeJornada" name="TipoDeJornada" value="Tipo de Jornada Predeterminado" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="TipoDeContrato">Tipo de Contrato</label>
+            <input type="text" class="form-control generate-input" id="TipoDeContrato" name="TipoDeContrato" value="Tipo de Contrato Predeterminado" />
+        </div>
+    </div>
+
+    <!-- Información de la Nómina -->
+    <div class="generate-section-title">Información de la Nómina</div>
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="PeriodoPago">Periodo de Pago</label>
+            <input type="text" class="form-control generate-input" id="PeriodoPago" name="PeriodoPago" value="01/10/2024 - 15/10/2024" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="FechaPago">Fecha de Pago</label>
+            <input type="date" class="form-control generate-input" id="FechaPago" name="FechaPago" value="2022-01-15" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="DiasLaborados">Días Laborados</label>
+            <input type="number" class="form-control generate-input" id="DiasLaborados" name="DiasLaborados" value="15" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="DiasPagados">Días Pagados</label>
+            <input type="number" class="form-control generate-input" id="DiasPagados" name="DiasPagados" value="15" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="SalarioDiario">Salario Diario</label>
+            <input type="number" class="form-control generate-input" id="SalarioDiario" name="SalarioDiario" value="300.00" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="SBC">Salario Base de Cotización (SBC)</label>
+            <input type="number" class="form-control generate-input" id="SBC" name="SBC" value="300.00" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label for="SDI">Salario Diario Integrado (SDI)</label>
+            <input type="number" class="form-control generate-input" id="SDI" name="SDI" value="300.00" />
+        </div>
+    </div>
+
+    <!-- Sección de Percepciones -->
+    <div class="generate-section-title">Percepciones</div>
+    <div id="percepciones">
+        <div class="row">
+            <div class="col-12 form-group">
+                <label for="ConceptoPercepcion0">Concepto</label>
+                <input type="text" class="form-control generate-input" id="ConceptoPercepcion0" name="Percepciones[0].Concepto" />
+            </div>
+            <div class="col-12 form-group">
+                <label for="ImportePercepcion0">Importe</label>
+                <input type="number" class="form-control generate-input" id="ImportePercepcion0" name="Percepciones[0].Importe" step="0.01" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Deducciones -->
+    <div class="generate-section-title">Deducciones</div>
+    <div id="deducciones">
+        <div class="row">
+            <div class="col-12 form-group">
+                <label for="ConceptoDeduccion0">Concepto</label>
+                <input type="text" class="form-control generate-input" id="ConceptoDeduccion0" name="Deducciones[0].Concepto" />
+            </div>
+            <div class="col-12 form-group">
+                <label for="ImporteDeduccion0">Importe</label>
+                <input type="number" class="form-control generate-input" id="ImporteDeduccion0" name="Deducciones[0].Importe" step="0.01" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones al final del formulario -->
+    <div class="botones-finales-container">
+        <div class="boton-container">
+            <button type="button" class="btn boton-percepcion" onclick="addPercepcion()">
+                Agregar Percepción <i class="fas fa-plus" style="margin-left: 8px;"></i>
+            </button>
+            <button type="button" class="btn boton-deduccion" onclick="addDeduccion()">
+                Agregar Deducción <i class="fas fa-minus" style="margin-left: 8px;"></i>
+            </button>
+        </div>
+        <button type="submit" class="btn boton-guardar">
+            Guardar Cambios <i class="fas fa-save" style="margin-left: 8px;"></i>
+        </button>
+    </div>
+
+
+
+
+</form>
+
+<style>
+
+    .generate-section-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #004aad; /* Azul */
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #004aad;
+        padding-bottom: 5px;
+    }
+
+    /* Estilo para los botones específicos en Generate */
+    .generate-boton-percepcion,
+    .generate-boton-deduccion,
+    .generate-boton-guardar {
+        width: 200px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .generate-boton-percepcion {
+        background-color: #28a745; /* Verde para Agregar Percepción */
+    }
+
+    .generate-boton-deduccion {
+        background-color: #dc3545; /* Rojo para Agregar Deducción */
+    }
+
+    .generate-boton-guardar {
+        background-color: #004aad; /* Azul para Guardar Cambios */
+    }
+
+    .generate-boton-percepcion:hover {
+        background-color: #218838;
+    }
+
+    .generate-boton-deduccion:hover {
+        background-color: #c82333;
+    }
+
+    .generate-boton-guardar:hover {
+        background-color: #002a7f;
+    }
+
+    /* Alineación y espaciado */
+    .boton-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Espacio entre botones */
+        margin-bottom: 20px; /* Espacio antes del footer */
+    }
+
+    .botones-finales-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Espacio entre los botones */
+        margin-bottom: 60px; /* Espacio antes del footer */
+    }
+
+    .boton-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Espacio entre los botones Agregar Percepción y Agregar Deducción */
+    }
+
+    .boton-percepcion, .boton-deduccion, .boton-guardar {
+        width: 180px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .boton-percepcion {
+        background-color: #28a745; /* Verde */
+        color: white;
+        border: none;
+    }
+
+    .boton-deduccion {
+        background-color: #dc3545; /* Rojo */
+        color: white;
+        border: none;
+    }
+
+    .boton-guardar {
+        background-color: #004aad; /* Azul */
+        color: white;
+        border: none;
+    }
+
+
+</style>
+
+<script>
+    let percepcionCount = 1;
+    let deduccionCount = 1;
+
+    function addPercepcion() {
+        const percepcionesDiv = document.getElementById('percepciones');
+        const newPercepcion = `
+            <div class="row mt-2">
+                <div class="col-12 form-group">
+                    <input type="text" class="form-control generate-input" id="ConceptoPercepcion${percepcionCount}" name="Percepciones[${percepcionCount}].Concepto" placeholder="Concepto" />
+                </div>
+                <div class="col-12 form-group">
+                    <input type="number" class="form-control generate-input" id="ImportePercepcion${percepcionCount}" name="Percepciones[${percepcionCount}].Importe" placeholder="Importe" step="0.01" />
+                </div>
+            </div>
+            `;
+        percepcionesDiv.insertAdjacentHTML('beforeend', newPercepcion);
+        percepcionCount++;
+    }
+
+    function addDeduccion() {
+        const deduccionesDiv = document.getElementById('deducciones');
+        const newDeduccion = `
+            <div class="row mt-2">
+                <div class="col-12 form-group">
+                    <input type="text" class="form-control generate-input" id="ConceptoDeduccion${deduccionCount}" name="Deducciones[${deduccionCount}].Concepto" placeholder="Concepto" />
+                </div>
+                <div class="col-12 form-group">
+                    <input type="number" class="form-control generate-input" id="ImporteDeduccion${deduccionCount}" name="Deducciones[${deduccionCount}].Importe" placeholder="Importe" step="0.01" />
+                </div>
+            </div>
+            `;
+        deduccionesDiv.insertAdjacentHTML('beforeend', newDeduccion);
+        deduccionCount++;
+    }
+</script>
+

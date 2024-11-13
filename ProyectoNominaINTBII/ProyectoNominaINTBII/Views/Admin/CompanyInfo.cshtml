@@ -1,0 +1,187 @@
+﻿@model ProyectoNominaINTBII.Models.CompanyInfoModel
+
+<div class="company-info-container">
+    <h2>Información de la Empresa</h2>
+
+    <form id="companyInfoForm">
+        <div class="form-group">
+            <label>Nombre de la Empresa:</label>
+            <input type="text" id="Nombre" value="@Model.Nombre" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Dirección:</label>
+            <input type="text" id="Direccion" value="@Model.Direccion" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="text" id="Telefono" value="@Model.Telefono" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" id="Email" value="@Model.Email" readonly class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>RFC:</label>
+            <input type="text" id="RFC" value="@Model.RFC" readonly class="form-control" />
+        </div>
+
+        <div class="company-info-button-group">
+            <button type="button" id="modifyBtn" onclick="enableEditing()" class="company-info-btn-modify">
+                <i class="fas fa-edit icon-spacing"></i> Modificar
+            </button>
+            <button type="button" id="updateBtn" onclick="updateCompanyInfo()" disabled class="company-info-btn-update">
+                <i class="fas fa-sync-alt icon-spacing"></i> Actualizar
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Contenedor de notificación -->
+<div id="notification" class="notification">Información actualizada exitosamente</div>
+
+<script>
+    function enableEditing() {
+        document.querySelectorAll("input").forEach(input => input.removeAttribute("readonly"));
+        document.getElementById("updateBtn").disabled = false;
+    }
+
+    function updateCompanyInfo() {
+        const data = {
+            Nombre: document.getElementById("Nombre").value,
+            Direccion: document.getElementById("Direccion").value,
+            Telefono: document.getElementById("Telefono").value,
+            Email: document.getElementById("Email").value,
+            RFC: document.getElementById("RFC").value
+        };
+
+        fetch('/Company/UpdateCompanyInfo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showNotification("Información actualizada exitosamente");
+                document.querySelectorAll("input").forEach(input => input.setAttribute("readonly", true));
+                document.getElementById("updateBtn").disabled = true;
+            } else {
+                showNotification("Hubo un error al actualizar la información", true);
+            }
+        })
+        .catch(error => {
+            console.error("Error al actualizar la información:", error);
+            showNotification("Hubo un error en la solicitud", true);
+        });
+    }
+
+    function showNotification(message, isError = false) {
+        const notification = document.getElementById("notification");
+        notification.textContent = message;
+        notification.classList.add("show");
+        notification.classList.toggle("error", isError);
+
+        setTimeout(() => {
+            notification.classList.remove("show");
+        }, 3000); // La notificación desaparecerá después de 3 segundos
+    }
+</script>
+
+<style>
+    /* Estilo del contenedor de notificación */
+    .notification {
+    position: fixed;
+    top: 20px;
+    left: -300px; /* Cambia "right" a "left" para mostrarla en la izquierda */
+    width: 250px;
+    padding: 15px;
+    background-color: #28a745; /* Verde para éxito */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    opacity: 0;
+    transition: left 0.5s ease, opacity 0.5s ease; /* Cambia "right" a "left" en la transición */
+    z-index: 1000;
+}
+
+.notification.show {
+    left: 20px; /* Cambia "right" a "left" para mostrarla en la izquierda */
+    opacity: 1;
+}
+
+
+    .notification.error {
+        background-color: #dc3545; /* Rojo para errores */
+    }
+
+    .company-info-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para el grupo de botones */
+    .company-info-button-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 40px; /* Espacio adicional para evitar colisión con el footer */
+    }
+
+    .company-info-btn-modify,
+    .company-info-btn-update {
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 5px;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+    }
+
+    .company-info-btn-modify {
+        background-color: #007bff;
+    }
+
+    .company-info-btn-modify:hover {
+        background-color: #4da3ff;
+        text-decoration: underline;
+    }
+
+    .company-info-btn-update {
+        background-color: #28a745;
+    }
+
+    .company-info-btn-update:hover:enabled {
+        background-color: #218838;
+        text-decoration: underline;
+    }
+
+    .company-info-btn-update:disabled {
+        background-color: #9acfa1; /* Verde claro para el estado deshabilitado */
+        cursor: not-allowed;
+    }
+
+    /* Espaciado para los íconos en los botones */
+    .icon-spacing {
+        margin-right: 8px;
+    }
+</style>

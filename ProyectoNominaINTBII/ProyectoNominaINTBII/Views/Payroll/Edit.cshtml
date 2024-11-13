@@ -1,0 +1,152 @@
+﻿@model ProyectoNominaINTBII.Models.PayrollModel
+
+<div class="edit-user-form-container">
+    <h2>Editar Información del Usuario</h2>
+
+    <form asp-action="Edit" method="post">
+        <!-- Campo oculto para el Id de la nómina -->
+        <input type="hidden" asp-for="Id" />
+
+        <div class="edit-field-container">
+            <div class="edit-section-title">Información del Empleado</div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="NumeroEmpleado">Número de Empleado</label>
+                    <input type="text" class="form-control" id="NumeroEmpleado" name="NumeroEmpleado" value="@Model.NumeroEmpleado" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="Empleado">Nombre del Empleado</label>
+                    <input type="text" class="form-control" id="Empleado" name="Empleado" value="@Model.Empleado" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="RFCEmpleado">RFC del Empleado</label>
+                    <input type="text" class="form-control" id="RFCEmpleado" name="RFCEmpleado" value="@Model.RFCEmpleado" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="CURP">CURP</label>
+                    <input type="text" class="form-control" id="CURP" name="CURP" value="@Model.CURP" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="NumeroIMSS">Número IMSS</label>
+                    <input type="text" class="form-control" id="NumeroIMSS" name="NumeroIMSS" value="@Model.NumeroIMSS" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="FechaInicioRelacion">Fecha de Inicio de Relación</label>
+                    <input type="date" class="form-control" id="FechaInicioRelacion" name="FechaInicioRelacion" value="@Model.FechaInicioRelacion?.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="Puesto">Puesto</label>
+                    <input type="text" class="form-control" id="Puesto" name="Puesto" value="@Model.Puesto" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="Departamento">Departamento</label>
+                    <input type="text" class="form-control" id="Departamento" name="Departamento" value="@Model.Departamento" />
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-field-container">
+            <div class="edit-section-title">Información de la Nómina</div>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label for="PeriodoPago">Periodo de Pago</label>
+                    <input type="text" class="form-control" id="PeriodoPago" name="PeriodoPago" value="@Model.PeriodoPago" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="FechaPago">Fecha de Pago</label>
+                    <input type="date" class="form-control" id="FechaPago" name="FechaPago" value="@Model.FechaPago?.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="DiasLaborados">Días Laborados</label>
+                    <input type="number" class="form-control" id="DiasLaborados" name="DiasLaborados" value="@Model.DiasLaborados" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="DiasPagados">Días Pagados</label>
+                    <input type="number" class="form-control" id="DiasPagados" name="DiasPagados" value="@Model.DiasPagados" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="SalarioDiario">Salario Diario</label>
+                    <input type="number" class="form-control" id="SalarioDiario" name="SalarioDiario" value="@Model.SalarioDiario" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="SBC">Salario Base de Cotización (SBC)</label>
+                    <input type="number" class="form-control" id="SBC" name="SBC" value="@Model.SBC" />
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="SDI">Salario Diario Integrado (SDI)</label>
+                    <input type="number" class="form-control" id="SDI" name="SDI" value="@Model.SDI" />
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-boton-container">
+            <button type="submit" class="btn edit-btn-primary">
+                Guardar cambios <i class="fas fa-save" style="margin-left: 8px;"></i>
+            </button>
+            <a asp-action="Index" class="btn edit-btn-secondary">
+                <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Regresar
+            </a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .edit-user-form-container {
+        padding: 20px;
+    }
+
+    .edit-section-title {
+        background-color: #0056b3;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .edit-field-container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .edit-boton-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+        .edit-boton-container .edit-btn-primary,
+        .edit-boton-container .edit-btn-secondary {
+            padding: 10px 20px;
+            font-size: 1em;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+    .edit-btn-primary {
+        background-color: #004aad;
+        color: white;
+        border: none;
+    }
+
+        .edit-btn-primary:hover {
+            background-color: #4da3ff; /* Azul más claro en el hover */
+        }
+
+    .edit-btn-secondary {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+    }
+
+        .edit-btn-secondary:hover {
+            background-color: #5a6268;
+        }
+</style>

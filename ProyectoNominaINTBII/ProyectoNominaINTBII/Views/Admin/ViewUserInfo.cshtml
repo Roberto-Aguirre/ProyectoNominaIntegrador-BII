@@ -1,0 +1,194 @@
+﻿@model ProyectoNominaINTBII.Models.UserModel
+
+<div class="user-info-page">
+    <h2>Empleado: <span class="employee-name">@Model.NombreCompleto</span></h2>
+    <p class="employee-id">Número de Empleado: @Model.NumeroEmpleado</p>
+
+    <div class="row">
+        <!-- Fila 1: Información de la Empresa y del Empleado -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Información de la Empresa</div>
+                <div class="card-body">
+                    <p><span class="label">Nombre de la Empresa:</span> Nombre Predeterminado Empresa</p>
+                    <p><span class="label">RFC de la Empresa:</span> RFC123456789</p>
+                    <p><span class="label">Dirección de la Empresa:</span> Dirección Predeterminada</p>
+                    <p><span class="label">Lugar de Expedición:</span> Lugar de Expedición Predeterminado</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Información del Empleado</div>
+                <div class="card-body">
+                    <p><span class="label">RFC del Empleado:</span> @Model.RFC</p>
+                    <p><span class="label">CURP:</span> @Model.CURP</p>
+                    <p><span class="label">Número IMSS:</span> @Model.NoIMSS</p>
+                    <p><span class="label">Departamento:</span> @Model.Departamento</p>
+                    <p><span class="label">Puesto:</span> @Model.Puesto</p>
+                    <p>
+                        <span class="label">Estado:</span>
+                        <span class="status-indicator @(Model.IsActive ? "active" : "inactive")"></span>
+                        @if (Model.IsActive)
+                        {
+                            <span class="status-text">Activo</span>
+                        }
+                        else
+                        {
+                            <span class="status-text">Inactivo</span>
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <!-- Fila 2: Información de la Nómina y Totales -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Información de la Nómina</div>
+                <div class="card-body">
+                    <p><span class="label">Periodo de Pago:</span> 01/10/2024 - 15/10/2024</p>
+                    <p><span class="label">Fecha de Pago:</span> 15/01/2022</p>
+                    <p><span class="label">Días Laborados:</span> 15</p>
+                    <p><span class="label">Días Pagados:</span> 15</p>
+                    <p><span class="label">Salario Diario:</span> $300.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Totales</div>
+                <div class="card-body">
+                    <p><span class="label">Total Percepciones:</span> $0.00</p>
+                    <p><span class="label">Total Deducciones:</span> $0.00</p>
+                    <p><span class="label">Total Neto:</span> $0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones de acción centrados -->
+    <div class="user-info-buttons text-center mt-4">
+        <a asp-action="ListUsers" asp-controller="Admin" class="user-btn-secondary">
+            <i class="fas fa-arrow-left"></i> Regresar
+        </a>
+        <a asp-action="EditAllUsersInfo" asp-route-id="@Model.Id" asp-controller="Admin" class="user-btn-primary">
+            <i class="fas fa-edit"></i> Editar
+        </a>
+    </div>
+</div>
+
+<style>
+    .user-info-page {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        .user-info-page h2 {
+            font-weight: bold;
+            color: #003366;
+        }
+
+    .employee-name {
+        color: #003366;
+        font-weight: bold;
+    }
+
+    .employee-id {
+        color: #555;
+        margin-top: -10px;
+        font-size: 1.1em;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        font-weight: bold;
+        padding: 10px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .card-body p {
+        margin: 8px 0;
+    }
+
+    .label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .user-info-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .user-btn-primary,
+    .user-btn-secondary {
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .user-btn-primary {
+        background-color: #007bff;
+    }
+
+    .user-btn-secondary {
+        background-color: #6c757d;
+    }
+
+    .user-btn-primary:hover {
+        background-color: #4da3ff;
+    }
+
+    .user-btn-secondary:hover {
+        background-color: #d3d3d3;
+    }
+
+    .user-info-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 40px; /* Espacio entre los botones y el footer */
+    }
+
+    .status-indicator {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+        .status-indicator.active {
+            background-color: #28a745; /* Verde para Activo */
+        }
+
+        .status-indicator.inactive {
+            background-color: #dc3545; /* Rojo para Inactivo */
+        }
+
+    .status-text {
+        font-weight: bold;
+        color: #333;
+    }
+
+
+</style>

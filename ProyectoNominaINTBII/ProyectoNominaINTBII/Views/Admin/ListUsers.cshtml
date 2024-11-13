@@ -1,0 +1,177 @@
+﻿
+@model List<ProyectoNominaINTBII.Models.UserModel>
+
+<div class="edit-user-info-container-listusers">
+    <h2>Gestión de Usuarios</h2>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar-edit-listusers">
+    <button class="btn-search-edit-listusers">Buscar</button>
+    <input type="text" id="searchUserInput" placeholder="Buscar por ID o Nombre" class="search-input-edit-listusers" />
+</div>
+
+
+    <!-- Tabla de usuarios -->
+    <table class="user-table-listusers">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>USUARIOS</th>
+                <th>FECHA INGRESO</th>
+                <th>ESTADO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr data-user-id="@user.Id">
+                    <td>@user.Id</td>
+                    <td>@user.Nombre</td>
+                    <td>@user.FechaInicio.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <span class="status-circle-listusers @(user.IsActive ? "bg-success-listusers" : "bg-danger-listusers")"></span>
+                    </td>
+                    <td>
+                        <a asp-action="ViewUserInfo" asp-controller="Admin" asp-route-id="@user.Id" class="btn-info-listusers">Ver</a>
+                        <a asp-action="EditAllUsersInfo" asp-controller="Admin" asp-route-id="@user.Id" class="btn-warning-listusers">Editar</a>
+                        <button class="btn-toggle-status-listusers @(user.IsActive ? "btn-warning" : "btn-success")" onclick="toggleUserStatus(@user.Id, this)">
+                            @(user.IsActive ? "Dar de baja" : "Dar de alta")
+                        </button>
+                        <button class="btn-delete-user-listusers" onclick="deleteUser(@user.Id, this)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal de confirmación para eliminar usuario -->
+<div id="confirmModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>¿Estás seguro de que deseas eliminar este usuario?</h3>
+        <div class="delete-icon">
+            <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="modal-buttons">
+            <button class="modal-button btn-confirm" onclick="confirmDelete()">Eliminar</button>
+            <button class="modal-button btn-cancel" onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Notificación emergente a la izquierda -->
+<div id="notification" class="notification-left @(!string.IsNullOrEmpty(TempData["SuccessMessage"]?.ToString()) ? "show success" : "")">
+    @TempData["SuccessMessage"]
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const notification = document.getElementById("notification");
+        if (notification.textContent.trim() !== "") {
+            notification.classList.add("show");
+
+            setTimeout(() => {
+                notification.classList.remove("show");
+            }, 3000);
+        }
+    });
+
+    let userIdToDelete = null;
+    let deleteButtonReference = null;
+
+    function openDeleteModal(userId, button) {
+        userIdToDelete = userId;
+        deleteButtonReference = button;
+        document.getElementById('confirmModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('confirmModal').style.display = 'none';
+    }
+
+    function confirmDelete() {
+        if (userIdToDelete) {
+            fetch(`/Admin/DeleteUser?id=${userIdToDelete}`, {
+                method: 'POST'
+            }).then(response => {
+                if (response.ok) {
+                    const row = deleteButtonReference.closest('tr');
+                    row.remove();
+                    showNotification("Usuario eliminado correctamente.", "success");
+                } else {
+                    alert("Error al eliminar el usuario.");
+                }
+                closeModal();
+            }).catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema al procesar la solicitud.");
+            });
+        }
+    }
+
+function toggleUserStatus(userId, button) {
+    fetch(`/Admin/ToggleUserStatus?id=${userId}`, {
+        method: 'POST'
+    }).then(response => {
+        if (response.ok) {
+            // Cambiar el estado en el botón y el indicador visualmente de inmediato
+            const statusCircle = button.closest('tr').querySelector('.status-circle-listusers');
+            if (statusCircle.classList.contains('bg-success-listusers')) {
+                // Cambia a estado inactivo
+                button.classList.remove('bg-success-listusers');
+                button.classList.add('bg-danger-listusers');
+                button.textContent = 'Dar de alta';
+                statusCircle.classList.remove('bg-success-listusers');
+                statusCircle.classList.add('bg-danger-listusers');
+            } else {
+                // Cambia a estado activo
+                button.classList.remove('bg-danger-listusers');
+                button.classList.add('bg-success-listusers');
+                button.textContent = 'Dar de baja';
+                statusCircle.classList.remove('bg-danger-listusers');
+                statusCircle.classList.add('bg-success-listusers');
+            }
+        } else {
+            alert('Error al cambiar el estado del usuario.');
+        }
+    });
+}
+
+
+
+    function deleteUser(userId, button) {
+        openDeleteModal(userId, button);
+    }
+
+    function showNotification(message, type = 'success') {
+        const notification = document.getElementById("notification");
+        notification.textContent = message;
+
+        notification.classList.remove("success", "error", "warning");
+        notification.classList.add("show", type);
+
+        setTimeout(() => {
+            notification.classList.remove("show");
+        }, 3000);
+    }
+
+    document.getElementById("searchUserInput").addEventListener("input", function() {
+    let searchValue = this.value.toLowerCase();
+    let rows = document.querySelectorAll(".user-table-listusers tbody tr");
+
+    rows.forEach(row => {
+        let id = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+        let name = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+
+        if (id.includes(searchValue) || name.includes(searchValue)) {
+            row.style.display = ""; // Mostrar fila
+        } else {
+            row.style.display = "none"; // Ocultar fila
+        }
+    });
+});
+
+
+</script>
