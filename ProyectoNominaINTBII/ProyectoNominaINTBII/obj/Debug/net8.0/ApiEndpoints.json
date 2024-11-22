@@ -465,13 +465,13 @@
     "Parameters": [
       {
         "Name": "empresaRegPat",
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -522,7 +522,7 @@
       },
       {
         "Name": "empresaRegPat",
-        "Type": "ProyectoNominaINTBII.EmpresaRegPat",
+        "Type": "ProyectoNominaINTBII.Models.EmpresaRegPat",
         "IsRequired": true
       }
     ],
@@ -763,6 +763,115 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.InicioNominaController",
+    "Method": "GetInicioNominas",
+    "RelativePath": "api/InicioNomina",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.InicioNomina, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.InicioNominaController",
+    "Method": "PostInicioNomina",
+    "RelativePath": "api/InicioNomina",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inicioNomina",
+        "Type": "ProyectoNominaINTBII.Models.InicioNomina",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.InicioNomina",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.InicioNominaController",
+    "Method": "GetInicioNomina",
+    "RelativePath": "api/InicioNomina/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.InicioNomina",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.InicioNominaController",
+    "Method": "PutInicioNomina",
+    "RelativePath": "api/InicioNomina/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "inicioNomina",
+        "Type": "ProyectoNominaINTBII.Models.InicioNomina",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.InicioNominaController",
+    "Method": "DeleteInicioNomina",
+    "RelativePath": "api/InicioNomina/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProyectoNominaINTBII.Controllers.MotivoNoTimbrarController",
     "Method": "GetMotivoNoTimbrars",
     "RelativePath": "api/MotivoNoTimbrar",
@@ -859,6 +968,333 @@
     "ContainingType": "ProyectoNominaINTBII.Controllers.MotivoNoTimbrarController",
     "Method": "DeleteMotivoNoTimbrar",
     "RelativePath": "api/MotivoNoTimbrar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominaDetalleController",
+    "Method": "GetNominaDetalles",
+    "RelativePath": "api/NominaDetalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.NominaDetalle, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominaDetalleController",
+    "Method": "PostNominaDetalle",
+    "RelativePath": "api/NominaDetalle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nominaDetalle",
+        "Type": "ProyectoNominaINTBII.Models.NominaDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.NominaDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominaDetalleController",
+    "Method": "GetNominaDetalle",
+    "RelativePath": "api/NominaDetalle/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.NominaDetalle",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominaDetalleController",
+    "Method": "PutNominaDetalle",
+    "RelativePath": "api/NominaDetalle/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "nominaDetalle",
+        "Type": "ProyectoNominaINTBII.Models.NominaDetalle",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominaDetalleController",
+    "Method": "DeleteNominaDetalle",
+    "RelativePath": "api/NominaDetalle/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominasController",
+    "Method": "GetNominas",
+    "RelativePath": "api/Nominas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Nomina, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominasController",
+    "Method": "PostNomina",
+    "RelativePath": "api/Nominas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nomina",
+        "Type": "ProyectoNominaINTBII.Models.Nomina",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.Nomina",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominasController",
+    "Method": "GetNomina",
+    "RelativePath": "api/Nominas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.Nomina",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominasController",
+    "Method": "PutNomina",
+    "RelativePath": "api/Nominas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "nomina",
+        "Type": "ProyectoNominaINTBII.Models.Nomina",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.NominasController",
+    "Method": "DeleteNomina",
+    "RelativePath": "api/Nominas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.PeriodosController",
+    "Method": "GetPeriodos",
+    "RelativePath": "api/Periodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.Periodo, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.PeriodosController",
+    "Method": "PostPeriodo",
+    "RelativePath": "api/Periodos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "periodo",
+        "Type": "ProyectoNominaINTBII.Models.Periodo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.Periodo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.PeriodosController",
+    "Method": "GetPeriodo",
+    "RelativePath": "api/Periodos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.Periodo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.PeriodosController",
+    "Method": "PutPeriodo",
+    "RelativePath": "api/Periodos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "periodo",
+        "Type": "ProyectoNominaINTBII.Models.Periodo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.PeriodosController",
+    "Method": "DeletePeriodo",
+    "RelativePath": "api/Periodos/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -3039,6 +3475,115 @@
     "ContainingType": "ProyectoNominaINTBII.Data.TrabajadoresController",
     "Method": "DeleteTrabajador",
     "RelativePath": "api/Trabajadores/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.UsersController",
+    "Method": "GetUsers",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ProyectoNominaINTBII.Models.User, ProyectoNominaINTBII, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.UsersController",
+    "Method": "PostUser",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "ProyectoNominaINTBII.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.UsersController",
+    "Method": "GetUser",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProyectoNominaINTBII.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.UsersController",
+    "Method": "PutUser",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "ProyectoNominaINTBII.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoNominaINTBII.Controllers.UsersController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Users/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
