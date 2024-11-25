@@ -1,0 +1,120 @@
+﻿@model IEnumerable<ProyectoNominaINTBII.Models.NominaDetalle>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoIncapacidadId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiasPagados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorasExtra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gravado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsraPagar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseImpuesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCaptura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comentarios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Incidencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Periodo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trabajador)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoIncapacidadId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiasPagados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HorasExtra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gravado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsraPagar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseImpuesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCaptura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentarios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Incidencia.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trabajador.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
