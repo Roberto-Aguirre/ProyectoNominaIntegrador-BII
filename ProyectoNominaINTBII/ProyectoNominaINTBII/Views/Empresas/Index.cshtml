@@ -1,0 +1,234 @@
+﻿@model IEnumerable<ProyectoNominaINTBII.Models.Empresa>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaAlta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rfc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroExt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroInt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colonia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Curp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoComprobante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PathLogo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PathCertificadoSat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PathLlaveSat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContraseñaSat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProveedorSat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PathTimbrado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CumpleReqCuotas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaveImss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaveInfonavit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaveFonacot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LugarExpedicion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PorcentajePresFed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoWhatsApp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoFijo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Moneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Municipio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegimenFiscal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoConstitucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoEmpresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoHora)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAlta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rfc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroExt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroInt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colonia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoComprobante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PathLogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PathCertificadoSat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PathLlaveSat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContraseñaSat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProveedorSat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PathTimbrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CumpleReqCuotas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveImss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveInfonavit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveFonacot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LugarExpedicion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PorcentajePresFed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoWhatsApp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoFijo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Moneda.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Municipio.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegimenFiscal.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoConstitucion.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoEmpresa.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoHora.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

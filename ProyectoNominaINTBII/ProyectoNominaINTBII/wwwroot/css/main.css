@@ -468,6 +468,7 @@ canvas {
 
     .user-edit-form .form-control {
         border-radius: 5px;
+        height: 50px;
         border: 1px solid #ddd;
         padding: 10px;
     }
@@ -659,6 +660,7 @@ hr {
 
 /* Estilo para inputs y selects */
 .form-control {
+    height: 50px;
     border: 2px solid #004aad;
     border-radius: 5px;
     padding: 10px;
