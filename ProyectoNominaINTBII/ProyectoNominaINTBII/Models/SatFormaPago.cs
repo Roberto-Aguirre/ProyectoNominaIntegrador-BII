@@ -15,9 +15,9 @@ public partial class SatFormaPago
 
     public string Tipo { get; set; } = null!;
 
-    public DateTime FechaInicioVigenciaSat { get; set; }
+    public DateTime? FechaInicioVigenciaSat { get; set; }
 
-    public DateTime FechaFinVigenciaSat { get; set; }
+    public DateTime? FechaFinVigenciaSat { get; set; }
 
     public string Estatus { get; set; } = null!;
 

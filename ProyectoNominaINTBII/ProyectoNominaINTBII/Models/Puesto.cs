@@ -7,7 +7,7 @@ public partial class Puesto
 {
     public int Id { get; set; }
 
-    public int Categoria { get; set; }
+    public int CategoriaId { get; set; }
 
     public string Descripcion { get; set; } = null!;
 
@@ -19,7 +19,7 @@ public partial class Puesto
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Categorium CategoriaNavigation { get; set; } = null!;
+    public virtual Categorium Categoria { get; set; } = null!;
 
     public virtual Empresa Empresa { get; set; } = null!;
 

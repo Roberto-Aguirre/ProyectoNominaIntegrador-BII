@@ -49,6 +49,8 @@ public partial class Nomina
 
     public virtual Empresa Empresa { get; set; } = null!;
 
+    public virtual Periodo Periodo { get; set; } = null!;
+
     public virtual SatPeriocidadPago SatPeriocidadPago { get; set; } = null!;
 
     public virtual SatTipoContrato SatTipoContrato { get; set; } = null!;

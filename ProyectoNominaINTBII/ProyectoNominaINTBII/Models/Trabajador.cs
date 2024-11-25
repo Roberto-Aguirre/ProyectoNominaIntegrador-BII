@@ -123,6 +123,8 @@ public partial class Trabajador
 
     public virtual SatMunicipio Municipio { get; set; } = null!;
 
+    public virtual ICollection<NominaDetalle> NominaDetalles { get; set; } = new List<NominaDetalle>();
+
     public virtual SatOrigenRecurso OrigenRecurso { get; set; } = null!;
 
     public virtual SatPai Pais { get; set; } = null!;

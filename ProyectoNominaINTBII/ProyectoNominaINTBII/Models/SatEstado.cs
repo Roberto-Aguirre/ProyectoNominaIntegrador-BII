@@ -13,11 +13,11 @@ public partial class SatEstado
 
     public string DescripcionSat { get; set; } = null!;
 
-    public DateTime FechaInicioVigenciaSat { get; set; }
+    public DateTime? FechaInicioVigenciaSat { get; set; }
 
-    public DateTime FechaFinVigenciaSat { get; set; }
+    public DateTime? FechaFinVigenciaSat { get; set; }
 
-    public int FolioInegi { get; set; }
+    public int? FolioInegi { get; set; }
 
     public string Estatus { get; set; } = null!;
 

@@ -33,6 +33,8 @@ public partial class EmpresaRegPat
 
     public virtual Empresa Empresa { get; set; } = null!;
 
+    public virtual ICollection<InicioNomina> InicioNominas { get; set; } = new List<InicioNomina>();
+
     public virtual SatRiesgoPuesto RiesgoPuesto { get; set; } = null!;
 
     public virtual ICollection<Trabajador> Trabajadors { get; set; } = new List<Trabajador>();

@@ -75,15 +75,25 @@ public partial class Empresa
 
     public string Estatus { get; set; } = null!;
 
+    public virtual ICollection<Categorium> Categoria { get; set; } = new List<Categorium>();
+
     public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 
     public virtual SatEstado Estado { get; set; } = null!;
+
+    public virtual ICollection<InicioNomina> InicioNominas { get; set; } = new List<InicioNomina>();
 
     public virtual SatMonedum Moneda { get; set; } = null!;
 
     public virtual SatMunicipio Municipio { get; set; } = null!;
 
+    public virtual ICollection<NominaDetalle> NominaDetalles { get; set; } = new List<NominaDetalle>();
+
+    public virtual ICollection<Nomina> Nominas { get; set; } = new List<Nomina>();
+
     public virtual SatPai Pais { get; set; } = null!;
+
+    public virtual ICollection<Periodo> Periodos { get; set; } = new List<Periodo>();
 
     public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
 
