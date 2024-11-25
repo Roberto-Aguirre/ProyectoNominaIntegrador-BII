@@ -11,9 +11,9 @@ public partial class SatRiesgoPuesto
 
     public string Descripcion { get; set; } = null!;
 
-    public DateTime FechaInicioVigencia { get; set; }
+    public DateTime? FechaInicioVigencia { get; set; }
 
-    public DateTime FechaFinVigencia { get; set; }
+    public DateTime? FechaFinVigencia { get; set; }
 
     public string Estatus { get; set; } = null!;
 

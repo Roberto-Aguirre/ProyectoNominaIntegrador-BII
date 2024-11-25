@@ -7,15 +7,17 @@ public partial class Periodo
 {
     public int Id { get; set; }
 
-    public int? SatPeriocidadPagoId { get; set; }
+    public int SatPeriocidadPagoId { get; set; }
+
+    public int? Periodo1 { get; set; }
 
     public string Descripcion { get; set; } = null!;
 
-    public int? EmpresaId { get; set; }
+    public int EmpresaId { get; set; }
 
     public string Estatus { get; set; } = null!;
 
-    public virtual Empresa? Empresa { get; set; }
+    public virtual Empresa Empresa { get; set; } = null!;
 
     public virtual ICollection<InicioNomina> InicioNominas { get; set; } = new List<InicioNomina>();
 
@@ -23,5 +25,5 @@ public partial class Periodo
 
     public virtual ICollection<Nomina> Nominas { get; set; } = new List<Nomina>();
 
-    public virtual SatPeriocidadPago? SatPeriocidadPago { get; set; }
+    public virtual SatPeriocidadPago SatPeriocidadPago { get; set; } = null!;
 }

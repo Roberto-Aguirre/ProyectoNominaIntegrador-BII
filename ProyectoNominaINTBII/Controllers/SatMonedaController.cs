@@ -24,16 +24,16 @@ using AutoMapper; namespace ProyectoNominaINTBII.Controllers
 
         // GET: api/SatMoneda
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SatMonedumDTO>>> GetSatMoneda()
+        public async Task<ActionResult<IEnumerable<SatMonedum>>> GetSatMoneda()
         {
-            return _automapper.Map<List<SatMonedumDTO>>(await _context.SatMoneda.ToListAsync());
+            return _automapper.Map<List<SatMonedum>>(await _context.SatMoneda.ToListAsync());
         }
 
         // GET: api/SatMoneda/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SatMonedumDTO>> GetSatMonedum(int id)
+        public async Task<ActionResult<SatMonedum>> GetSatMonedum(int id)
         {
-            var satMonedum = _automapper.Map<SatMonedumDTO>(await _context.SatMoneda.FindAsync(id));
+            var satMonedum = _automapper.Map<SatMonedum>(await _context.SatMoneda.FindAsync(id));
 
             if (satMonedum == null)
             {

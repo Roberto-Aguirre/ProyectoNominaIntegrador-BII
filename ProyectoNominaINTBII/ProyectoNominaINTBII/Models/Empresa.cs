@@ -75,6 +75,8 @@ public partial class Empresa
 
     public string Estatus { get; set; } = null!;
 
+    public virtual ICollection<Categorium> Categoria { get; set; } = new List<Categorium>();
+
     public virtual ICollection<EmpresaRegPat> EmpresaRegPats { get; set; } = new List<EmpresaRegPat>();
 
     public virtual SatEstado Estado { get; set; } = null!;

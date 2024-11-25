@@ -13,5 +13,7 @@ public partial class Categorium
 
     public string Estatus { get; set; } = null!;
 
+    public virtual Empresa Empresa { get; set; } = null!;
+
     public virtual ICollection<Puesto> Puestos { get; set; } = new List<Puesto>();
 }

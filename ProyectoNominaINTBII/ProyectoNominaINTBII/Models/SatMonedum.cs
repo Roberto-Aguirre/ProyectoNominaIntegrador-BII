@@ -15,9 +15,9 @@ public partial class SatMonedum
 
     public int PorcentajeVariacionSat { get; set; }
 
-    public DateTime FechaInicioVariacionSat { get; set; }
+    public DateTime? FechaInicioVariacionSat { get; set; }
 
-    public DateTime FechaFinVigenciaSat { get; set; }
+    public DateTime? FechaFinVigenciaSat { get; set; }
 
     public string Estatus { get; set; } = null!;
 

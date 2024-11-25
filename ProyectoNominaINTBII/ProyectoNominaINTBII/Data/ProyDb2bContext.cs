@@ -16,6 +16,8 @@ public partial class ProyDb2bContext : DbContext
     {
     }
 
+    public virtual DbSet<AplicacionNomina> AplicacionNominas { get; set; }
+
     public virtual DbSet<AreaGeografica> AreaGeograficas { get; set; }
 
     public virtual DbSet<BaseCotizacion> BaseCotizacions { get; set; }
@@ -29,6 +31,8 @@ public partial class ProyDb2bContext : DbContext
     public virtual DbSet<EmpresaRegPat> EmpresaRegPats { get; set; }
 
     public virtual DbSet<EstadoCivil> EstadoCivils { get; set; }
+
+    public virtual DbSet<Incidencia> Incidencias { get; set; }
 
     public virtual DbSet<InicioNomina> InicioNominas { get; set; }
 
@@ -78,19 +82,34 @@ public partial class ProyDb2bContext : DbContext
 
     public virtual DbSet<TipoEmpresa> TipoEmpresas { get; set; }
 
+    public virtual DbSet<TipoNomina> TipoNominas { get; set; }
+
+    public virtual DbSet<TipoNominaSat> TipoNominaSats { get; set; }
+
     public virtual DbSet<Trabajador> Trabajadors { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\pruebas;Initial Catalog=PROY_DB_2B;Integrated Security=True;Trust Server Certificate=True");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-F3JTBSV;Initial Catalog=PROY_DB_2B;Integrated Security=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<AplicacionNomina>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Aplicaci__3214EC0794E22F25");
+
+            entity.ToTable("AplicacionNomina");
+
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<AreaGeografica>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC07C6AA4DF9");
+            entity.HasKey(e => e.Id).HasName("PK__AreaGeog__3214EC079E4488F2");
 
             entity.ToTable("AreaGeografica");
 
@@ -107,7 +126,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<BaseCotizacion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__BaseCoti__3214EC07F74AEB7C");
+            entity.HasKey(e => e.Id).HasName("PK__BaseCoti__3214EC07200584C7");
 
             entity.ToTable("BaseCotizacion");
 
@@ -121,7 +140,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<Categorium>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Categori__3214EC07FD0B605B");
+            entity.HasKey(e => e.Id).HasName("PK__Categori__3214EC0778F26D07");
 
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(60)
@@ -129,11 +148,16 @@ public partial class ProyDb2bContext : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Empresa).WithMany(p => p.Categoria)
+                .HasForeignKey(d => d.EmpresaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Categoria_Empresa");
         });
 
         modelBuilder.Entity<Departamento>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Departam__3214EC07C7AFE1C1");
+            entity.HasKey(e => e.Id).HasName("PK__Departam__3214EC0713BBF1B3");
 
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(100)
@@ -146,7 +170,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<Empresa>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC0706466D24");
+            entity.HasKey(e => e.Id).HasName("PK__Empresa__3214EC07828EA5F3");
 
             entity.ToTable("Empresa");
 
@@ -275,11 +299,10 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<EmpresaRegPat>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__EmpresaR__3214EC0730643568");
+            entity.HasKey(e => e.Id).HasName("PK__EmpresaR__3214EC071A750465");
 
             entity.ToTable("EmpresaRegPat");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.LugarExpedicion)
                 .HasMaxLength(450)
                 .IsUnicode(false);
@@ -322,7 +345,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<EstadoCivil>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__EstadoCi__3214EC07DF3BF51F");
+            entity.HasKey(e => e.Id).HasName("PK__EstadoCi__3214EC073BE5A2BE");
 
             entity.ToTable("EstadoCivil");
 
@@ -334,9 +357,38 @@ public partial class ProyDb2bContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Incidencia>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Incidenc__3214EC0775204F3D");
+
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(350)
+                .IsUnicode(false);
+            entity.Property(e => e.Estatus)
+                .HasMaxLength(1)
+                .IsUnicode(false);
+            entity.Property(e => e.Monto).HasColumnType("decimal(15, 3)");
+            entity.Property(e => e.Porcentaje).HasColumnType("decimal(15, 3)");
+
+            entity.HasOne(d => d.Aplicacion).WithMany(p => p.Incidencia)
+                .HasForeignKey(d => d.AplicacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Incidencia_Aplicacion");
+
+            entity.HasOne(d => d.TipoAplicacionNomina).WithMany(p => p.Incidencia)
+                .HasForeignKey(d => d.TipoAplicacionNominaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Incidencia_TipoAplicacionNomina");
+
+            entity.HasOne(d => d.TipoNomina).WithMany(p => p.Incidencia)
+                .HasForeignKey(d => d.TipoNominaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Incidencia_TipoNomina");
+        });
+
         modelBuilder.Entity<InicioNomina>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__InicioNo__3214EC077CFA9CE0");
+            entity.HasKey(e => e.Id).HasName("PK__InicioNo__3214EC072D98D22B");
 
             entity.ToTable("InicioNomina");
 
@@ -377,7 +429,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<MotivoNoTimbrar>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__MotivoNo__3214EC079C9C6DD6");
+            entity.HasKey(e => e.Id).HasName("PK__MotivoNo__3214EC070A9E86A9");
 
             entity.ToTable("MotivoNoTimbrar");
 
@@ -391,7 +443,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<Nomina>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Nomina__3214EC076E0BBF91");
+            entity.HasKey(e => e.Id).HasName("PK__Nomina__3214EC078FD79CDA");
 
             entity.ToTable("Nomina");
 
@@ -433,7 +485,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<NominaDetalle>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__NominaDe__3214EC07F0FBC097");
+            entity.HasKey(e => e.Id).HasName("PK__NominaDe__3214EC07E462E45F");
 
             entity.ToTable("NominaDetalle");
 
@@ -456,7 +508,12 @@ public partial class ProyDb2bContext : DbContext
             entity.HasOne(d => d.Empresa).WithMany(p => p.NominaDetalles)
                 .HasForeignKey(d => d.EmpresaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_NominaDetalle_Empresas");
+                .HasConstraintName("FK_NominaDetalle_Empresa");
+
+            entity.HasOne(d => d.Incidencia).WithMany(p => p.NominaDetalles)
+                .HasForeignKey(d => d.IncidenciaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_NominaDetalle_Incidencia");
 
             entity.HasOne(d => d.Periodo).WithMany(p => p.NominaDetalles)
                 .HasForeignKey(d => d.PeriodoId)
@@ -471,7 +528,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<Periodo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Periodo__3214EC07AC5B71B0");
+            entity.HasKey(e => e.Id).HasName("PK__Periodo__3214EC07C47F0D85");
 
             entity.ToTable("Periodo");
 
@@ -481,24 +538,27 @@ public partial class ProyDb2bContext : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+            entity.Property(e => e.Periodo1).HasColumnName("Periodo");
 
             entity.HasOne(d => d.Empresa).WithMany(p => p.Periodos)
                 .HasForeignKey(d => d.EmpresaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Periodo_Empresas");
 
             entity.HasOne(d => d.SatPeriocidadPago).WithMany(p => p.Periodos)
                 .HasForeignKey(d => d.SatPeriocidadPagoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Periodo_SatPeriocidadPagos");
         });
 
         modelBuilder.Entity<Puesto>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Puesto__3214EC076C359E10");
+            entity.HasKey(e => e.Id).HasName("PK__Puesto__3214EC07BBDDEA82");
 
             entity.ToTable("Puesto");
 
             entity.Property(e => e.Descripcion)
-                .HasMaxLength(100)
+                .HasMaxLength(200)
                 .IsUnicode(false);
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
@@ -506,8 +566,8 @@ public partial class ProyDb2bContext : DbContext
             entity.Property(e => e.SalarioFin).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.SalarioIni).HasColumnType("decimal(18, 2)");
 
-            entity.HasOne(d => d.CategoriaNavigation).WithMany(p => p.Puestos)
-                .HasForeignKey(d => d.Categoria)
+            entity.HasOne(d => d.Categoria).WithMany(p => p.Puestos)
+                .HasForeignKey(d => d.CategoriaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Puesto_Categoria");
 
@@ -519,7 +579,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatBanco>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatBanco__3214EC0799A9C710");
+            entity.HasKey(e => e.Id).HasName("PK__SatBanco__3214EC07FC47B41C");
 
             entity.Property(e => e.ClaveAbm).HasColumnName("ClaveABM");
             entity.Property(e => e.ClaveSat)
@@ -533,12 +593,12 @@ public partial class ProyDb2bContext : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+            entity.Property(e => e.FechaFinVigenciaSat)
+                .HasColumnType("datetime")
+                .HasColumnName("FechaFinVigenciaSAT");
             entity.Property(e => e.FechaInicioVigenciaSat)
                 .HasColumnType("datetime")
                 .HasColumnName("FechaInicioVigenciaSAT");
-            entity.Property(e => e.FehcaFinVigenciaSat)
-                .HasColumnType("datetime")
-                .HasColumnName("FehcaFinVigenciaSAT");
             entity.Property(e => e.RazonSocialSat)
                 .HasMaxLength(120)
                 .IsUnicode(false)
@@ -547,7 +607,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatEstado>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatEstad__3214EC071EED19AB");
+            entity.HasKey(e => e.Id).HasName("PK__SatEstad__3214EC07FEB08003");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -571,7 +631,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatFormaPago>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatForma__3214EC0789D99C14");
+            entity.HasKey(e => e.Id).HasName("PK__SatForma__3214EC0787C75823");
 
             entity.ToTable("SatFormaPago");
 
@@ -603,7 +663,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatMonedum>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatMoned__3214EC072DE3A65F");
+            entity.HasKey(e => e.Id).HasName("PK__SatMoned__3214EC07AEF609A8");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -628,7 +688,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatMunicipio>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatMunic__3214EC0733D8ABE7");
+            entity.HasKey(e => e.Id).HasName("PK__SatMunic__3214EC07B774A2FB");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -651,7 +711,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatOrigenRecurso>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatOrige__3214EC07CA3B7C74");
+            entity.HasKey(e => e.Id).HasName("PK__SatOrige__3214EC0768476CC2");
 
             entity.ToTable("SatOrigenRecurso");
 
@@ -670,7 +730,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatPai>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatPais__3214EC0796A9C33C");
+            entity.HasKey(e => e.Id).HasName("PK__SatPais__3214EC074135BF20");
 
             entity.Property(e => e.AgrupacionesSat)
                 .HasMaxLength(50)
@@ -703,7 +763,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatPeriocidadPago>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatPerio__3214EC0768ED746C");
+            entity.HasKey(e => e.Id).HasName("PK__SatPerio__3214EC0718CA7E18");
 
             entity.ToTable("SatPeriocidadPago");
 
@@ -721,11 +781,17 @@ public partial class ProyDb2bContext : DbContext
             entity.Property(e => e.Estatus)
                 .HasMaxLength(1)
                 .IsUnicode(false);
+            entity.Property(e => e.FechaFinVigenciaSat)
+                .HasColumnType("datetime")
+                .HasColumnName("FechaFinVigenciaSAT");
+            entity.Property(e => e.FechaInicioVigenciaSat)
+                .HasColumnType("datetime")
+                .HasColumnName("FechaInicioVigenciaSAT");
         });
 
         modelBuilder.Entity<SatRegimenFiscal>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatRegim__3214EC0702710B18");
+            entity.HasKey(e => e.Id).HasName("PK__SatRegim__3214EC0756757A54");
 
             entity.ToTable("SatRegimenFiscal");
 
@@ -758,7 +824,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatRiesgoPuesto>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatRiesg__3214EC073DEA4CEB");
+            entity.HasKey(e => e.Id).HasName("PK__SatRiesg__3214EC07A07B227C");
 
             entity.ToTable("SatRiesgoPuesto");
 
@@ -778,7 +844,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatTipoContrato>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoC__3214EC07FFA301F4");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoC__3214EC07A1A3A888");
 
             entity.ToTable("SatTipoContrato");
 
@@ -796,7 +862,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatTipoHora>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoH__3214EC072E7637A0");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoH__3214EC074BB476AA");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(10)
@@ -814,7 +880,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatTipoJornadum>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoJ__3214EC0716DD65C6");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoJ__3214EC0718096A1C");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -832,7 +898,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<SatTipoRegiman>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SatTipoR__3214EC07AB942444");
+            entity.HasKey(e => e.Id).HasName("PK__SatTipoR__3214EC072B5E6361");
 
             entity.Property(e => e.ClaveSat)
                 .HasMaxLength(5)
@@ -855,7 +921,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<Sexo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Sexo__3214EC072BA79EF1");
+            entity.HasKey(e => e.Id).HasName("PK__Sexo__3214EC072D1B7DF7");
 
             entity.ToTable("Sexo");
 
@@ -869,7 +935,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<TipoConstitucion>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoCons__3214EC07DF55B162");
+            entity.HasKey(e => e.Id).HasName("PK__TipoCons__3214EC07ACEE01EA");
 
             entity.ToTable("TipoConstitucion");
 
@@ -883,7 +949,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<TipoEmpleado>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoEmpl__3214EC075A6BF93E");
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpl__3214EC0788AA5530");
 
             entity.ToTable("TipoEmpleado");
 
@@ -902,7 +968,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<TipoEmpresa>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__TipoEmpr__3214EC07E5962A36");
+            entity.HasKey(e => e.Id).HasName("PK__TipoEmpr__3214EC074D290E30");
 
             entity.ToTable("TipoEmpresa");
 
@@ -914,9 +980,31 @@ public partial class ProyDb2bContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<TipoNomina>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__TipoNomi__3214EC074A1BC77C");
+
+            entity.ToTable("TipoNomina");
+
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<TipoNominaSat>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__TipoNomi__3214EC078AACAD79");
+
+            entity.ToTable("TipoNominaSAT");
+
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<Trabajador>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Trabajad__3214EC077635A068");
+            entity.HasKey(e => e.Id).HasName("PK__Trabajad__3214EC07122CA421");
 
             entity.ToTable("Trabajador");
 
@@ -1083,7 +1171,7 @@ public partial class ProyDb2bContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07740C89F7");
+            entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07C3B68A8F");
 
             entity.Property(e => e.Nombre)
                 .HasMaxLength(150)

@@ -39,6 +39,8 @@ public partial class NominaDetalle
 
     public virtual Empresa Empresa { get; set; } = null!;
 
+    public virtual Incidencia Incidencia { get; set; } = null!;
+
     public virtual Periodo Periodo { get; set; } = null!;
 
     public virtual Trabajador Trabajador { get; set; } = null!;

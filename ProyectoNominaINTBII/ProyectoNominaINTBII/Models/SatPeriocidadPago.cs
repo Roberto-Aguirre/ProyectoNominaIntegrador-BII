@@ -11,6 +11,10 @@ public partial class SatPeriocidadPago
 
     public string DescripcionSat { get; set; } = null!;
 
+    public DateTime? FechaInicioVigenciaSat { get; set; }
+
+    public DateTime? FechaFinVigenciaSat { get; set; }
+
     public int Dias { get; set; }
 
     public string? DiasValidos { get; set; }

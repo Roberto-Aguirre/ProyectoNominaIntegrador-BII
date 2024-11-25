@@ -13,9 +13,9 @@ public partial class SatBanco
 
     public string RazonSocialSat { get; set; } = null!;
 
-    public DateTime FechaInicioVigenciaSat { get; set; }
+    public DateTime? FechaInicioVigenciaSat { get; set; }
 
-    public DateTime FehcaFinVigenciaSat { get; set; }
+    public DateTime? FechaFinVigenciaSat { get; set; }
 
     public int ClaveAbm { get; set; }
 

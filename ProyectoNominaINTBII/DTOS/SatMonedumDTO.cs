@@ -17,7 +17,7 @@ public partial class SatMonedumDTO
 
     public DateTime? FechaInicioVariacionSat { get; set; }
 
-    public DateTime? FechaFinVigenciaSat { get; set; }
+    public DateTime? FechaFinVigenciaSat { get; set; } = null;
 
     public string Estatus { get; set; } = null!;
 

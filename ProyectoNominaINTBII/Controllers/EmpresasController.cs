@@ -26,9 +26,9 @@ namespace ProyectoNominaINTBII.Controllers
 
         // GET: api/Empresas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<EmpresaDTO>>> GetEmpresas()
+        public async Task<ActionResult<IEnumerable<Empresa>>> GetEmpresas()
         {
-            return _automapper.Map<List<EmpresaDTO>>(await _context.Empresas.ToListAsync()); 
+            return _automapper.Map<List<Empresa>>(await _context.Empresas.ToListAsync()); 
         }
 
         // GET: api/Empresas/5
