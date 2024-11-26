@@ -51,14 +51,14 @@ namespace ProyectoNominaINTBII.Controllers
         // GET: Empresas/Create
         public IActionResult Create()
         {
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id");
-            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "Id");
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id");
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id");
-            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "Id");
-            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Id");
-            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Id");
-            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "Id");
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat");
+            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "DescripcionSat");
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat");
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat");
+            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "DescripcionSat");
+            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Descripcion");
+            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Descripcion");
+            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "DescripcionSat");
             return View();
         }
 
@@ -69,20 +69,19 @@ namespace ProyectoNominaINTBII.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FechaAlta,Rfc,Nombre,Calle,NumeroExt,NumeroInt,Colonia,Cp,Curp,MunicipioId,EstadoId,PaisId,Email,TipoComprobante,PathLogo,PathCertificadoSat,PathLlaveSat,ContraseñaSat,ProveedorSat,PathTimbrado,MonedaId,RegimenFiscalId,CumpleReqCuotas,ClaveImss,ClaveInfonavit,ClaveFonacot,LugarExpedicion,TipoEmpresaId,TipoHoraId,PorcentajePresFed,TelefonoWhatsApp,TelefonoFijo,TipoConstitucionId,Estatus")] Empresa empresa)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(empresa);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id", empresa.EstadoId);
-            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "Id", empresa.MonedaId);
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id", empresa.MunicipioId);
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id", empresa.PaisId);
-            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "Id", empresa.RegimenFiscalId);
-            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Id", empresa.TipoConstitucionId);
-            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Id", empresa.TipoEmpresaId);
-            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "Id", empresa.TipoHoraId);
+            
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", empresa.EstadoId);
+            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "DescripcionSat", empresa.MonedaId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", empresa.MunicipioId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", empresa.PaisId);
+            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "DescripcionSat", empresa.RegimenFiscalId);
+            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Descripcion", empresa.TipoConstitucionId);
+            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Descripcion", empresa.TipoEmpresaId);
+            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "DescripcionSat", empresa.TipoHoraId);
             return View(empresa);
         }
 
@@ -99,14 +98,14 @@ namespace ProyectoNominaINTBII.Controllers
             {
                 return NotFound();
             }
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id", empresa.EstadoId);
-            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "Id", empresa.MonedaId);
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id", empresa.MunicipioId);
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id", empresa.PaisId);
-            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "Id", empresa.RegimenFiscalId);
-            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Id", empresa.TipoConstitucionId);
-            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Id", empresa.TipoEmpresaId);
-            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "Id", empresa.TipoHoraId);
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", empresa.EstadoId);
+            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "DescripcionSat", empresa.MonedaId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", empresa.MunicipioId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", empresa.PaisId);
+            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "DescripcionSat", empresa.RegimenFiscalId);
+            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Descripcion", empresa.TipoConstitucionId);
+            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Descripcion", empresa.TipoEmpresaId);
+            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "DescripcionSat", empresa.TipoHoraId);
             return View(empresa);
         }
 
@@ -122,8 +121,7 @@ namespace ProyectoNominaINTBII.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(empresa);
@@ -141,15 +139,15 @@ namespace ProyectoNominaINTBII.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id", empresa.EstadoId);
-            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "Id", empresa.MonedaId);
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id", empresa.MunicipioId);
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id", empresa.PaisId);
-            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "Id", empresa.RegimenFiscalId);
-            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Id", empresa.TipoConstitucionId);
-            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Id", empresa.TipoEmpresaId);
-            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "Id", empresa.TipoHoraId);
+            
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", empresa.EstadoId);
+            ViewData["MonedaId"] = new SelectList(_context.SatMoneda, "Id", "DescripcionSat", empresa.MonedaId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", empresa.MunicipioId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", empresa.PaisId);
+            ViewData["RegimenFiscalId"] = new SelectList(_context.SatRegimenFiscals, "Id", "DescripcionSat", empresa.RegimenFiscalId);
+            ViewData["TipoConstitucionId"] = new SelectList(_context.TipoConstitucions, "Id", "Descripcion", empresa.TipoConstitucionId);
+            ViewData["TipoEmpresaId"] = new SelectList(_context.TipoEmpresas, "Id", "Descripcion", empresa.TipoEmpresaId);
+            ViewData["TipoHoraId"] = new SelectList(_context.SatTipoHoras, "Id", "DescripcionSat", empresa.TipoHoraId);
             return View(empresa);
         }
 

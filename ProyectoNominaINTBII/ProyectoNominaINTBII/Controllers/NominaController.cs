@@ -63,17 +63,79 @@ namespace ProyectoNominaINTBII.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EmpresaId,Ejercicio,FechaPago,SatPeriocidadPagoId,PeriodoId,SatTipoContratoId,NominaExtraordinariaId,ConceptoNomina,ConceptoTimbrado,TotalTrabajadores,TotalPercepciones,TotalDeducciones,Extraordinaria,Generada,Autorizada,Timbrada,Cerrada,Estatus")] Nomina nomina)
+        public async Task<IActionResult> Create([Bind("Id,EmpresaId,Ejercicio,FechaPago,PeriodoId,ConceptoNomina,ConceptoTimbrado,Extraordinaria,Autorizada,Timbrada,Cerrada")] Nomina nomina)
         {
             
             Periodo periodo = await _context.Periodos.FindAsync(nomina.PeriodoId);
             nomina.FechaInicial = periodo.FechaInicial;
             nomina.FechaFinal = periodo.FechaFinal;
             nomina.Ejercicio = DateTime.UtcNow.Year;
-            
-            _context.Add(nomina);
+            Trabajador trabajador = await _context.Trabajadors.FirstOrDefaultAsync(e => e.EmpresaId == nomina.EmpresaId);
+            List<Trabajador> trabajadoresNomina = await _context.Trabajadors.ToListAsync();
+            nomina.SatPeriocidadPagoId = trabajador.PeriocidadPagoId;
+            nomina.SatTipoContratoId = trabajador.TipoContratoId;
+
+            if (nomina.Extraordinaria)
+                nomina.NominaExtraordinariaId = 1;
+            else
+                nomina.NominaExtraordinariaId = 0;
+
+
+            nomina.TotalTrabajadores = trabajadoresNomina.Count;
+
+            NominaDetalle nominaDetalle = new NominaDetalle();
+            nominaDetalle.EmpresaId = trabajador.EmpresaId;
+            nominaDetalle.PeriodoId = periodo.Id;
+            nominaDetalle.TrabajadorId = trabajador.Id;
+            //nominaDetalle.IncidenciaId = 
+            //nominaDetalle.TipoIncapacidadId 
+            //nominaDetalle.DiasPagados 
+            //nominaDetalle.HorasExtra 
+            //nominaDetalle.Importe 
+            //nominaDetalle.Gravado 
+            //nominaDetalle.Exento 
+            //nominaDetalle.IsraPagar 
+            //nominaDetalle.BaseImpuesto 
+            //nominaDetalle.TipoCaptura 
+            //nominaDetalle.Comentarios 
+            //nominaDetalle.Estatus
+
+
+
+
+
+
+            nomina.TotalDeducciones = 0;
+            nomina.TotalPercepciones = 0;
+            nomina.Generada = true;
+            nomina.Estatus = "I";
+
+                _context.Add(nomina);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            return RedirectToAction(nameof(Index));
+
+
+
+
+
+
+
             //ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", nomina.EmpresaId);
             //ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Descripcion", nomina.PeriodoId);
             //ViewData["SatPeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "DescripcionSat", nomina.SatPeriocidadPagoId);

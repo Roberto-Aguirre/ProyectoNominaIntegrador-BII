@@ -19,6 +19,9 @@
 </form>
 
 <style>
+    .fiscal {
+        width: 50vw;
+    }
     .nomina-container {
         display: flex;
         flex-wrap: wrap;
@@ -118,10 +121,10 @@
                 <div class="data-item"><span class="data-label">ID:</span> @Html.DisplayFor(modelItem => item.Id)</div>
                 <div class="data-item"><span class="data-label">Días Pagados:</span> @Html.DisplayFor(modelItem => item.DiasPagados)</div>
                 <div class="data-item"><span class="data-label">Horas Extra:</span> @Html.DisplayFor(modelItem => item.HorasExtra)</div>
-                <div class="data-item"><span class="data-label">Importe:</span> @Html.DisplayFor(modelItem => item.Importe)</div>
-                <div class="data-item"><span class="data-label">Gravado:</span> @Html.DisplayFor(modelItem => item.Gravado)</div>
-                <div class="data-item"><span class="data-label">Exento:</span> @Html.DisplayFor(modelItem => item.Exento)</div>
-                <div class="data-item"><span class="data-label">Isra a Pagar:</span> @Html.DisplayFor(modelItem => item.IsraPagar)</div>
+                <div class="data-item"><span class="data-label">Importe:</span> $@Html.DisplayFor(modelItem => item.Importe)</div>
+                <div class="data-item"><span class="data-label">Gravado:</span> $@Html.DisplayFor(modelItem => item.Gravado)</div>
+                <div class="data-item"><span class="data-label">Exento:</span> $@Html.DisplayFor(modelItem => item.Exento)</div>
+                <div class="data-item"><span class="data-label">Isra a Pagar:</span> $@Html.DisplayFor(modelItem => item.IsraPagar)</div>
             </div>
         </div>
         <div class="section">
@@ -135,7 +138,7 @@
         </div>
         <div class="section">
             <div class="section-header">Información Relacionada</div>
-            <div class="data">
+            <div class="data fiscal">
                 <div class="data-item"><span class="data-label">Empresa:</span> @Html.DisplayFor(modelItem => item.Empresa.Nombre)</div>
                 <div class="data-item"><span class="data-label">Incidencia:</span> @Html.DisplayFor(modelItem => item.Incidencia.Descripcion)</div>
                 <div class="data-item"><span class="data-label">Periodo:</span> @Html.DisplayFor(modelItem => item.Periodo.Descripcion)</div>

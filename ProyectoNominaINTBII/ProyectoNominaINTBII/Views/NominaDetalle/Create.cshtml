@@ -11,7 +11,6 @@
 <h4>NominaDetalle</h4>
 <div class="form-group">
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-    <input type="submit" value="Save" form="editForm" class="btn btn-primary" />
 </div>
 <hr />
 
@@ -128,7 +127,7 @@
                 <input asp-for="Estatus" class="form-control" />
                 <span asp-validation-for="Estatus" class="text-danger"></span>
             </div>
-
+            <input type="submit" value="Save" form="editForm" class="btn btn-primary" />
         </form>
     </div>
 </div>

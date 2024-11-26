@@ -53,7 +53,7 @@ namespace ProyectoNominaINTBII.Controllers
         {
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre");
             ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Descripcion");
-            ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Descripcion");
+            ViewData["PeriodoId"] = new SelectList(_context.Incidencias, "Id", "Descripcion");
             ViewData["TrabajadorId"] = new SelectList(_context.Trabajadors, "Id", "NumEmpleado");
             return View();
         }
@@ -92,10 +92,10 @@ namespace ProyectoNominaINTBII.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Id", nominaDetalle.EmpresaId);
-            ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Id", nominaDetalle.IncidenciaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", nominaDetalle.EmpresaId);
+            ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Descripcion", nominaDetalle.IncidenciaId);
             ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Id", nominaDetalle.PeriodoId);
-            ViewData["TrabajadorId"] = new SelectList(_context.Trabajadors, "Id", "Id", nominaDetalle.TrabajadorId);
+            ViewData["TrabajadorId"] = new SelectList(_context.Trabajadors, "Id", "NumEmpleado", nominaDetalle.TrabajadorId);
             return View(nominaDetalle);
         }
 
@@ -130,10 +130,10 @@ namespace ProyectoNominaINTBII.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             
-            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Id", nominaDetalle.EmpresaId);
-            ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Id", nominaDetalle.IncidenciaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", nominaDetalle.EmpresaId);
+            ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Descripcion", nominaDetalle.IncidenciaId);
             ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Id", nominaDetalle.PeriodoId);
-            ViewData["TrabajadorId"] = new SelectList(_context.Trabajadors, "Id", "Id", nominaDetalle.TrabajadorId);
+            ViewData["TrabajadorId"] = new SelectList(_context.Trabajadors, "Id", "NumEmpleado", nominaDetalle.TrabajadorId);
             return View(nominaDetalle);
         }
 

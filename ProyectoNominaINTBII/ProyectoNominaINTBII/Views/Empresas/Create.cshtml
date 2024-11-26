@@ -14,99 +14,99 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FechaAlta" class="control-label"></label>
+                <label asp-for="FechaAlta" class="control-label">Fecha de alta</label>
                 <input asp-for="FechaAlta" class="form-control" />
                 <span asp-validation-for="FechaAlta" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Rfc" class="control-label"></label>
+                <label asp-for="Rfc" class="control-label">RFC</label>
                 <input asp-for="Rfc" class="form-control" />
                 <span asp-validation-for="Rfc" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
+                <label asp-for="Nombre" class="control-label">Nombre de empresa</label>
                 <input asp-for="Nombre" class="form-control" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Calle" class="control-label"></label>
+                <label asp-for="Calle" class="control-label">Calle</label>
                 <input asp-for="Calle" class="form-control" />
                 <span asp-validation-for="Calle" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumeroExt" class="control-label"></label>
+                <label asp-for="NumeroExt" class="control-label">Numero Exterior</label>
                 <input asp-for="NumeroExt" class="form-control" />
                 <span asp-validation-for="NumeroExt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumeroInt" class="control-label"></label>
+                <label asp-for="NumeroInt" class="control-label">Numero interior (opcional)</label>
                 <input asp-for="NumeroInt" class="form-control" />
                 <span asp-validation-for="NumeroInt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Colonia" class="control-label"></label>
+                <label asp-for="Colonia" class="control-label">Colonia</label>
                 <input asp-for="Colonia" class="form-control" />
                 <span asp-validation-for="Colonia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Cp" class="control-label"></label>
+                <label asp-for="Cp" class="control-label">Codigo Postal</label>
                 <input asp-for="Cp" class="form-control" />
                 <span asp-validation-for="Cp" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Curp" class="control-label"></label>
+                <label asp-for="Curp" class="control-label">Curp</label>
                 <input asp-for="Curp" class="form-control" />
                 <span asp-validation-for="Curp" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MunicipioId" class="control-label"></label>
+                <label asp-for="MunicipioId" class="control-label">Municipio</label>
                 <select asp-for="MunicipioId" class ="form-control" asp-items="ViewBag.MunicipioId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="EstadoId" class="control-label"></label>
+                <label asp-for="EstadoId" class="control-label">Estado</label>
                 <select asp-for="EstadoId" class ="form-control" asp-items="ViewBag.EstadoId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="PaisId" class="control-label"></label>
+                <label asp-for="PaisId" class="control-label">País</label>
                 <select asp-for="PaisId" class ="form-control" asp-items="ViewBag.PaisId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
+                <label asp-for="Email" class="control-label">Correo Electronico</label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoComprobante" class="control-label"></label>
+                <label asp-for="TipoComprobante" class="control-label">Tipo de comprobante</label>
                 <input asp-for="TipoComprobante" class="form-control" />
                 <span asp-validation-for="TipoComprobante" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PathLogo" class="control-label"></label>
+                <label asp-for="PathLogo" class="control-label">Direccion de logo (opcional)</label>
                 <input asp-for="PathLogo" class="form-control" />
                 <span asp-validation-for="PathLogo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PathCertificadoSat" class="control-label"></label>
+                <label asp-for="PathCertificadoSat" class="control-label">Direccion Certificado Sat (opcional)</label>
                 <input asp-for="PathCertificadoSat" class="form-control" />
                 <span asp-validation-for="PathCertificadoSat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PathLlaveSat" class="control-label"></label>
+                <label asp-for="PathLlaveSat" class="control-label">Direccion Llave Sat (opcional)</label>
                 <input asp-for="PathLlaveSat" class="form-control" />
                 <span asp-validation-for="PathLlaveSat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ContraseñaSat" class="control-label"></label>
+                <label asp-for="ContraseñaSat" class="control-label">Contraseña del Sat (opcional)</label>
                 <input asp-for="ContraseñaSat" class="form-control" />
                 <span asp-validation-for="ContraseñaSat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProveedorSat" class="control-label"></label>
+                <label asp-for="ProveedorSat" class="control-label">Proveedor de sat (opcional)</label>
                 <input asp-for="ProveedorSat" class="form-control" />
                 <span asp-validation-for="ProveedorSat" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PathTimbrado" class="control-label"></label>
+                <label asp-for="PathTimbrado" class="control-label">Direccion de timbrado (opcional)</label>
                 <input asp-for="PathTimbrado" class="form-control" />
                 <span asp-validation-for="PathTimbrado" class="text-danger"></span>
             </div>
@@ -115,75 +115,75 @@
                 <select asp-for="MonedaId" class ="form-control" asp-items="ViewBag.MonedaId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="RegimenFiscalId" class="control-label"></label>
+                <label asp-for="RegimenFiscalId" class="control-label">Regimen fiscal</label>
                 <select asp-for="RegimenFiscalId" class ="form-control" asp-items="ViewBag.RegimenFiscalId"></select>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="CumpleReqCuotas" /> @Html.DisplayNameFor(model => model.CumpleReqCuotas)
+                    <input class="form-check-input" asp-for="CumpleReqCuotas" /> Cumple requisitos de disminucion
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="ClaveImss" class="control-label"></label>
+                <label asp-for="ClaveImss" class="control-label">Clave de IMSS</label>
                 <input asp-for="ClaveImss" class="form-control" />
                 <span asp-validation-for="ClaveImss" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClaveInfonavit" class="control-label"></label>
+                <label asp-for="ClaveInfonavit" class="control-label">Clave de Infornavit</label>
                 <input asp-for="ClaveInfonavit" class="form-control" />
                 <span asp-validation-for="ClaveInfonavit" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClaveFonacot" class="control-label"></label>
+                <label asp-for="ClaveFonacot" class="control-label">Clave de Fonacot</label>
                 <input asp-for="ClaveFonacot" class="form-control" />
                 <span asp-validation-for="ClaveFonacot" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LugarExpedicion" class="control-label"></label>
+                <label asp-for="LugarExpedicion" class="control-label">Lugar de expedicion</label>
                 <input asp-for="LugarExpedicion" class="form-control" />
                 <span asp-validation-for="LugarExpedicion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoEmpresaId" class="control-label"></label>
+                <label asp-for="TipoEmpresaId" class="control-label">Tipo de empresa</label>
                 <select asp-for="TipoEmpresaId" class ="form-control" asp-items="ViewBag.TipoEmpresaId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="TipoHoraId" class="control-label"></label>
+                <label asp-for="TipoHoraId" class="control-label">Tipo de horas</label>
                 <select asp-for="TipoHoraId" class ="form-control" asp-items="ViewBag.TipoHoraId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="PorcentajePresFed" class="control-label"></label>
+                <label asp-for="PorcentajePresFed" class="control-label">Porcentaje efectivo ISR  </label>
                 <input asp-for="PorcentajePresFed" class="form-control" />
                 <span asp-validation-for="PorcentajePresFed" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefonoWhatsApp" class="control-label"></label>
+                <label asp-for="TelefonoWhatsApp" class="control-label">Telefono de Whatsapp</label>
                 <input asp-for="TelefonoWhatsApp" class="form-control" />
                 <span asp-validation-for="TelefonoWhatsApp" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefonoFijo" class="control-label"></label>
+                <label asp-for="TelefonoFijo" class="control-label">Telefono Fijo</label>
                 <input asp-for="TelefonoFijo" class="form-control" />
                 <span asp-validation-for="TelefonoFijo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoConstitucionId" class="control-label"></label>
+                <label asp-for="TipoConstitucionId" class="control-label">Tipo de Constitucion</label>
                 <select asp-for="TipoConstitucionId" class ="form-control" asp-items="ViewBag.TipoConstitucionId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Estatus" class="control-label"></label>
+                <label asp-for="Estatus" class="control-label">Estatus</label>
                 <input asp-for="Estatus" class="form-control" />
                 <span asp-validation-for="Estatus" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear empresa" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver a lista</a>
 </div>
 
 @section Scripts {

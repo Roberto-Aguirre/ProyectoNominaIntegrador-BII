@@ -19,6 +19,9 @@
 </form>
 
 <style>
+    .fiscal{
+        width:50vw;
+    }
     .empresa-container {
         display: flex;
         flex-wrap: wrap;
@@ -133,10 +136,10 @@
         </div>
         <div class="section">
             <div class="section-header">Información Fiscal</div>
-            <div class="data">
-                <div class="data-item"><span class="data-label">Regimen Fiscal:</span> @Html.DisplayFor(modelItem => item.RegimenFiscal)</div>
-                <div class="data-item"><span class="data-label">Tipo de Constitución:</span> @Html.DisplayFor(modelItem => item.TipoConstitucion)</div>
-                <div class="data-item"><span class="data-label">Tipo de Empresa:</span> @Html.DisplayFor(modelItem => item.TipoEmpresa)</div>
+            <div class="data fiscal">
+                <div class="data-item"><span class="data-label">Regimen Fiscal:</span> @Html.DisplayFor(modelItem => item.RegimenFiscal.DescripcionSat)</div>
+                <div class="data-item"><span class="data-label">Tipo de Constitución:</span> @Html.DisplayFor(modelItem => item.TipoConstitucion.Descripcion)</div>
+                <div class="data-item"><span class="data-label">Tipo de Empresa:</span> @Html.DisplayFor(modelItem => item.TipoEmpresa.Descripcion)</div>
             </div>
         </div>
     </div>
