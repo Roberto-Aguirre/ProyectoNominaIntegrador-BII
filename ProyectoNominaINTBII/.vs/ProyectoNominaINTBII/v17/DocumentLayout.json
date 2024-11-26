@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\nomina\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nomina\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\trabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\trabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\nomina\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nomina\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\nomina\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nomina\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\proyectonominaintbii.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\proyectonominaintbii.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\nominadetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\nominadetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\data\\proydb2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\data\\proydb2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,79 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Nomina\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Edit.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Nomina\\Edit.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T03:33:28.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Details.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Nomina\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Details.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Nomina\\Details.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T03:31:58.707Z",
+              "Title": "TrabajadoresController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
+              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
+              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
+              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T04:04:43.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Nomina\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Nomina\\Index.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Nomina\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T03:28:56.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProyDb2bContext.cs",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T03:10:43.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "NominaController.cs",
               "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaController.cs",
               "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\NominaController.cs",
               "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaController.cs",
               "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\NominaController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwEcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAmwHEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T02:01:37.684Z",
+              "WhenOpened": "2024-11-26T03:37:29.987Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProyectoNominaINTBII",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-              "RelativeToolTip": "ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-26T02:39:31.002Z",
+              "DocumentIndex": 1,
+              "Title": "NominaDetalleController.cs",
+              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
+              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
+              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
+              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T03:36:51.851Z",
               "EditorCaption": ""
             }
           ]
