@@ -1,4 +1,7 @@
-﻿namespace ProyectoNominaINTBII.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace ProyectoNominaINTBII.Models;
 
 public partial class Periodo
 {
@@ -11,6 +14,10 @@ public partial class Periodo
     public string Descripcion { get; set; } = null!;
 
     public int EmpresaId { get; set; }
+
+    public DateTime? FechaInicial { get; set; }
+
+    public DateTime? FechaFinal { get; set; }
 
     public string Estatus { get; set; } = null!;
 

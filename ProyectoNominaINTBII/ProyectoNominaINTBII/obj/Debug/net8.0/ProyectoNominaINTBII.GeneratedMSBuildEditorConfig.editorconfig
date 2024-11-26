@@ -114,6 +114,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

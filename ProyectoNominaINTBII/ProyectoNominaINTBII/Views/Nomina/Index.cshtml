@@ -1,0 +1,150 @@
+﻿@model IEnumerable<ProyectoNominaINTBII.Models.Nomina>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Periodo
+            </th>
+            <th>
+                Ejercicio
+            </th>
+            <th>
+               Fecha Inicial
+            </th>
+            <th>
+               Fecha Final
+            </th>
+            <th>
+                Fecha Pago
+            </th>
+            <th>
+                Es extraordinaria
+            </th>
+            <th>
+               Concepto Nomina
+            </th>
+            <th>
+                Concepto Timbrado
+            </th>
+            <th>
+                Total Trabajadores
+            </th>
+            <th>
+                Total Percepciones
+            </th>
+            <th>
+                Total Deducciones
+            </th>
+            <th>
+                Es extraordinaria
+            </th>
+            <th>
+               Generada
+            </th>
+            <th>
+                Autorizada
+            </th>
+            <th>
+                Timbrada
+            </th>
+            <th>
+                Cerrada
+            </th>
+            <th>
+                Estatus
+            </th>
+            <th>
+                Empresa
+            </th>
+            <th>
+                Periocidad Pago
+            </th>
+            <th>
+               Tipo Contrato
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Periodo.Descripcion)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ejercicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NominaExtraordinariaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptoNomina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptoTimbrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTrabajadores)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPercepciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDeducciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extraordinaria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Generada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autorizada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Timbrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cerrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SatPeriocidadPago.DescripcionSat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SatTipoContrato.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

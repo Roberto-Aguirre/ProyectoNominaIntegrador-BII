@@ -1,4 +1,7 @@
-﻿namespace ProyectoNominaINTBII.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace ProyectoNominaINTBII.Models;
 
 public partial class MotivoNoTimbrar
 {

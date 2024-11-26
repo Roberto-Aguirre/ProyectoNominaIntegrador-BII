@@ -1,0 +1,110 @@
+﻿@model ProyectoNominaINTBII.Models.Nomina
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Nomina</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmpresaId" class="control-label"></label>
+                <select asp-for="EmpresaId" class ="form-control" asp-items="ViewBag.EmpresaId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaPago" class="control-label"></label>
+                <input asp-for="FechaPago" class="form-control" />
+                <span asp-validation-for="FechaPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SatPeriocidadPagoId" class="control-label"></label>
+                <select asp-for="SatPeriocidadPagoId" class ="form-control" asp-items="ViewBag.SatPeriocidadPagoId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeriodoId" class="control-label"></label>
+                <select asp-for="PeriodoId" class ="form-control" asp-items="ViewBag.PeriodoId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SatTipoContratoId" class="control-label"></label>
+                <select asp-for="SatTipoContratoId" class ="form-control" asp-items="ViewBag.SatTipoContratoId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NominaExtraordinariaId" class="control-label"></label>
+                <input asp-for="NominaExtraordinariaId" class="form-control" />
+                <span asp-validation-for="NominaExtraordinariaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptoNomina" class="control-label"></label>
+                <input asp-for="ConceptoNomina" class="form-control" />
+                <span asp-validation-for="ConceptoNomina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptoTimbrado" class="control-label"></label>
+                <input asp-for="ConceptoTimbrado" class="form-control" />
+                <span asp-validation-for="ConceptoTimbrado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalTrabajadores" class="control-label"></label>
+                <input asp-for="TotalTrabajadores" class="form-control" />
+                <span asp-validation-for="TotalTrabajadores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPercepciones" class="control-label"></label>
+                <input asp-for="TotalPercepciones" class="form-control" />
+                <span asp-validation-for="TotalPercepciones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalDeducciones" class="control-label"></label>
+                <input asp-for="TotalDeducciones" class="form-control" />
+                <span asp-validation-for="TotalDeducciones" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Extraordinaria" /> @Html.DisplayNameFor(model => model.Extraordinaria)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Generada" /> @Html.DisplayNameFor(model => model.Generada)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Autorizada" /> @Html.DisplayNameFor(model => model.Autorizada)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Timbrada" /> @Html.DisplayNameFor(model => model.Timbrada)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Cerrada" /> @Html.DisplayNameFor(model => model.Cerrada)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estatus" class="control-label"></label>
+                <input asp-for="Estatus" class="form-control" />
+                <span asp-validation-for="Estatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
