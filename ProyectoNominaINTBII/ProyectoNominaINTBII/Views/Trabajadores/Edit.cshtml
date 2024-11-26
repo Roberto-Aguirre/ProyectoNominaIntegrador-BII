@@ -2,22 +2,91 @@
 
 @{
     ViewData["Title"] = "Edit";
-
-
-
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Edit</h1>
 <h4>Trabajador</h4>
+
 <hr />
+<div class="form-group">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <input type="submit" value="Save" form="editForm" class="btn btn-primary" />
+</div>
+
+
+
+<style>
+
+    /* Estilos para los títulos */
+    h1, h4 {
+        font-family: 'Arial', sans-serif; /* Usa una tipografía limpia y moderna */
+        color: #333; /* Color oscuro para buena legibilidad */
+        text-align: center; /* Centra los títulos para un look más formal */
+        margin-bottom: 20px; /* Espacio debajo del título para separar del contenido */
+    }
+
+    h1 {
+        font-size: 45PX; /* Tamaño grande para el título principal */
+        font-weight: bold; /* Negrita para destacar */
+        padding-top: 20px; /* Espacio en la parte superior */
+        border-bottom: 2px solid #007bff; /* Línea debajo para un toque elegante */
+        margin-bottom: 30px; /* Más espacio debajo para separación clara del contenido */
+    }
+
+    h4 {
+        font-size: 20px; /* Tamaño adecuado para subtítulos */
+        color: #555; /* Un poco más claro que el h1 para diferenciación */
+        font-weight: normal; /* Sin negrita para diferenciar del título principal */
+    }
+
+    /* Alineación vertical de los botones */
+    .btn {
+        display: inline-block; /* Permite que los botones se alineen horizontalmente */
+        vertical-align: middle; /* Alinea los botones verticalmente al centro */
+        margin: 5px; /* Espacio uniforme alrededor de cada botón */
+    }
+
+    /* Estilos adicionales para dar formato y coherencia */
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px; /* Espaciado interno más amplio para mejor clicabilidad */
+        font-size: 16px; /* Tamaño de fuente uniforme para ambos botones */
+        border-radius: 5px; /* Bordes redondeados */
+        text-shadow: 0 1px 1px rgba(0,0,0,0.2); /* Sombra en el texto para profundidad */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra alrededor del botón para efecto 3D */
+        transition: all 0.3s ease; /* Transición suave para cambios de estado */
+    }
+
+    .btn-primary {
+        color: #fff; /* Texto blanco para mayor contraste */
+        background-color: #007bff; /* Fondo azul para el botón 'Save' */
+        border-color: #007bff; /* Borde azul a juego */
+    }
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0056b3; /* Fondo más oscuro al interactuar */
+            border-color: #004085; /* Borde más oscuro al interactuar */
+        }
+
+    .btn-secondary {
+        color: #fff; /* Texto blanco para mayor contraste */
+        background-color: #6c757d; /* Fondo gris para el botón 'Back to List' */
+        border-color: #6c757d; /* Borde gris a juego */
+    }
+
+        .btn-secondary:hover, .btn-secondary:focus {
+            background-color: #545b62; /* Fondo más oscuro al interactuar */
+            border-color: #4e555b; /* Borde más oscuro al interactuar */
+        }
+</style>
+
 <div class="container">
     <form asp-action="Edit">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="Id" />
         <div class="row">
-            <div class="col-md-6">
-                <!-- Columna Izquierda -->
+            <div class="col-md-3">
+                <!-- Columna 1 -->
                 <div class="form-group">
                     <label for="EmpresaId">Empresa</label>
                     <select asp-for="EmpresaId" class="form-control" asp-items="ViewBag.EmpresaId"></select>
@@ -64,6 +133,9 @@
                     <input asp-for="FechaIngreso" class="form-control" />
                     <span asp-validation-for="FechaIngreso" class="text-danger"></span>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <!-- Columna 2 -->
                 <div class="form-group">
                     <label asp-for="PeriocidadPagoId" class="control-label"></label>
                     <select asp-for="PeriocidadPagoId" class="form-control" asp-items="ViewBag.PeriocidadPagoId"></select>
@@ -109,7 +181,9 @@
                     <input asp-for="NumEmpleado" class="form-control" />
                     <span asp-validation-for="NumEmpleado" class="text-danger"></span>
                 </div>
-    
+            </div>
+            <div class="col-md-3">
+                <!-- Columna 3 -->
                 <div class="form-group">
                     <label asp-for="EmpresaRegimenPatId" class="control-label"></label>
                     <select asp-for="EmpresaRegimenPatId" class="form-control" asp-items="ViewBag.EmpresaRegimenPatId"></select>
@@ -146,9 +220,6 @@
                     <input asp-for="Nss" class="form-control" />
                     <span asp-validation-for="Nss" the text-danger"></span>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <!-- Columna Derecha -->
                 <div class="form-group">
                     <label asp-for="Calle" class="control-label"></label>
                     <input asp-for="Calle" class="form-control" />
@@ -159,6 +230,9 @@
                     <input asp-for="NumeroExt" class="form-control" />
                     <span asp-validation-for="NumeroExt" the text-danger"></span>
                 </div>
+            </div>
+            <div class="col-md-3">
+                <!-- Columna 4 -->
                 <div class="form-group">
                     <label for="NumeroInt">Numero Interior</label>
                     <input asp-for="NumeroInt" class="form-control" />
@@ -206,15 +280,10 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <input type="submit" value="Save" class="btn btn-primary" />
-        </div>
     </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{

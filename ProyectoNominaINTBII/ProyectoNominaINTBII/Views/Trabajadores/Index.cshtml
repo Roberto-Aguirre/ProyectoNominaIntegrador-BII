@@ -9,102 +9,137 @@
 <h1>Trabajadores</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo</a>
+    <a asp-action="Create" class="btn btn-primary" style="font-size: 1.2rem; padding: 10px 20px;">Crear Nuevo</a>
 </p>
+
+<style>
+    .worker-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .section {
+        flex: 1 1 30%; /* Adjusting the width to ensure they fit in a row */
+        padding: 10px;
+        margin: 5px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        text-align: center;
+    }
+
+    .data {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-item {
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-label {
+        font-weight: bold;
+        width: 50%; /* Consistent width for labels */
+    }
+
+    .data-value {
+        width: 50%; /* Consistent width for values */
+        text-align: right;
+    }
+
+    .action-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+        .action-buttons a {
+            font-size: 1rem;
+            padding: 8px 16px;
+            margin-right: 5px;
+        }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la lista de trabajadores */
+    }
+
+        .search-form .form-control {
+            flex-grow: 1; /* Permite que el input de búsqueda ocupe más espacio */
+        }
+
+    h1 {
+        text-align: center;
+        color: #007bff; /* Cambia el color del título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+</style>
+
+
+
+<form asp-action="Index" method="get" class="search-form">
+    <input type="text" name="searchString" class="form-control" placeholder="Buscar trabajadores..." />
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
 
 @foreach (var item in Model)
 
 {
-    <table class="table table-striped table-bordered mb-4">
-        <thead class="table-dark">
-            <tr>
-                <th colspan="2">Información Personal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>NumEmpleado</th>
-                <td>@Html.DisplayFor(modelItem => item.NumEmpleado)</td>
-            </tr>
-            <tr>
-                <th>Nombre</th>
-                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
-            </tr>
-            <tr>
-                <th>Apellido Paterno</th>
-                <td>@Html.DisplayFor(modelItem => item.ApellidoPaterno)</td>
-            </tr>
-            <tr>
-                <th>Apellido Materno</th>
-                <td>@Html.DisplayFor(modelItem => item.ApellidoMaterno)</td>
-            </tr>
-            <tr>
-                <th>Fecha de Nacimiento</th>
-                <td>@Html.DisplayFor(modelItem => item.FechaNac)</td>
-            </tr>
-        </tbody>
-
-        <thead class="table-dark">
-            <tr>
-                <th colspan="2">Dirección</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Calle</th>
-                <td>@Html.DisplayFor(modelItem => item.Calle)</td>
-            </tr>
-            <tr>
-                <th>Número Exterior</th>
-                <td>@Html.DisplayFor(modelItem => item.NumeroExt)</td>
-            </tr>
-            <tr>
-                <th>Número Interior</th>
-                <td>@Html.DisplayFor(modelItem => item.NumeroInt)</td>
-            </tr>
-            <tr>
-                <th>Colonia</th>
-                <td>@Html.DisplayFor(modelItem => item.Colonia)</td>
-            </tr>
-            <tr>
-                <th>Código Postal</th>
-                <td>@Html.DisplayFor(modelItem => item.Cp)</td>
-            </tr>
-        </tbody>
-
-        <thead class="table-dark">
-            <tr>
-                <th colspan="2">Datos de Contacto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Teléfono Móvil</th>
-                <td>@Html.DisplayFor(modelItem => item.TelefonoMovil)</td>
-            </tr>
-            <tr>
-                <th>Teléfono Fijo</th>
-                <td>@Html.DisplayFor(modelItem => item.TelefonoFijo)</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>@Html.DisplayFor(modelItem => item.Email)</td>
-            </tr>
-        </tbody>
-
-        <thead class="table-dark">
-            <tr>
-                <th colspan="2">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="2">
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalles</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="worker-container">
+        <div class="action-buttons">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+        </div>
+        <div class="section">
+            <div class="section-header">Información Personal</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">NumEmpleado:</span> @Html.DisplayFor(modelItem => item.NumEmpleado)</div>
+                <div class="data-item"><span class="data-label">Nombre:</span> @Html.DisplayFor(modelItem => item.Nombre)</div>
+                <div class="data-item"><span class="data-label">Apellido Paterno:</span> @Html.DisplayFor(modelItem => item.ApellidoPaterno)</div>
+                <div class="data-item"><span class="data-label">Apellido Materno:</span> @Html.DisplayFor(modelItem => item.ApellidoMaterno)</div>
+                <div class="data-item"><span class="data-label">Fecha de Nacimiento:</span> @Html.DisplayFor(modelItem => item.FechaNac)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Dirección</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Calle:</span> @Html.DisplayFor(modelItem => item.Calle)</div>
+                <div class="data-item"><span class="data-label">Número Exterior:</span> @Html.DisplayFor(modelItem => item.NumeroExt)</div>
+                <div class="data-item"><span the "data-label">Número Interior:</span> @Html.DisplayFor(modelItem => item.NumeroInt)</div>
+                <div class="data-item"><span class="data-label">Colonia:</span> @Html.DisplayFor(modelItem => item.Colonia)</div>
+                <div class="data-item"><span class="data-label">Código Postal:</span> @Html.DisplayFor(modelItem => item.Cp)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Datos de Contacto</div>
+            <div class="data">
+                <div class="data-item"><span the "data-label">Teléfono Móvil:</span> @Html.DisplayFor(modelItem => item.TelefonoMovil)</div>
+                <div class="data-item"><span class="data-label">Teléfono Fijo:</span> @Html.DisplayFor(modelItem => item.TelefonoFijo)</div>
+                <div class="data-item"><span class="data-label">Email:</span> @Html.DisplayFor(modelItem => item.Email)</div>
+            </div>
+        </div>
+    </div>
 }

@@ -1,120 +1,146 @@
 ﻿@model IEnumerable<ProyectoNominaINTBII.Models.NominaDetalle>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Detalle Nomina";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Detalle Nomina</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary" style="font-size: 1.2rem; padding: 10px 20px;">Crear Nuevo</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiasPagados)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HorasExtra)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Importe)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gravado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Exento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsraPagar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BaseImpuesto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoCaptura)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comentarios)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Empresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Incidencia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Periodo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Trabajador)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiasPagados)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HorasExtra)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Importe)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gravado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Exento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsraPagar)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BaseImpuesto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoCaptura)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comentarios)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Empresa.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Incidencia.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Periodo.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Trabajador.Nombre)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+<!-- Barra de búsqueda -->
+<form asp-action="Index" method="get" class="search-form">
+    <input type="text" name="searchString" class="form-control" placeholder="Buscar Detalles..." />
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<style>
+    .nomina-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .section {
+        flex: 1 1 30%; /* Ajustando el ancho para asegurarse de que quepan en una fila */
+        padding: 10px;
+        margin: 5px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        text-align: center;
+    }
+
+    .data {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-item {
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-label {
+        font-weight: bold;
+        width: 50%; /* Ancho consistente para las etiquetas */
+    }
+
+    .data-value {
+        width: 50%; /* Ancho consistente para los valores */
+        text-align: right;
+    }
+
+    .action-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+        .action-buttons a {
+            font-size: 1rem;
+            padding: 8px 16px;
+            margin-right: 5px;
+        }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la lista de detalles */
+    }
+
+        .search-form .form-control {
+            flex-grow: 1; /* Permite que el input de búsqueda ocupe más espacio */
+        }
+
+    h1 {
+        text-align: center;
+        color: #007bff; /* Cambia el color del título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+</style>
+
+@foreach (var item in Model)
+
+{
+    <div class="nomina-container">
+        <div class="action-buttons">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+        </div>
+        <div class="section">
+            <div class="section-header">Detalles de la Nómina</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">ID:</span> @Html.DisplayFor(modelItem => item.Id)</div>
+                <div class="data-item"><span class="data-label">Días Pagados:</span> @Html.DisplayFor(modelItem => item.DiasPagados)</div>
+                <div class="data-item"><span class="data-label">Horas Extra:</span> @Html.DisplayFor(modelItem => item.HorasExtra)</div>
+                <div class="data-item"><span class="data-label">Importe:</span> @Html.DisplayFor(modelItem => item.Importe)</div>
+                <div class="data-item"><span class="data-label">Gravado:</span> @Html.DisplayFor(modelItem => item.Gravado)</div>
+                <div class="data-item"><span class="data-label">Exento:</span> @Html.DisplayFor(modelItem => item.Exento)</div>
+                <div class="data-item"><span class="data-label">Isra a Pagar:</span> @Html.DisplayFor(modelItem => item.IsraPagar)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Información Adicional</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Base Impuesto:</span> @Html.DisplayFor(modelItem => item.BaseImpuesto)</div>
+                <div class="data-item"><span class="data-label">Tipo Captura:</span> @Html.DisplayFor(modelItem => item.TipoCaptura)</div>
+                <div class="data-item"><span class="data-label">Comentarios:</span> @Html.DisplayFor(modelItem => item.Comentarios)</div>
+                <div class="data-item"><span class="data-label">Estatus:</span> @Html.DisplayFor(modelItem => item.Estatus)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Información Relacionada</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Empresa:</span> @Html.DisplayFor(modelItem => item.Empresa.Nombre)</div>
+                <div class="data-item"><span class="data-label">Incidencia:</span> @Html.DisplayFor(modelItem => item.Incidencia.Descripcion)</div>
+                <div class="data-item"><span class="data-label">Periodo:</span> @Html.DisplayFor(modelItem => item.Periodo.Descripcion)</div>
+                <div class="data-item"><span class="data-label">Trabajador:</span> @Html.DisplayFor(modelItem => item.Trabajador.Nombre)</div>
+            </div>
+        </div>
+    </div>
 }
-    </tbody>
-</table>

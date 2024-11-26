@@ -2,222 +2,169 @@
 
 @{
     ViewData["Title"] = "Details";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1 class="text-center">Detalles de la Empresa - @Model.Nombre</h1>
 
-<div>
-    <h4>Empresa</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaAlta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaAlta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rfc)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rfc)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Calle)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Calle)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumeroExt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumeroExt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumeroInt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumeroInt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Colonia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Colonia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cp)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Curp)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Curp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoComprobante)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoComprobante)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PathLogo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PathLogo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PathCertificadoSat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PathCertificadoSat)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PathLlaveSat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PathLlaveSat)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ContraseñaSat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ContraseñaSat)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProveedorSat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProveedorSat)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PathTimbrado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PathTimbrado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CumpleReqCuotas)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CumpleReqCuotas)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClaveImss)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClaveImss)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClaveInfonavit)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClaveInfonavit)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClaveFonacot)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClaveFonacot)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LugarExpedicion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LugarExpedicion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PorcentajePresFed)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PorcentajePresFed)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TelefonoWhatsApp)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TelefonoWhatsApp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TelefonoFijo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TelefonoFijo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Moneda)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Moneda.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Municipio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Municipio.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pais)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pais.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RegimenFiscal)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RegimenFiscal.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoConstitucion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoConstitucion.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoEmpresa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoEmpresa.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoHora)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoHora.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+
+
+<div class="container">
+    <div class="header-container text-center">
+        <div class="btn-group-custom">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-edit">Editar</a>
+            <a asp-action="Index" class="btn-back">Volver a la lista</a>
+        </div>
+    </div>
+
+
+    <style>
+        .card-custom {
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .card-header-custom {
+            background-color: white;
+            color: black;
+            border-bottom: none;
+        }
+
+        .header-container {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-group-custom {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .btn-edit {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+            .btn-edit:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+            .btn-back:hover {
+                background-color: #5a6268;
+            }
+
+        .info-container {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .row-divider {
+            margin-top: 20px;
+        }
+
+        h5 {
+            margin-top: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+    <div class="card card-custom">
+        <div class="card-body">
+            <div class="row info-container">
+                <!-- Columna 1 -->
+                <div class="col-md-6">
+                    <h5>Información General</h5>
+                    <p><strong>Fecha Alta:</strong> @Html.DisplayFor(model => model.FechaAlta)</p>
+                    <p><strong>RFC:</strong> @Html.DisplayFor(model => model.Rfc)</p>
+                    <p><strong>Nombre:</strong> @Html.DisplayFor(model => model.Nombre)</p>
+                    <p><strong>Calle:</strong> @Html.DisplayFor(model => model.Calle)</p>
+                    <p><strong>Número Exterior:</strong> @Html.DisplayFor(model => model.NumeroExt)</p>
+                    <p><strong>Número Interior:</strong> @Html.DisplayFor(model => model.NumeroInt)</p>
+                    <p><strong>Colonia:</strong> @Html.DisplayFor(model => model.Colonia)</p>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="col-md-6">
+                    <h5>Ubicación y Contacto</h5>
+                    <p><strong>Código Postal:</strong> @Html.DisplayFor(model => model.Cp)</p>
+                    <p><strong>CURP:</strong> @Html.DisplayFor(model => model.Curp)</p>
+                    <p><strong>Email:</strong> @Html.DisplayFor(model => model.Email)</p>
+                    <p><strong>Tipo de Comprobante:</strong> @Html.DisplayFor(model => model.TipoComprobante)</p>
+                    <p><strong>Path Logo:</strong> @Html.DisplayFor(model => model.PathLogo)</p>
+                    <p><strong>Path Certificado SAT:</strong> @Html.DisplayFor(model => model.PathCertificadoSat)</p>
+                    <p><strong>Path Llave SAT:</strong> @Html.DisplayFor(model => model.PathLlaveSat)</p>
+                </div>
+            </div>
+
+            <div class="row row-divider info-container">
+                <!-- Columna 3 -->
+                <div class="col-md-6">
+                    <h5>Información Adicional</h5>
+                    <p><strong>Contraseña SAT:</strong> @Html.DisplayFor(model => model.ContraseñaSat)</p>
+                    <p><strong>Proveedor SAT:</strong> @Html.DisplayFor(model => model.ProveedorSat)</p>
+                    <p><strong>Path Timbrado:</strong> @Html.DisplayFor(model => model.PathTimbrado)</p>
+                    <p><strong>Cumple Requisitos de Cuotas:</strong> @Html.DisplayFor(model => model.CumpleReqCuotas)</p>
+                    <p><strong>Clave IMSS:</strong> @Html.DisplayFor(model => model.ClaveImss)</p>
+                    <p><strong>Clave Infonavit:</strong> @Html.DisplayFor(model => model.ClaveInfonavit)</p>
+                </div>
+
+                <!-- Columna 4 -->
+                <div class="col-md-6">
+                    <h5>Más Información</h5>
+                    <p><strong>Clave Fonacot:</strong> @Html.DisplayFor(model => model.ClaveFonacot)</p>
+                    <p><strong>Lugar de Expedición:</strong> @Html.DisplayFor(model => model.LugarExpedicion)</p>
+                    <p><strong>Porcentaje Presupuesto Federal:</strong> @Html.DisplayFor(model => model.PorcentajePresFed)</p>
+                    <p><strong>Teléfono WhatsApp:</strong> @Html.DisplayFor(model => model.TelefonoWhatsApp)</p>
+                    <p><strong>Teléfono Fijo:</strong> @Html.DisplayFor(model => model.TelefonoFijo)</p>
+                    <p><strong>Estatus:</strong> @Html.DisplayFor(model => model.Estatus)</p>
+                </div>
+            </div>
+
+            <div class="row row-divider info-container">
+                <!-- Columna 5 -->
+                <div class="col-md-6">
+                    <h5>Datos Fiscales</h5>
+                    <p><strong>Estado:</strong> @Html.DisplayFor(model => model.Estado.DescripcionSat)</p>
+                    <p><strong>Municipio:</strong> @Html.DisplayFor(model => model.Municipio.DescripcionSat)</p>
+                    <p><strong>Regimen Fiscal:</strong> @Html.DisplayFor(model => model.RegimenFiscal.DescripcionSat)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Otros Datos</h5>
+                    <p><strong>Moneda:</strong> @Html.DisplayFor(model => model.Moneda.DescripcionSat)</p>
+                    <p><strong>Pais:</strong> @Html.DisplayFor(model => model.Pais.DescripcionSat)</p>
+                    <p><strong>Tipo de Constitución:</strong> @Html.DisplayFor(model => model.TipoConstitucion.Descripcion)</p>
+                    <p><strong>Tipo de Empresa:</strong> @Html.DisplayFor(model => model.TipoEmpresa.Descripcion)</p>
+                    <p><strong>Tipo de Hora:</strong> @Html.DisplayFor(model => model.TipoHora.DescripcionSat)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

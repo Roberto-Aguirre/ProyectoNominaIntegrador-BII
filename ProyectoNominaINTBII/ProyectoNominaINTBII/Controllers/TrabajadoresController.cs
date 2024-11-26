@@ -19,49 +19,51 @@ namespace ProyectoNominaINTBII.Controllers
             _context = context;
         }
 
+
         // GET: Trabajadores
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString = null)
         {
-            var proyDb2bContext = _context.Trabajadors.Include(t => t.Banco).Include(t => t.BaseCotizacion).Include(t => t.Departamento).Include(t => t.Empresa).Include(t => t.EmpresaRegimenPat).Include(t => t.Estado).Include(t => t.EstadoCivil).Include(t => t.FormaPago).Include(t => t.MotivoNoTimbrar).Include(t => t.Municipio).Include(t => t.OrigenRecurso).Include(t => t.Pais).Include(t => t.PeriocidadPago).Include(t => t.Puesto).Include(t => t.Sexo).Include(t => t.TipoContrato).Include(t => t.TipoEmpleado).Include(t => t.TipoJornada).Include(t => t.TipoRegimen);
-            return View(await proyDb2bContext.ToListAsync());
-        }
+            IQueryable<Trabajador> trabajadoresQuery = _context.Trabajadors.Include(t => t.Banco)
+                                                                            .Include(t => t.BaseCotizacion)
+                                                                            .Include(t => t.Departamento)
+                                                                            .Include(t => t.Empresa)
+                                                                            .Include(t => t.EmpresaRegimenPat)
+                                                                            .Include(t => t.Estado)
+                                                                            .Include(t => t.EstadoCivil)
+                                                                            .Include(t => t.FormaPago)
+                                                                            .Include(t => t.MotivoNoTimbrar)
+                                                                            .Include(t => t.Municipio)
+                                                                            .Include(t => t.OrigenRecurso)
+                                                                            .Include(t => t.Pais)
+                                                                            .Include(t => t.PeriocidadPago)
+                                                                            .Include(t => t.Puesto)
+                                                                            .Include(t => t.Sexo)
+                                                                            .Include(t => t.TipoContrato)
+                                                                            .Include(t => t.TipoEmpleado)
+                                                                            .Include(t => t.TipoJornada)
+                                                                            .Include(t => t.TipoRegimen);
 
-        // GET: Trabajadores/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+            if (!string.IsNullOrEmpty(searchString))
             {
-                return NotFound();
+                if (int.TryParse(searchString, out int id))
+                {
+                    // Búsqueda por ID
+                    trabajadoresQuery = trabajadoresQuery.Where(t => t.Id == id);
+                }
+                else
+                {
+                    // Búsqueda por Nombre (considerando nombre, apellido paterno y materno)
+                    trabajadoresQuery = trabajadoresQuery.Where(t =>
+                        t.Nombre.Contains(searchString) ||
+                        t.ApellidoPaterno.Contains(searchString) ||
+                        t.ApellidoMaterno.Contains(searchString));
+                }
             }
 
-            var trabajador = await _context.Trabajadors
-                .Include(t => t.Banco)
-                .Include(t => t.BaseCotizacion)
-                .Include(t => t.Departamento)
-                .Include(t => t.Empresa)
-                .Include(t => t.EmpresaRegimenPat)
-                .Include(t => t.Estado)
-                .Include(t => t.EstadoCivil)
-                .Include(t => t.FormaPago)
-                .Include(t => t.MotivoNoTimbrar)
-                .Include(t => t.Municipio)
-                .Include(t => t.OrigenRecurso)
-                .Include(t => t.Pais)
-                .Include(t => t.PeriocidadPago)
-                .Include(t => t.Puesto)
-                .Include(t => t.Sexo)
-                .Include(t => t.TipoContrato)
-                .Include(t => t.TipoEmpleado)
-                .Include(t => t.TipoJornada)
-                .Include(t => t.TipoRegimen)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (trabajador == null)
-            {
-                return NotFound();
-            }
-
-            return View(trabajador);
+            var trabajadores = await trabajadoresQuery.ToListAsync();
+            return View(trabajadores);
         }
+
 
         // GET: Trabajadores/Create
         public IActionResult Create()
@@ -248,6 +250,46 @@ namespace ProyectoNominaINTBII.Controllers
 
             return View(trabajador);
         }
+
+
+        // GET: Trabajadores/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var trabajador = await _context.Trabajadors
+                .Include(t => t.Banco)
+                .Include(t => t.BaseCotizacion)
+                .Include(t => t.Departamento)
+                .Include(t => t.Empresa)
+                .Include(t => t.EmpresaRegimenPat)
+                .Include(t => t.Estado)
+                .Include(t => t.EstadoCivil)
+                .Include(t => t.FormaPago)
+                .Include(t => t.MotivoNoTimbrar)
+                .Include(t => t.Municipio)
+                .Include(t => t.OrigenRecurso)
+                .Include(t => t.Pais)
+                .Include(t => t.PeriocidadPago)
+                .Include(t => t.Puesto)
+                .Include(t => t.Sexo)
+                .Include(t => t.TipoContrato)
+                .Include(t => t.TipoEmpleado)
+                .Include(t => t.TipoJornada)
+                .Include(t => t.TipoRegimen)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (trabajador == null)
+            {
+                return NotFound();
+            }
+
+            return View(trabajador);
+        }
+
+
 
         // POST: Trabajadores/Delete/5
         [HttpPost, ActionName("Delete")]

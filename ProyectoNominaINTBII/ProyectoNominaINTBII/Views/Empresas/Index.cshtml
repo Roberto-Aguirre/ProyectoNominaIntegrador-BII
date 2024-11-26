@@ -1,234 +1,143 @@
 ﻿@model IEnumerable<ProyectoNominaINTBII.Models.Empresa>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Empresas";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Empresas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary" style="font-size: 1.2rem; padding: 10px 20px;">Crear Nueva Empresa</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaAlta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rfc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Calle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumeroExt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumeroInt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Colonia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Curp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoComprobante)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PathLogo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PathCertificadoSat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PathLlaveSat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ContraseñaSat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProveedorSat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PathTimbrado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CumpleReqCuotas)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClaveImss)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClaveInfonavit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClaveFonacot)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LugarExpedicion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PorcentajePresFed)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TelefonoWhatsApp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TelefonoFijo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Moneda)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Municipio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pais)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RegimenFiscal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoConstitucion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoEmpresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoHora)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaAlta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rfc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Calle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroExt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroInt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colonia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Curp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoComprobante)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PathLogo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PathCertificadoSat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PathLlaveSat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContraseñaSat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProveedorSat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PathTimbrado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CumpleReqCuotas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClaveImss)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClaveInfonavit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClaveFonacot)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LugarExpedicion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PorcentajePresFed)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefonoWhatsApp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefonoFijo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Moneda.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Municipio.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pais.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegimenFiscal.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoConstitucion.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoEmpresa.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoHora.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+<!-- Barra de búsqueda -->
+<form asp-action="Index" method="get" class="search-form">
+    <input type="text" name="searchString" class="form-control" placeholder="Buscar empresas..." />
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<style>
+    .empresa-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .section {
+        flex: 1 1 30%; /* Ajustando el ancho para asegurarse de que quepan en una fila */
+        padding: 10px;
+        margin: 5px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        text-align: center;
+    }
+
+    .data {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-item {
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-label {
+        font-weight: bold;
+        width: 50%; /* Ancho consistente para las etiquetas */
+    }
+
+    .data-value {
+        width: 50%; /* Ancho consistente para los valores */
+        text-align: right;
+    }
+
+    .action-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .action-buttons a {
+        font-size: 1rem;
+        padding: 8px 16px;
+        margin-right: 5px;
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la lista de empresas */
+    }
+
+    .search-form .form-control {
+        flex-grow: 1; /* Permite que el input de búsqueda ocupe más espacio */
+    }
+
+    h1 {
+        text-align: center;
+        color: #007bff; /* Cambia el color del título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+</style>
+
+@foreach (var item in Model)
+
+{
+    <div class="empresa-container">
+        <div class="action-buttons">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+        </div>
+        <div class="section">
+            <div class="section-header">Información General</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Nombre:</span> @Html.DisplayFor(modelItem => item.Nombre)</div>
+                <div class="data-item"><span class="data-label">RFC:</span> @Html.DisplayFor(modelItem => item.Rfc)</div>
+                <div class="data-item"><span class="data-label">Fecha de Alta:</span> @Html.DisplayFor(modelItem => item.FechaAlta)</div>
+                <div class="data-item"><span class="data-label">Email:</span> @Html.DisplayFor(modelItem => item.Email)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Dirección</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Calle:</span> @Html.DisplayFor(modelItem => item.Calle)</div>
+                <div class="data-item"><span class="data-label">Número Exterior:</span> @Html.DisplayFor(modelItem => item.NumeroExt)</div>
+                <div class="data-item"><span class="data-label">Número Interior:</span> @Html.DisplayFor(modelItem => item.NumeroInt)</div>
+                <div class="data-item"><span class="data-label">Colonia:</span> @Html.DisplayFor(modelItem => item.Colonia)</div>
+                <div class="data-item"><span class="data-label">Código Postal:</span> @Html.DisplayFor(modelItem => item.Cp)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Información Fiscal</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Regimen Fiscal:</span> @Html.DisplayFor(modelItem => item.RegimenFiscal)</div>
+                <div class="data-item"><span class="data-label">Tipo de Constitución:</span> @Html.DisplayFor(modelItem => item.TipoConstitucion)</div>
+                <div class="data-item"><span class="data-label">Tipo de Empresa:</span> @Html.DisplayFor(modelItem => item.TipoEmpresa)</div>
+            </div>
+        </div>
+    </div>
 }
-    </tbody>
-</table>

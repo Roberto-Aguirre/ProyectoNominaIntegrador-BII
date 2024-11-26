@@ -2,99 +2,139 @@
 
 @{
     ViewData["Title"] = "Create";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Create</h1>
 
 <h4>NominaDetalle</h4>
+<div class="form-group">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <input type="submit" value="Save" form="editForm" class="btn btn-primary" />
+</div>
 <hr />
+
+<style>
+    /* Alineación vertical de los botones */
+    .btn {
+        display: inline-block; /* Permite que los botones se alineen horizontalmente */
+        vertical-align: middle; /* Alinea los botones verticalmente al centro */
+        margin: 5px; /* Espacio uniforme alrededor de cada botón */
+    }
+
+    /* Estilos adicionales para dar formato y coherencia */
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px; /* Espaciado interno más amplio para mejor clicabilidad */
+        font-size: 16px; /* Tamaño de fuente uniforme para ambos botones */
+        border-radius: 5px; /* Bordes redondeados */
+        text-shadow: 0 1px 1px rgba(0,0,0,0.2); /* Sombra en el texto para profundidad */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra alrededor del botón para efecto 3D */
+        transition: all 0.3s ease; /* Transición suave para cambios de estado */
+    }
+
+    .btn-primary {
+        color: #fff; /* Texto blanco para mayor contraste */
+        background-color: #007bff; /* Fondo azul para el botón 'Save' */
+        border-color: #007bff; /* Borde azul a juego */
+    }
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0056b3; /* Fondo más oscuro al interactuar */
+            border-color: #004085; /* Borde más oscuro al interactuar */
+        }
+
+    .btn-secondary {
+        color: #fff; /* Texto blanco para mayor contraste */
+        background-color: #6c757d; /* Fondo gris para el botón 'Back to List' */
+        border-color: #6c757d; /* Borde gris a juego */
+    }
+
+        .btn-secondary:hover, .btn-secondary:focus {
+            background-color: #545b62; /* Fondo más oscuro al interactuar */
+            border-color: #4e555b; /* Borde más oscuro al interactuar */
+        }
+
+    /* Ajuste de márgenes para mantener los campos juntos */
+    .form-group {
+        margin-bottom: 10px; /* Reduce la separación entre los campos */
+    }
+</style>
+
 <div class="row">
-    <div class="col-md-4">
+    <!-- Formulario en una sola columna -->
+    <div class="col-md-12">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="EmpresaId" class="control-label"></label>
-                <select asp-for="EmpresaId" class ="form-control" asp-items="ViewBag.EmpresaId"></select>
+                <select asp-for="EmpresaId" class="form-control" asp-items="ViewBag.EmpresaId"></select>
             </div>
+
             <div class="form-group">
                 <label asp-for="PeriodoId" class="control-label"></label>
-                <select asp-for="PeriodoId" class ="form-control" asp-items="ViewBag.PeriodoId"></select>
+                <select asp-for="PeriodoId" class="form-control" asp-items="ViewBag.PeriodoId"></select>
             </div>
+
             <div class="form-group">
                 <label asp-for="TrabajadorId" class="control-label"></label>
-                <select asp-for="TrabajadorId" class ="form-control" asp-items="ViewBag.TrabajadorId"></select>
+                <select asp-for="TrabajadorId" class="form-control" asp-items="ViewBag.TrabajadorId"></select>
             </div>
+
             <div class="form-group">
                 <label asp-for="IncidenciaId" class="control-label"></label>
-                <select asp-for="IncidenciaId" class ="form-control" asp-items="ViewBag.IncidenciaId"></select>
+                <select asp-for="IncidenciaId" class="form-control" asp-items="ViewBag.IncidenciaId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="TipoIncapacidadId" class="control-label"></label>
-                <input asp-for="TipoIncapacidadId" class="form-control" />
-                <span asp-validation-for="TipoIncapacidadId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DiasPagados" class="control-label"></label>
-                <input asp-for="DiasPagados" class="form-control" />
-                <span asp-validation-for="DiasPagados" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HorasExtra" class="control-label"></label>
-                <input asp-for="HorasExtra" class="form-control" />
-                <span asp-validation-for="HorasExtra" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Importe" class="control-label"></label>
-                <input asp-for="Importe" class="form-control" />
-                <span asp-validation-for="Importe" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="Gravado" class="control-label"></label>
                 <input asp-for="Gravado" class="form-control" />
                 <span asp-validation-for="Gravado" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Exento" class="control-label"></label>
                 <input asp-for="Exento" class="form-control" />
                 <span asp-validation-for="Exento" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="IsraPagar" class="control-label"></label>
                 <input asp-for="IsraPagar" class="form-control" />
                 <span asp-validation-for="IsraPagar" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="BaseImpuesto" class="control-label"></label>
                 <input asp-for="BaseImpuesto" class="form-control" />
                 <span asp-validation-for="BaseImpuesto" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="TipoCaptura" class="control-label"></label>
                 <input asp-for="TipoCaptura" class="form-control" />
                 <span asp-validation-for="TipoCaptura" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Comentarios" class="control-label"></label>
                 <input asp-for="Comentarios" class="form-control" />
                 <span asp-validation-for="Comentarios" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Estatus" class="control-label"></label>
                 <input asp-for="Estatus" class="form-control" />
                 <span asp-validation-for="Estatus" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

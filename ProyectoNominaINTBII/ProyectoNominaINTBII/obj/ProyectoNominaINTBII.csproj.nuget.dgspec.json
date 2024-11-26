@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
+    "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
+    "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "projectUniqueName": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
         "projectName": "ProyectoNominaINTBII",
-        "projectPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "projectPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
         "packagesPath": "C:\\Users\\aldo-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
+        "outputPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aldo-\\AppData\\Roaming\\NuGet\\NuGet.Config",

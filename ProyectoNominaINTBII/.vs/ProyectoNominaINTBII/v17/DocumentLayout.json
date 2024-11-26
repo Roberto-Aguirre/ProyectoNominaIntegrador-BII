@@ -1,71 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\",
+  "WorkspaceRootPath": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\trabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\controllers\\trabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\trabajadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\trabajadores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\trabajadores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\ivan aguirre\\desktop\\codes\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\controllers\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\nominacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\trabajadores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\trabajadores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\empresas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\empresas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\trabajadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\trabajadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\data\\proydb2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\data\\proydb2bcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\controllers\\nominadetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\controllers\\nominadetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\empresas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\empresas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\views\\nominadetalle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\nominadetalle\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii-nominadetalle\\proyectonominaintbii\\proyectonominaintbii\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
+      "AbsoluteMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|c:\\users\\aldo-\\onedrive\\escritorio\\proyectonominaintegrador-bii\\proyectonominaintbii\\proyectonominaintbii\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D2FEB4B-B589-4DED-B836-B7FEA7B34501}|ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj|solutionrelative:proyectonominaintbii\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,223 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
           "SelectedChildIndex": 1,
-=======
-          "SelectedChildIndex": 2,
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Create.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Trabajadores\\Create.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Create.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Trabajadores\\Create.cshtml",
-              "ViewState": "AgIAALIAAAAAAAAAAADgvxQAAAA+AAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAD4v0EAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T04:09:21.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T07:42:06.469Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-=======
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Trabajadores\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Edit.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Trabajadores\\Edit.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T02:26:47.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
               "DocumentIndex": 0,
-              "Title": "TrabajadoresController.cs",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\TrabajadoresController.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAAGcAAAAAAAAAAAAcwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T04:04:43.619Z",
-=======
-              "ViewState": "AgIAAEQAAAAAAAAAAAAvwEsAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:19:21.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Trabajadores\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Trabajadores\\Index.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Trabajadores\\Index.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAG0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T02:12:43.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Empresas\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Empresas\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Empresas\\Index.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Empresas\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T02:03:53.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Empresas\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\Empresas\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\Empresas\\Edit.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\Empresas\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T02:03:51.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T01:53:38.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Edit.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T01:53:36.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Index.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T01:53:15.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
               "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
               "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T01:53:12.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\appsettings.json",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\appsettings.json",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\appsettings.json",
-              "RelativeToolTip": "ProyectoNominaINTBII\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-26T01:18:21.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProyDb2bContext.cs",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Data\\ProyDb2bContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:18:12.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Create.cshtml",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Create.cshtml",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Create.cshtml",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Create.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAADgvxgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T05:00:14.327Z",
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 2,
-              "Title": "NominaController.cs",
-              "DocumentMoniker": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaController.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\NominaController.cs",
-              "ToolTip": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaController.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\NominaController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAmwHEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T03:37:29.987Z",
+              "WhenOpened": "2024-11-26T10:00:40.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-=======
-              "DocumentIndex": 8,
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
-              "Title": "NominaDetalleController.cs",
-              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
-              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
-              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII-NominaDetalle\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
-              "RelativeToolTip": "ProyectoNominaINTBII\\Controllers\\NominaDetalleController.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAIIAAAAAAAAAAAAcwIMAAAAMAAAAAAAAAA==",
->>>>>>> e6e2c89ce770bcb345be2a7fcf6f7db48caf5918
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T03:36:51.851Z",
-              "EditorCaption": ""
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
+              "RelativeDocumentMoniker": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
+              "ToolTip": "C:\\Users\\aldo-\\OneDrive\\Escritorio\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
+              "RelativeToolTip": "ProyectoNominaINTBII\\Views\\NominaDetalle\\Details.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T09:57:47.599Z"
             }
           ]
         }

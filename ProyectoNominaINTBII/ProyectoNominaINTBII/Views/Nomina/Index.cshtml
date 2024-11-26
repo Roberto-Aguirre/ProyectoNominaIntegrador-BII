@@ -8,95 +8,134 @@
 <h1>Nomina</h1>
 
 <p>
-    <a asp-action="Create">Crear Nomina</a>
+    <a asp-action="Create" class="btn btn-primary" style="font-size: 1.2rem; padding: 10px 20px;">Crear Nomina</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Periodo
-            </th>
-            <th>
-                Ejercicio
-            </th>
-            <th>
-               Fecha Inicial
-            </th>
-            <th>
-               Fecha Final
-            </th>
-            <th>
-                Fecha Pago
-            </th>
-            <th>
-                Total Trabajadores
-            </th>
-            <th>
-                Total Percepciones
-            </th>
-            <th>
-                Total Deducciones
-            </th>
-            <th>
-               Generada
-            </th>
-            <th>
-                Autorizada
-            </th>
-            <th>
-                Timbrada
-            </th>
-            <th>
-                Cerrada
-            </th>
-            <th>Controles</th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Periodo.Descripcion)
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ejercicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaInicial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaFinal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaPago)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TotalTrabajadores)
-            </td>
-            <td>
-                $@Html.DisplayFor(modelItem => item.TotalPercepciones)
-            </td>
-            <td>
-                $@Html.DisplayFor(modelItem => item.TotalDeducciones)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Generada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autorizada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Timbrada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cerrada)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-            </td>
-        </tr>
+
+<!-- Barra de búsqueda -->
+<form asp-action="Index" method="get" class="search-form">
+    <input type="text" name="searchString" class="form-control" placeholder="Buscar nóminas..." />
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<style>
+    .nomina-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 15px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .section {
+        flex: 1 1 30%; /* Ajustando el ancho para asegurarse de que quepan en una fila */
+        padding: 10px;
+        margin: 5px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        text-align: center;
+    }
+
+    .data {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-item {
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .data-label {
+        font-weight: bold;
+        width: 50%; /* Ancho consistente para las etiquetas */
+    }
+
+    .data-value {
+        width: 50%; /* Ancho consistente para los valores */
+        text-align: right;
+    }
+
+    .action-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+        .action-buttons a {
+            font-size: 1rem;
+            padding: 8px 16px;
+            margin-right: 5px;
+        }
+
+    .search-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la lista de nóminas */
+    }
+
+        .search-form .form-control {
+            flex-grow: 1; /* Permite que el input de búsqueda ocupe más espacio */
+        }
+
+    h1 {
+        text-align: center;
+        color: #007bff; /* Cambia el color del título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+</style>
+
+@foreach (var item in Model)
+{
+    <div class="nomina-container">
+        <div class="action-buttons">
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalles</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+        </div>
+        <div class="section">
+            <div class="section-header">Detalles de la Nómina</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Periodo:</span> @Html.DisplayFor(modelItem => item.Periodo.Descripcion)</div>
+                <div class="data-item"><span class="data-label">Ejercicio:</span> @Html.DisplayFor(modelItem => item.Ejercicio)</div>
+                <div class="data-item"><span class="data-label">Fecha Inicial:</span> @Html.DisplayFor(modelItem => item.FechaInicial)</div>
+                <div class="data-item"><span class="data-label">Fecha Final:</span> @Html.DisplayFor(modelItem => item.FechaFinal)</div>
+                <div class="data-item"><span class="data-label">Fecha Pago:</span> @Html.DisplayFor(modelItem => item.FechaPago)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Totales</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Total Trabajadores:</span> @Html.DisplayFor(modelItem => item.TotalTrabajadores)</div>
+                <div class="data-item"><span class="data-label">Total Percepciones:</span> $@Html.DisplayFor(modelItem => item.TotalPercepciones)</div>
+                <div class="data-item"><span class="data-label">Total Deducciones:</span> $@Html.DisplayFor(modelItem => item.TotalDeducciones)</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header">Estado de la Nómina</div>
+            <div class="data">
+                <div class="data-item"><span class="data-label">Generada:</span> @Html.DisplayFor(modelItem => item.Generada)</div>
+                <div class="data-item"><span class="data-label">Autorizada:</span> @Html.DisplayFor(modelItem => item.Autorizada)</div>
+                <div class="data-item"><span class="data-label">Timbrada:</span> @Html.DisplayFor(modelItem => item.Timbrada)</div>
+                <div class="data-item"><span class="data-label">Cerrada:</span> @Html.DisplayFor(modelItem => item.Cerrada)</div>
+            </div>
+        </div>
+    </div>
 }
-    </tbody>
-</table>

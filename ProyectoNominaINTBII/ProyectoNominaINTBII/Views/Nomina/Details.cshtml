@@ -5,135 +5,141 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<div class="container">
+    <div class="header-container text-center">
+        <h2>Detalles de la Nómina - @Model.Ejercicio</h2>
+        <div class="btn-group-custom">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-edit">Editar</a>
+            <a asp-action="Index" class="btn-back">Volver a la lista</a>
+        </div>
+    </div>
 
-<div>
-    <h4>Nomina</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ejercicio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ejercicio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaInicial)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaInicial)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaFinal)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaFinal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaPago)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NominaExtraordinariaId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NominaExtraordinariaId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ConceptoNomina)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ConceptoNomina)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ConceptoTimbrado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ConceptoTimbrado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalTrabajadores)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalTrabajadores)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalPercepciones)
-        </dt>
-        <dd class = "col-sm-10">
-            $@Html.DisplayFor(model => model.TotalPercepciones)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalDeducciones)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalDeducciones)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Extraordinaria)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Extraordinaria)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Generada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Generada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Autorizada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Autorizada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Timbrada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Timbrada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cerrada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cerrada)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Empresa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Empresa.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Periodo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Periodo.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SatPeriocidadPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SatPeriocidadPago.DescripcionSat)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SatTipoContrato)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SatTipoContrato.Descripcion)
-        </dd>
-    </dl>
+    <!-- Card Container -->
+    <div class="card card-custom">
+        <div class="card-body">
+            <!-- Información General de la Nómina -->
+            <div class="row info-container">
+                <div class="col-md-6">
+                    <h5>Información General</h5>
+                    <p><strong>Ejercicio:</strong> @Html.DisplayFor(model => model.Ejercicio)</p>
+                    <p><strong>Fecha Inicial:</strong> @Html.DisplayFor(model => model.FechaInicial)</p>
+                    <p><strong>Fecha Final:</strong> @Html.DisplayFor(model => model.FechaFinal)</p>
+                    <p><strong>Fecha de Pago:</strong> @Html.DisplayFor(model => model.FechaPago)</p>
+                    <p><strong>Nomina Extraordinaria:</strong> @Html.DisplayFor(model => model.NominaExtraordinariaId)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Conceptos</h5>
+                    <p><strong>Concepto Nómina:</strong> @Html.DisplayFor(model => model.ConceptoNomina)</p>
+                    <p><strong>Concepto Timbrado:</strong> @Html.DisplayFor(model => model.ConceptoTimbrado)</p>
+                    <p><strong>Total de Trabajadores:</strong> @Html.DisplayFor(model => model.TotalTrabajadores)</p>
+                </div>
+            </div>
+
+            <!-- Totales y Otros Datos -->
+            <div class="row row-divider info-container">
+                <div class="col-md-6">
+                    <h5>Totales</h5>
+                    <p><strong>Total Percepciones:</strong> $@Html.DisplayFor(model => model.TotalPercepciones)</p>
+                    <p><strong>Total Deducciones:</strong> $@Html.DisplayFor(model => model.TotalDeducciones)</p>
+                    <p><strong>Extraordinaria:</strong> @Html.DisplayFor(model => model.Extraordinaria)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Estado de la Nómina</h5>
+                    <p><strong>Generada:</strong> @Html.DisplayFor(model => model.Generada)</p>
+                    <p><strong>Autorizada:</strong> @Html.DisplayFor(model => model.Autorizada)</p>
+                    <p><strong>Timbrada:</strong> @Html.DisplayFor(model => model.Timbrada)</p>
+                    <p><strong>Cerrada:</strong> @Html.DisplayFor(model => model.Cerrada)</p>
+                    <p><strong>Estatus:</strong> @Html.DisplayFor(model => model.Estatus)</p>
+                </div>
+            </div>
+
+            <!-- Información de las Relaciones -->
+            <div class="row row-divider info-container">
+                <div class="col-md-6">
+                    <h5>Empresa y Periodo</h5>
+                    <p><strong>Empresa:</strong> @Html.DisplayFor(model => model.Empresa.Nombre)</p>
+                    <p><strong>Periodo:</strong> @Html.DisplayFor(model => model.Periodo.Descripcion)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Tipo de Pago</h5>
+                    <p><strong>Tipo de Periocidad de Pago:</strong> @Html.DisplayFor(model => model.SatPeriocidadPago.DescripcionSat)</p>
+                    <p><strong>Tipo de Contrato:</strong> @Html.DisplayFor(model => model.SatTipoContrato.Descripcion)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Volver</a>
-</div>
+
+
+<style>
+    .card-custom {
+        border: 2px solid #007BFF;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .card-header-custom {
+        background-color: white;
+        color: black;
+        border-bottom: none;
+    }
+
+    .header-container {
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .btn-group-custom {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .btn-edit {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .btn-edit:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-back {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .btn-back:hover {
+        background-color: #5a6268;
+    }
+
+    .info-container {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .row-divider {
+        margin-top: 20px;
+    }
+
+    h5 {
+        margin-top: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>

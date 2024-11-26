@@ -2,306 +2,136 @@
 
 @{
     ViewData["Title"] = "Details";
+
+
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<style>
+    .card-custom {
+        border: 2px solid #007BFF;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+    }
 
-<div>
-    <h4>Trabajador</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumEmpleado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumEmpleado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ApellidoPaterno)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ApellidoPaterno)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ApellidoMaterno)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ApellidoMaterno)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaNac)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaNac)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Calle)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Calle)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumeroExt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumeroExt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumeroInt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumeroInt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Colonia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Colonia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cp)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TelefonoMovil)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TelefonoMovil)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TelefonoFijo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TelefonoFijo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rfc)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rfc)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Curp)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Curp)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nss)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nss)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaIngreso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaIngreso)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaBaja)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaBaja)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CuentaBanco)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CuentaBanco)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Clabe)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Clabe)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Salario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Salario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SalarioDiario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SalarioDiario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SalarioDiarioInte)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SalarioDiarioInte)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CumpleReqDisminucion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CumpleReqDisminucion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PorcentajePresFed)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PorcentajePresFed)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MontoPropio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MontoPropio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NominaGen)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NominaGen)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EstatusTimbrado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EstatusTimbrado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Banco)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Banco.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BaseCotizacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BaseCotizacion.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Departamento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Departamento.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Empresa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Empresa.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EmpresaRegimenPat)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EmpresaRegimenPat.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EstadoCivil)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EstadoCivil.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FormaPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FormaPago.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MotivoNoTimbrar)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MotivoNoTimbrar.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Municipio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Municipio.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OrigenRecurso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OrigenRecurso.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pais)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pais.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PeriocidadPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PeriocidadPago.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Puesto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Puesto.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sexo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Sexo.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoContrato)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoContrato.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoEmpleado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoEmpleado.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoJornada)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoJornada.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoRegimen)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoRegimen.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    .card-header-custom {
+        background-color: white;
+        color: black;
+        border-bottom: none;
+    }
+
+    .header-container {
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .btn-group-custom {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .btn-edit {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+        .btn-edit:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-back {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+
+    .info-container {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .row-divider {
+        margin-top: 20px;
+    }
+
+    h5 {
+        margin-top: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    <div class="header-container text-center">
+        <h2>Detalles del Trabajador - @Model.Nombre @Model.ApellidoPaterno @Model.ApellidoMaterno</h2>
+        <div class="btn-group-custom">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-edit">Editar</a>
+            <a asp-action="Index" class="btn-back">Volver a la lista</a>
+        </div>
+    </div>
+    <div class="card card-custom">
+        <div class="card-body">
+            <div class="row info-container">
+                <div class="col-md-6">
+                    <h5>Información Personal</h5>
+                    <p><strong>Número de Empleado:</strong> @Model.NumEmpleado</p>
+                    <p><strong>RFC:</strong> @Model.Rfc</p>
+                    <p><strong>CURP:</strong> @Model.Curp</p>
+                    <p><strong>Fecha de Nacimiento:</strong> @Model.FechaNac.ToShortDateString()</p>
+                    <p><strong>Sexo:</strong> @Model.Sexo.Descipcion</p>
+                    <p><strong>Estado Civil:</strong> @Model.EstadoCivil.Descripcion</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contacto y Ubicación</h5>
+                    <p><strong>Calle:</strong> @Model.Calle</p>
+                    <p><strong>Número Exterior:</strong> @Model.NumeroExt</p>
+                    <p><strong>Número Interior:</strong> @Model.NumeroInt</p>
+                    <p><strong>Colonia:</strong> @Model.Colonia</p>
+                    <p><strong>Código Postal:</strong> @Model.Cp</p>
+                    <p><strong>Teléfono Móvil:</strong> @Model.TelefonoMovil</p>
+                    <p><strong>Teléfono Fijo:</strong> @Model.TelefonoFijo</p>
+                </div>
+            </div>
+            <div class="row row-divider info-container">
+                <div class="col-md-6">
+                    <h5>Datos Laborales</h5>
+                    <p><strong>Fecha de Ingreso:</strong> @Model.FechaIngreso.ToShortDateString()</p>
+                    <p><strong>Departamento:</strong> @Model.Departamento.Descripcion</p>
+                    <p><strong>Puesto:</strong> @Model.Puesto.Descripcion</p>
+                    <p><strong>Salario Diario:</strong> $@Model.SalarioDiario.ToString("N2")</p>
+                    <p><strong>Salario Integrado:</strong> $@Model.SalarioDiarioInte.ToString("N2")</p>
+                    <p><strong>Nómina Generada:</strong> @Model.NominaGen</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Otros Datos</h5>
+                    <p><strong>Estado:</strong> @Model.Estado.DescripcionSat</p>
+                    <p><strong>Municipio:</strong> @Model.Municipio.DescripcionSat</p>
+                    <p><strong>Banco:</strong> @Model.Banco.DescripcionSat</p>
+                    <p><strong>Cuenta Bancaria:</strong> @Model.CuentaBanco</p>
+                    <p><strong>CLABE:</strong> @Model.Clabe</p>
+                    <p><strong>Email:</strong> @Model.Email</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

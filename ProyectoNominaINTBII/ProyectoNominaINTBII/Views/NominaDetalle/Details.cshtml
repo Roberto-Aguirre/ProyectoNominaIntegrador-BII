@@ -2,108 +2,94 @@
 
 @{
     ViewData["Title"] = "Details";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Detalles de Nomina Detalle</h1>
 
-<div>
-    <h4>NominaDetalle</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoIncapacidadId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoIncapacidadId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DiasPagados)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DiasPagados)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HorasExtra)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HorasExtra)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Importe)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Importe)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Gravado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Gravado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Exento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Exento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsraPagar)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsraPagar)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BaseImpuesto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BaseImpuesto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoCaptura)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoCaptura)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Comentarios)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Comentarios)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Empresa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Empresa.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Incidencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Incidencia.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Periodo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Periodo.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Trabajador)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Trabajador.Id)
-        </dd>
-    </dl>
+<div class="container">
+    <div class="header-container text-center">
+        <h2>Detalles del NominaDetalle</h2>
+        <div class="btn-group-custom">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-edit">Editar</a>
+            <a asp-action="Index" class="btn-back">Volver a la lista</a>
+        </div>
+    </div>
+    <div class="card card-custom">
+        <div class="card-body">
+            <div class="row info-container">
+                <div class="col-md-6">
+                    <h5>Información General</h5>
+                    <p><strong>Días Pagados:</strong> @Html.DisplayFor(model => model.DiasPagados)</p>
+                    <p><strong>Horas Extra:</strong> @Html.DisplayFor(model => model.HorasExtra)</p>
+                    <p><strong>Importe Total:</strong> $@Html.DisplayFor(model => model.Importe)</p>
+                    <p><strong>Gravado:</strong> $@Html.DisplayFor(model => model.Gravado)</p>
+                    <p><strong>Exento:</strong> $@Html.DisplayFor(model => model.Exento)</p>
+                    <p><strong>ISR a Pagar:</strong> $@Html.DisplayFor(model => model.IsraPagar)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Datos Fiscales y Captura</h5>
+                    <p><strong>Base Impuesto:</strong> $@Html.DisplayFor(model => model.BaseImpuesto)</p>
+                    <p><strong>Tipo de Captura:</strong> @Html.DisplayFor(model => model.TipoCaptura)</p>
+                    <p><strong>Comentarios:</strong> @Html.DisplayFor(model => model.Comentarios)</p>
+                    <p><strong>Estatus:</strong> @Html.DisplayFor(model => model.Estatus)</p>
+                </div>
+            </div>
+            <div class="row row-divider info-container">
+                <div class="col-md-6">
+                    <h5>Relaciones</h5>
+                    <p><strong>Empresa:</strong> @Html.DisplayFor(model => model.Empresa.Id)</p>
+                    <p><strong>Incidencia:</strong> @Html.DisplayFor(model => model.Incidencia.Id)</p>
+                    <p><strong>Periodo:</strong> @Html.DisplayFor(model => model.Periodo.Id)</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Trabajador</h5>
+                    <p><strong>Trabajador:</strong> @Html.DisplayFor(model => model.Trabajador.Id)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<style>
+    .btn-edit {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+    .btn-edit:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-back {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+    .btn-back:hover {
+        background-color: #5a6268;
+    }
+
+    .row-divider {
+        margin-top: 20px;
+    }
+
+    .info-container {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    h5 {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
