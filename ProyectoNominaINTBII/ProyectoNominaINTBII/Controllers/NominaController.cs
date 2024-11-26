@@ -70,23 +70,42 @@ namespace ProyectoNominaINTBII.Controllers
             nomina.FechaInicial = periodo.FechaInicial;
             nomina.FechaFinal = periodo.FechaFinal;
             nomina.Ejercicio = DateTime.UtcNow.Year;
-            Trabajador trabajador = await _context.Trabajadors.FirstOrDefaultAsync(e => e.EmpresaId == nomina.EmpresaId);
+            Trabajador trabajadordummy = await _context.Trabajadors.FirstOrDefaultAsync(e => e.EmpresaId == nomina.EmpresaId);
             List<Trabajador> trabajadoresNomina = await _context.Trabajadors.ToListAsync();
-            nomina.SatPeriocidadPagoId = trabajador.PeriocidadPagoId;
-            nomina.SatTipoContratoId = trabajador.TipoContratoId;
+            nomina.SatPeriocidadPagoId = trabajadordummy.PeriocidadPagoId;
+            nomina.SatTipoContratoId = trabajadordummy.TipoContratoId;
 
             if (nomina.Extraordinaria)
                 nomina.NominaExtraordinariaId = 1;
             else
                 nomina.NominaExtraordinariaId = 0;
 
-
             nomina.TotalTrabajadores = trabajadoresNomina.Count;
 
-            NominaDetalle nominaDetalle = new NominaDetalle();
-            nominaDetalle.EmpresaId = trabajador.EmpresaId;
-            nominaDetalle.PeriodoId = periodo.Id;
-            nominaDetalle.TrabajadorId = trabajador.Id;
+       NominaDetalle baseNomina = new NominaDetalle();
+            baseNomina.PeriodoId = nomina.PeriodoId;
+            baseNomina.DiasPagados = 5;
+            baseNomina.EmpresaId = nomina.EmpresaId;
+            baseNomina.Estatus = "I";
+            baseNomina.
+            //baseNomina.BaseImpuesto =
+            //baseNomina.
+
+            //baseNomina.BaseImpuesto 
+
+
+            foreach (var item in trabajadoresNomina)
+            {
+                var salario = item.SalarioDiario;
+
+                NominaDetalle nominaEstandar = new NominaDetalle();
+                NominaDetalle Imss = new NominaDetalle();
+                NominaDetalle Isr = new NominaDetalle();
+                NominaDetalle nominaDetalle = new NominaDetalle();
+
+
+            }
+
             //nominaDetalle.IncidenciaId = 
             //nominaDetalle.TipoIncapacidadId 
             //nominaDetalle.DiasPagados 

@@ -7457,19 +7457,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\": {}
+    "C:\\Users\\ext_riaguirres\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+      "projectUniqueName": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
       "projectName": "ProyectoNominaINTBII",
-      "projectPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-      "packagesPath": "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
+      "projectPath": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+      "packagesPath": "C:\\Users\\ext_riaguirres\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ivan Aguirre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ext_riaguirres\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7556,7 +7556,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"iTextSharp 5.5.13.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'iTextSharp 5.5.13.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         "net8.0"
