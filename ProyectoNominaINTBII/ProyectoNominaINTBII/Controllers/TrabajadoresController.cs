@@ -70,11 +70,11 @@ namespace ProyectoNominaINTBII.Controllers
             ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Descripcion");
             ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Descripcion");
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre");
-            ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "RegistroPatronal");
+            ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "Id");
             ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat");
             ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Descripcion");
             ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "DescripcionSat");
-            ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Descripcion");
+            ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Id");
             ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat");
             ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "DscripcionSat");
             ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat");
@@ -84,7 +84,7 @@ namespace ProyectoNominaINTBII.Controllers
             ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion");
             ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion");
             ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat");
-            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat");
+            //ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat");
             return View();
         }
 
@@ -95,34 +95,32 @@ namespace ProyectoNominaINTBII.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,EmpresaId,TipoEmpleadoId,TipoContratoId,NumEmpleado,Nombre,ApellidoPaterno,ApellidoMaterno,SexoId,EstadoCivilId,FechaNac,Calle,NumeroExt,NumeroInt,Colonia,Cp,PaisId,MunicipioId,EstadoId,TelefonoMovil,TelefonoFijo,Rfc,Curp,Nss,FechaIngreso,FechaBaja,PeriocidadPagoId,FormaPagoId,CuentaBanco,Clabe,BancoId,Email,Salario,SalarioDiario,SalarioDiarioInte,CumpleReqDisminucion,TipoRegimenId,PuestoId,DepartamentoId,BaseCotizacionId,TipoJornadaId,OrigenRecursoId,PorcentajePresFed,MontoPropio,NominaGen,EmpresaRegimenPatId,EstatusTimbrado,MotivoNoTimbrarId,Estatus")] Trabajador trabajador)
         {
-               
-                    _context.Add(trabajador);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+
+            _context.Add(trabajador);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
 
-                ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "DescripcionSat", trabajador.BancoId);
-                ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Descripcion", trabajador.BaseCotizacionId);
-                ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Descripcion", trabajador.DepartamentoId);
-                ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", trabajador.EmpresaId);
-                ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "RegistroPatronal", trabajador.EmpresaRegimenPatId);
-                ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", trabajador.EstadoId);
-                ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Descripcion", trabajador.EstadoCivilId);
-                ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "DescripcionSat", trabajador.FormaPagoId);
-                ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Descripcion", trabajador.MotivoNoTimbrarId);
-                ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", trabajador.MunicipioId);
-                ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "DscripcionSat", trabajador.OrigenRecursoId);
-                ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", trabajador.PaisId);
-                ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "DescripcionSat", trabajador.PeriocidadPagoId);
-                ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Descripcion", trabajador.PuestoId);
-                ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Descipcion", trabajador.SexoId);
-                ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion", trabajador.TipoContratoId);
-                ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion", trabajador.TipoEmpleadoId);
-                ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat", trabajador.TipoJornadaId);
-                ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat", trabajador.TipoRegimenId);
-            
-          
-
+            ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "DescripcionSat", trabajador.BancoId);
+            ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Descripcion", trabajador.BaseCotizacionId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Descripcion", trabajador.DepartamentoId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", trabajador.EmpresaId);
+            ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "Id", trabajador.EmpresaRegimenPatId);
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", trabajador.EstadoId);
+            ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Descripcion", trabajador.EstadoCivilId);
+            ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "DescripcionSat", trabajador.FormaPagoId);
+            ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Id", trabajador.MotivoNoTimbrarId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", trabajador.MunicipioId);
+            ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "DscripcionSat", trabajador.OrigenRecursoId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", trabajador.PaisId);
+            ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "DescripcionSat", trabajador.PeriocidadPagoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Descripcion", trabajador.PuestoId);
+            ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Descipcion", trabajador.SexoId);
+            ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion", trabajador.TipoContratoId);
+            ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion", trabajador.TipoEmpleadoId);
+            ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat", trabajador.TipoJornadaId);
+            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat", trabajador.TipoRegimenId);
+            return View(trabajador);
 
         }
 
@@ -139,25 +137,25 @@ namespace ProyectoNominaINTBII.Controllers
             {
                 return NotFound();
             }
-            ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "Id", trabajador.BancoId);
-            ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Id", trabajador.BaseCotizacionId);
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id", trabajador.DepartamentoId);
-            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Id", trabajador.EmpresaId);
+            ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "DescripcionSat", trabajador.BancoId);
+            ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Descripcion", trabajador.BaseCotizacionId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Descripcion", trabajador.DepartamentoId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", trabajador.EmpresaId);
             ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "Id", trabajador.EmpresaRegimenPatId);
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id", trabajador.EstadoId);
-            ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Id", trabajador.EstadoCivilId);
-            ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "Id", trabajador.FormaPagoId);
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", trabajador.EstadoId);
+            ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Descripcion", trabajador.EstadoCivilId);
+            ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "DescripcionSat", trabajador.FormaPagoId);
             ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Id", trabajador.MotivoNoTimbrarId);
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id", trabajador.MunicipioId);
-            ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "Id", trabajador.OrigenRecursoId);
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id", trabajador.PaisId);
-            ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "Id", trabajador.PeriocidadPagoId);
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id", trabajador.PuestoId);
-            ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Id", trabajador.SexoId);
-            ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Id", trabajador.TipoContratoId);
-            ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Id", trabajador.TipoEmpleadoId);
-            ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "Id", trabajador.TipoJornadaId);
-            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "Id", trabajador.TipoRegimenId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", trabajador.MunicipioId);
+            ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "DscripcionSat", trabajador.OrigenRecursoId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", trabajador.PaisId);
+            ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "DescripcionSat", trabajador.PeriocidadPagoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Descripcion", trabajador.PuestoId);
+            ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Descipcion", trabajador.SexoId);
+            ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion", trabajador.TipoContratoId);
+            ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion", trabajador.TipoEmpleadoId);
+            ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat", trabajador.TipoJornadaId);
+            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat", trabajador.TipoRegimenId);
             return View(trabajador);
         }
 
@@ -173,8 +171,6 @@ namespace ProyectoNominaINTBII.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
                 try
                 {
                     _context.Update(trabajador);
@@ -192,28 +188,29 @@ namespace ProyectoNominaINTBII.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "Id", trabajador.BancoId);
-            ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Id", trabajador.BaseCotizacionId);
-            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Id", trabajador.DepartamentoId);
-            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Id", trabajador.EmpresaId);
+            
+            ViewData["BancoId"] = new SelectList(_context.SatBancos, "Id", "DescripcionSat", trabajador.BancoId);
+            ViewData["BaseCotizacionId"] = new SelectList(_context.BaseCotizacions, "Id", "Descripcion", trabajador.BaseCotizacionId);
+            ViewData["DepartamentoId"] = new SelectList(_context.Departamentos, "Id", "Descripcion", trabajador.DepartamentoId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Nombre", trabajador.EmpresaId);
             ViewData["EmpresaRegimenPatId"] = new SelectList(_context.EmpresaRegPats, "Id", "Id", trabajador.EmpresaRegimenPatId);
-            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "Id", trabajador.EstadoId);
-            ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Id", trabajador.EstadoCivilId);
-            ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "Id", trabajador.FormaPagoId);
+            ViewData["EstadoId"] = new SelectList(_context.SatEstados, "Id", "DescripcionSat", trabajador.EstadoId);
+            ViewData["EstadoCivilId"] = new SelectList(_context.EstadoCivils, "Id", "Descripcion", trabajador.EstadoCivilId);
+            ViewData["FormaPagoId"] = new SelectList(_context.SatFormaPagos, "Id", "DescripcionSat", trabajador.FormaPagoId);
             ViewData["MotivoNoTimbrarId"] = new SelectList(_context.MotivoNoTimbrars, "Id", "Id", trabajador.MotivoNoTimbrarId);
-            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "Id", trabajador.MunicipioId);
-            ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "Id", trabajador.OrigenRecursoId);
-            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "Id", trabajador.PaisId);
-            ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "Id", trabajador.PeriocidadPagoId);
-            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Id", trabajador.PuestoId);
-            ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Id", trabajador.SexoId);
-            ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Id", trabajador.TipoContratoId);
-            ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Id", trabajador.TipoEmpleadoId);
-            ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "Id", trabajador.TipoJornadaId);
-            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "Id", trabajador.TipoRegimenId);
+            ViewData["MunicipioId"] = new SelectList(_context.SatMunicipios, "Id", "DescripcionSat", trabajador.MunicipioId);
+            ViewData["OrigenRecursoId"] = new SelectList(_context.SatOrigenRecursos, "Id", "DscripcionSat", trabajador.OrigenRecursoId);
+            ViewData["PaisId"] = new SelectList(_context.SatPais, "Id", "DescripcionSat", trabajador.PaisId);
+            ViewData["PeriocidadPagoId"] = new SelectList(_context.SatPeriocidadPagos, "Id", "DescripcionSat", trabajador.PeriocidadPagoId);
+            ViewData["PuestoId"] = new SelectList(_context.Puestos, "Id", "Descripcion", trabajador.PuestoId);
+            ViewData["SexoId"] = new SelectList(_context.Sexos, "Id", "Descipcion", trabajador.SexoId);
+            ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion", trabajador.TipoContratoId);
+            ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion", trabajador.TipoEmpleadoId);
+            ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat", trabajador.TipoJornadaId);
+            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat", trabajador.TipoRegimenId);
             return View(trabajador);
         }
+
 
         // GET: Trabajadores/Delete/5
         public async Task<IActionResult> Delete(int? id)
