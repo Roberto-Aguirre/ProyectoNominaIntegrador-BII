@@ -1,17 +1,157 @@
-﻿@model ProyectoNominaINTBII.Models.UserModel
+﻿@using ProyectoNominaINTBII.Models
 
 <h2>Agregar Usuario</h2>
 <form asp-action="CreateUser" asp-controller="Admin" method="post" class="create-user-form">
     <div class="row">
         <!-- Columna izquierda -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="form-group">
                 <label for="Nombre">Nombre Completo</label>
                 <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingrese el nombre completo" required />
             </div>
             <div class="form-group">
-                <label for="NumeroEmpleado">Número de Empleado</label>
-                <input type="text" class="form-control" id="NumeroEmpleado" name="NumeroEmpleado" placeholder="Ingrese un valor numérico" required />
+                <label for="ApellidoPaterno">Apellido Paterno</label>
+                <input type="text" class="form-control" id="ApellidoPaterno" name="ApellidoPaterno" placeholder="Ingrese el apellido paterno" required />
+            </div>
+            <div class="form-group">
+                <label for="ApellidoMaterno">Apellido Materno</label>
+                <input type="text" class="form-control" id="ApellidoMaterno" name="ApellidoMaterno" placeholder="Ingrese el apellido materno" required />
+            </div>
+            <div class="form-group">
+                <label for="SexoId">Sexo</label>
+                <select id="SexoId" name="SexoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Sexos)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="EstadoCivilId">Estado Civil</label>
+                <select id="EstadoCivilId" name="EstadoCivilId" class="form-control custom-select" required>
+                    @foreach (var item in Model.EstadosCiviles)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TipoContratoId">Tipo de Contrato</label>
+                <select id="TipoContratoId" name="TipoContratoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.TiposContrato)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="PaisId">País</label>
+                <select id="PaisId" name="PaisId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Paises)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="BancoId">Banco</label>
+                <select id="BancoId" name="BancoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Bancos)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="DepartamentoId">Departamento</label>
+                <select id="DepartamentoId" name="DepartamentoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Departamentos)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="PeriocidadPagoId">Periocidad de Pagos</label>
+                <select id="PeriocidadPagoId" name="PeriocidadPagoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.PeriodicidadesPago)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Columna central -->
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="Calle">Calle</label>
+                <input type="text" class="form-control" id="Calle" name="Calle" placeholder="Ingrese la calle" required />
+            </div>
+            <div class="form-group">
+                <label for="NumeroExt">Número Exterior</label>
+                <input type="text" class="form-control" id="NumeroExt" name="NumeroExt" placeholder="Número exterior" required />
+            </div>
+            <div class="form-group">
+                <label for="NumeroInt">Número Interior</label>
+                <input type="text" class="form-control" id="NumeroInt" name="NumeroInt" placeholder="Número interior" />
+            </div>
+            <div class="form-group">
+                <label for="Colonia">Colonia</label>
+                <input type="text" class="form-control" id="Colonia" name="Colonia" placeholder="Ingrese la colonia" required />
+            </div>
+            <div class="form-group">
+                <label for="CP">Código Postal</label>
+                <input type="text" class="form-control" id="CP" name="CP" placeholder="Código Postal" required />
+            </div>
+            <div class="form-group">
+                <label for="TelefonoFijo">Teléfono Fijo</label>
+                <input type="text" class="form-control" id="TelefonoFijo" name="TelefonoFijo" placeholder="Ejemplo: 123-456-7890" />
+            </div>
+            <div class="form-group">
+                <label for="EstadoId">Estado</label>
+                <select id="EstadoId" name="EstadoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Estados)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TipoRegimenId">Tipo de Régimen</label>
+                <select id="TipoRegimenId" name="TipoRegimenId" class="form-control custom-select" required>
+                    @foreach (var item in Model.TiposRegimen)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TipoJornadaId">Tipo de Jornada</label>
+                <select id="TipoJornadaId" name="TipoJornadaId" class="form-control custom-select" required>
+                    @foreach (var item in Model.TiposJornada)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TipoEmpleadoId">Tipo de Empleado</label>
+                <select id="TipoEmpleadoId" name="TipoEmpleadoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.TiposEmpleado)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="NumEmpleado">Número de Empleado</label>
+                <input type="text" class="form-control" id="NumEmpleado" name="NumEmpleado" placeholder="Ingrese un valor numérico" required />
             </div>
             <div class="form-group">
                 <label for="RFC">RFC</label>
@@ -22,123 +162,97 @@
                 <input type="text" class="form-control" id="CURP" name="CURP" placeholder="Ejemplo: ABCD123456HDFR01" required />
             </div>
             <div class="form-group">
-                <label for="RegimenFiscal">Régimen Fiscal</label>
-                <input type="text" class="form-control" id="RegimenFiscal" name="RegimenFiscal" placeholder="Ingrese el régimen fiscal" required />
+                <label for="NSS">Número IMSS</label>
+                <input type="text" class="form-control" id="NSS" name="NSS" placeholder="Ejemplo: 12345678901" required />
             </div>
             <div class="form-group">
-                <label for="NoIMSS">Número IMSS</label>
-                <input type="text" class="form-control" id="NoIMSS" name="NoIMSS" placeholder="Ejemplo: 12345678901" required />
+                <label for="Salario">Salario</label>
+                <input type="number" step="0.01" class="form-control" id="Salario" name="Salario" placeholder="Ingrese el salario total" required />
             </div>
             <div class="form-group">
-                <label for="FechaInicio">Fecha de Inicio</label>
-                <input type="date" class="form-control" id="FechaInicio" name="FechaInicio" required />
+                <label for="SalarioDiarioInte">Salario Diario Integrado</label>
+                <input type="number" step="0.01" class="form-control" id="SalarioDiarioInte" name="SalarioDiarioInte" placeholder="Ingrese el salario diario integrado" required />
             </div>
+           
             <div class="form-group">
-                <label for="Regimen">Régimen</label>
-                <input type="text" class="form-control" id="Regimen" name="Regimen" placeholder="Ingrese el régimen" required />
-            </div>
-            <div class="form-group">
-                <label for="TipoJornada">Tipo de Jornada</label>
-                <input type="text" class="form-control" id="TipoJornada" name="TipoJornada" placeholder="Ejemplo: Diurna" required />
-            </div>
-            <div class="form-group">
-                <label for="Telefono">Teléfono</label>
-                <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Ejemplo: 123-456-7890" required />
-            </div>
-            <div class="form-group">
-                <label for="Email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="Email" name="Email" placeholder="Ejemplo: correo@ejemplo.com" required />
-            </div>
-        </div>
-
-        <!-- Columna derecha -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="SBC">SBC</label>
-                <input type="number" step="0.01" class="form-control" id="SBC" name="SBC" placeholder="Ingrese un valor numérico" required />
-            </div>
-            <div class="form-group">
-                <label for="SDI">SDI</label>
-                <input type="number" step="0.01" class="form-control" id="SDI" name="SDI" placeholder="Ingrese un valor numérico" required />
-            </div>
-            <div class="form-group">
-                <label for="Ejercicio">Ejercicio</label>
-                <input type="text" class="form-control" id="Ejercicio" name="Ejercicio" placeholder="Ingrese el ejercicio" required />
-            </div>
-            <div class="form-group">
-                <label for="Folio">Folio</label>
-                <input type="text" class="form-control" id="Folio" name="Folio" placeholder="Ingrese el folio" required />
-            </div>
-            <div class="form-group">
-                <label for="PeriodoPago">Periodo de Pago</label>
-                <input type="text" class="form-control" id="PeriodoPago" name="PeriodoPago" placeholder="Ejemplo: Mensual" required />
-            </div>
-            <div class="form-group">
-                <label for="FechaPago">Fecha de Pago</label>
-                <input type="date" class="form-control" id="FechaPago" name="FechaPago" required />
-            </div>
-            <div class="form-group">
-                <label for="Periodicidad">Periodicidad</label>
-                <input type="text" class="form-control" id="Periodicidad" name="Periodicidad" placeholder="Ejemplo: Mensual" required />
-            </div>
-            <div class="form-group">
-                <label for="DiasPagados">Días Pagados</label>
-                <input type="number" class="form-control" id="DiasPagados" name="DiasPagados" placeholder="Ingrese un valor numérico" required />
-            </div>
-            <div class="form-group">
-                <label for="Faltas">Faltas</label>
-                <input type="number" class="form-control" id="Faltas" name="Faltas" placeholder="Ingrese un valor numérico" required />
-            </div>
-            <div class="form-group">
-                <label for="Departamento">Departamento</label>
-                <input type="text" class="form-control" id="Departamento" name="Departamento" placeholder="Ingrese el departamento" required />
-            </div>
-            <div class="form-group">
-                <label for="Puesto">Puesto</label>
-                <input type="text" class="form-control" id="Puesto" name="Puesto" placeholder="Ingrese el puesto" required />
-            </div>
-        </div>
-    </div>
-
-    <!-- Columna completa para los campos restantes -->
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="SalarioDiario">Salario Diario</label>
-                <input type="number" step="0.01" class="form-control" id="SalarioDiario" name="SalarioDiario" placeholder="Ingrese un valor numérico" required />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Username">Username</label>
-                <input type="text" class="form-control" id="Username" name="Username" placeholder="Ingrese el username" required />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Password">Password</label>
-                <input type="password" class="form-control" id="Password" name="Password" placeholder="Ingrese el password" required />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Role">Role</label>
-                <input type="text" class="form-control" id="Role" name="Role" placeholder="Ejemplo: Admin o Empleado" required />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Estado">Estado</label>
-                <select id="Estado" name="IsActive" class="form-control custom-select" required>
-                    <option value="true" selected="@Model.IsActive">Activo</option>
-                    <option value="false" selected="@(Model.IsActive == false)">Inactivo</option>
+                <label for="MunicipioId">Municipio</label>
+                <select id="MunicipioId" name="MunicipioId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Municipios)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
                 </select>
-
             </div>
-        </div>
+            <div class="form-group">
+                <label for="PuestoId">Puesto</label>
+                <select id="PuestoId" name="PuestoId" class="form-control custom-select" required>
+                    @foreach (var item in Model.Puestos)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+          <div class="form-group">
+                <div class="form-group">
+                    <label for="FormaPagoId">Forma de Pago</label>
+                    <select id="FormaPagoId" name="FormaPagoId" class="form-control custom-select" required>
+                        @foreach (var item in Model.FormasPago)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Role">Rol</label>
+    <input type="text" class="form-control" id="Role" name="Role" placeholder="Ingrese el rol" required />
+</div>
+
+
+
+<div class="form-group">
+    <label for="CLABE">CLABE</label>
+    <input type="text" class="form-control" id="CLABE" name="CLABE" placeholder="Ingrese la CLABE" required />
+</div>
+
+<div class="form-group">
+    <label for="Email">Correo Electrónico</label>
+    <input type="email" class="form-control" id="Email" name="Email" placeholder="Ingrese el correo electrónico" required />
+</div>
+
+<div class="form-group">
+    <label for="Password">Contraseña</label>
+    <input type="password" class="form-control" id="Password" name="Password" placeholder="Ingrese la contraseña" required />
+</div>
+
+<div class="form-group">
+    <label for="Username">Nombre de Usuario</label>
+    <input type="text" class="form-control" id="Username" name="Username" placeholder="Ingrese el nombre de usuario" required />
+</div>
+
+<div class="form-group">
+    <label for="Estatus">Estatus</label>
+    <select class="form-control" id="Estatus" name="Estatus" required>
+        <option value="A">Activo</option>
+        <option value="I">Inactivo</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="CuentaBanco">Cuenta Bancaria</label>
+    <input type="number" class="form-control" id="CuentaBanco" name="CuentaBanco" placeholder="Ingrese el número de cuenta bancaria" required />
+</div>
+
+<div class="form-group">
+    <label for="TelefonoMovil">Teléfono Móvil</label>
+    <input type="text" class="form-control" id="TelefonoMovil" name="TelefonoMovil" placeholder="Ejemplo: 123-456-7890" required />
+</div>
+
+
     </div>
 
-    <!-- Botón centrado -->
+    <!-- Botón para enviar formulario -->
     <div class="button-container">
         <button type="submit" class="btn-create-user">
             <i class="fas fa-user-plus icon-spacing"></i> Agregar Usuario
@@ -146,104 +260,83 @@
     </div>
 </form>
 
+
 <script>
-    function createUser() {
-        // Evitar el envío de formulario tradicional
-        event.preventDefault();
+    window.onload = function () {
+        // Verifica si hay un mensaje de error en TempData
+        const errorMessage = '@TempData["ErrorMessage"]';
+        const successMessage = '@TempData["SuccessMessage"]';
 
-        // Recopila los datos del formulario
-        const formData = new FormData(document.getElementById("createUserForm"));
+        if (errorMessage) {
+            alert(errorMessage); // Muestra el mensaje de error en un alert
+        }
 
-        fetch('/Admin/CreateUser', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Usuario creado con éxito.");
-
-                    // Llama a la función para actualizar la lista en ListUsers
-                    addUserToListUsers(data.user);
-
-                    // Limpia el formulario después de crear el usuario
-                    document.getElementById("createUserForm").reset();
-                } else {
-                    alert(data.message);
-                }
-            })
-            .catch(error => console.error("Error:", error));
-    }
+        if (successMessage) {
+            alert(successMessage); // Muestra el mensaje de éxito en un alert
+        }
+    };
 </script>
 
+
+
 <style>
-    /* Centrado de la forma completa */
-    .create-user-form {
-        max-width: 900px;
-        margin: 0 auto;
+    .form-group {
+        margin-bottom: 20px;
     }
 
-    /* Estilo exclusivo para el botón en CreateUser */
+    label {
+        font-weight: bold;
+        color: #495057;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
     .button-container {
+        width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 60px; /* Espacio entre el botón y el footer */
+        margin-top: 30px; /* Espacio adicional antes del botón */
+        margin-bottom: 20px; /* Espacio después del botón para evitar que esté demasiado cerca del borde del formulario */
     }
 
     .btn-create-user {
-        background-color: #007bff;
-        color: white;
         padding: 10px 20px;
-        font-size: 1em;
-        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+        background-color: #007bff;
         border: none;
         border-radius: 5px;
-        display: inline-flex;
-        align-items: center;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s;
     }
 
         .btn-create-user:hover {
             background-color: #0056b3;
         }
 
-    /* Espaciado para el ícono en el botón */
-    .icon-spacing {
-        margin-right: 8px;
+    .form-control {
+        width: 100%;
+        padding: 6px 8px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        border: 2px solid #007bff;
+        border-radius: 4px;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
 
-    /* Estilos adicionales para campos y formulario */
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    /* Estilos específicos para el campo select en la vista CreateUser */
     .custom-select {
-        padding: 8px 12px;
-        font-size: 1em; /* Ajusta el tamaño de fuente si es necesario */
-        line-height: normal; /* Asegura que la altura de línea no corte el texto */
-        width: 100%; /* Asegura que ocupe todo el ancho de su contenedor */
-        border: 1px solid #007bff;
-        border-radius: 5px;
-        appearance: none; /* Oculta el ícono de dropdown predeterminado */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23007bff" d="M17.71,6.29a1,1,0,0,0-1.42,0L10,12.59,3.71,6.29A1,1,0,0,0,2.29,7.71l7,7a1,1,0,0,0,1.42,0l7-7A1,1,0,0,0,17.71,6.29Z"></path></svg>') no-repeat right 0.75rem center/16px 16px;
+        padding-right: 2.5rem; /* Espacio suficiente para no cortar el texto y mostrar el ícono */
     }
 
-        /* Opcional: Añade estilos para el ícono dropdown en algunos navegadores */
-        .custom-select::after {
-            content: '▼';
-            font-size: 0.75em;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
+    select:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        outline: none;
+    }
 </style>

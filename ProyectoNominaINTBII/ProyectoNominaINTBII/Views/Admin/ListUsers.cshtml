@@ -1,5 +1,4 @@
-﻿
-@model List<ProyectoNominaINTBII.Models.UserModel>
+﻿@using ProyectoNominaINTBII.Models
 
 <div class="edit-user-info-container-listusers">
     <h2>Gestión de Usuarios</h2>
@@ -28,16 +27,10 @@
                 <tr data-user-id="@user.Id">
                     <td>@user.Id</td>
                     <td>@user.Nombre</td>
-                    <td>@user.FechaInicio.ToString("dd/MM/yyyy")</td>
-                    <td>
-                        <span class="status-circle-listusers @(user.IsActive ? "bg-success-listusers" : "bg-danger-listusers")"></span>
-                    </td>
+                    <td>@user.FechaIngreso.ToString("dd/MM/yyyy")</td>
                     <td>
                         <a asp-action="ViewUserInfo" asp-controller="Admin" asp-route-id="@user.Id" class="btn-info-listusers">Ver</a>
-                        <a asp-action="EditAllUsersInfo" asp-controller="Admin" asp-route-id="@user.Id" class="btn-warning-listusers">Editar</a>
-                        <button class="btn-toggle-status-listusers @(user.IsActive ? "btn-warning" : "btn-success")" onclick="toggleUserStatus(@user.Id, this)">
-                            @(user.IsActive ? "Dar de baja" : "Dar de alta")
-                        </button>
+                        <a href="@Url.Action("EditAllUsersInfo", "Admin", new { id = user.Id })" class="btn btn-warning">Editar</a>
                         <button class="btn-delete-user-listusers" onclick="deleteUser(@user.Id, this)">Eliminar</button>
                     </td>
                 </tr>

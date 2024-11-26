@@ -1,11 +1,6 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProyectoNominaINTBII.Data;
-using ProyectoNominaINTBII.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
 namespace ProyectoNominaINTBII.Controllers
 {
@@ -17,9 +12,59 @@ namespace ProyectoNominaINTBII.Controllers
             return View();
         }
 
-        public IActionResult Generate() { 
-            return View(); 
+
+        private readonly ProyDb2bContext _context;
+
+        public PayrollController(ProyDb2bContext context)
+        {
+            _context = context;
         }
+
+        public async Task<IActionResult> Generate(int nominaId)
+        {
+            var nomina = await _context.Nominas
+                                       .Where(n => n.Id == nominaId)
+                                       .FirstOrDefaultAsync();
+
+            if (nomina == null)
+            {
+                return NotFound();
+            }
+
+            var model = new PayrollModel
+            {
+                Id = nomina.Id,
+                EmpresaId = nomina.EmpresaId,
+                Ejercicio = nomina.Ejercicio,
+                FechaInicial = nomina.FechaInicial,
+                FechaFinal = nomina.FechaFinal,
+                FechaPago = nomina.FechaPago,
+                SatPeriocidadPagoId = nomina.SatPeriocidadPagoId,
+                PeriodoId = nomina.PeriodoId,
+                SatTipoContratoId = nomina.SatTipoContratoId,
+                NominaExtraordinariaId = nomina.NominaExtraordinariaId,
+                ConceptoNomina = nomina.ConceptoNomina,
+                ConceptoTimbrado = nomina.ConceptoTimbrado,
+                TotalTrabajadores = nomina.TotalTrabajadores,
+                TotalPercepciones = nomina.TotalPercepciones,
+                TotalDeducciones = nomina.TotalDeducciones,
+                Extraordinaria = nomina.Extraordinaria,
+                Generada = nomina.Generada,
+                Autorizada = nomina.Autorizada,
+                Timbrada = nomina.Timbrada,
+                Cerrada = nomina.Cerrada,
+                Estatus = nomina.Estatus,
+                // Asegúrate de inicializar también las listas de Percepciones y Deducciones si son necesarias
+            };
+
+            return View(model);
+        }
+
+
+        //public IActionResult Generate()
+        //{
+        //    return View();
+        //}
         //    [HttpPost]
         //    public IActionResult Generate(PayrollModel payroll)
         //    {

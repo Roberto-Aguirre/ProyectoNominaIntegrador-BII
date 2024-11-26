@@ -1,6 +1,4 @@
 ﻿using ProyectoNominaINTBII.Models;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ProyectoNominaINTBII.Services
 {

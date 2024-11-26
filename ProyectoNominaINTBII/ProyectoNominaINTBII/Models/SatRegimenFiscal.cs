@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ProyectoNominaINTBII.Models;
+﻿namespace ProyectoNominaINTBII.Models;
 
 public partial class SatRegimenFiscal
 {

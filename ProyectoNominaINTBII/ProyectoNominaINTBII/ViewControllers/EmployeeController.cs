@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoNominaINTBII.Models;
 using ProyectoNominaINTBII.Services;  // Importa el servicio
-using System.Collections.Generic;
 
 namespace ProyectoNominaINTBII.Controllers
 {

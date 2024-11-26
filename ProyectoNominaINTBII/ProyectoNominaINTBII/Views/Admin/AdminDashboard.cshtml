@@ -1,84 +1,100 @@
-﻿<div class="content">
-    <h1 class="text-center">Bienvenido al Panel de Administración</h1>
-    <p class="text-center">Aquí puedes gestionar el sistema y los usuarios.</p>
+﻿
+<h1>@ViewData["Title"]</h1>
+<h2 class="text-center">Bienvenido al Panel de Administración</h2>
+<p class="text-center">Aquí puedes gestionar el sistema y los usuarios.</p>
 
-    <!-- Indicadores Clave -->
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card text-center">
-                <h3>Total Pagado</h3>
-                <p>$50,000,000.00</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <h3>Empleados Activos</h3>
-                <p>30</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <h3>Nóminas Generadas</h3>
-                <p>5</p>
-            </div>
+<!-- Indicadores Clave -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-center">
+            <h3>Total Pagado</h3>
+            <p id="totalPagado">$@Model?.TotalPagado.ToString("N2")</p>
         </div>
     </div>
-
-    <!-- Gráficos -->
-    <div class="row mt-4">
-        <div class="col-md-6 mb-5">
-            <!-- Se agrega 'mb-5' para margen inferior -->
-            <div class="card">
-                <h4 class="text-center">Pago por departamento</h4>
-                <canvas id="departmentChart" style="max-height: 400px;"></canvas>
-            </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <h3>Empleados Activos</h3>
+            <p id="empleadosActivos">@Model?.EmpleadosActivos</p>
         </div>
-        <div class="col-md-6 mb-5">
-            <!-- Se agrega 'mb-5' para margen inferior -->
-            <div class="card">
-                <h4 class="text-center">Gráfico de deducciones de impuestos</h4>
-                <canvas id="deductionChart" style="max-height: 400px;"></canvas>
-            </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <h3>Nóminas Generadas</h3>
+            <p id="nominasGeneradas">@Model?.NominasGeneradas</p>
         </div>
     </div>
 </div>
 
-<!-- Agrega el CDN de Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Gráficos -->
+<div class="row mt-4">
+    <div class="col-md-6 mb-5">
+        <div class="card">
+            <h4 class="text-center">Pago por departamento</h4>
+            <canvas id="departmentChart" style="max-height: 400px;"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6 mb-5">
+        <div class="card">
+            <h4 class="text-center">Gráfico de deducciones de impuestos</h4>
+            <canvas id="deductionChart" style="max-height: 400px;"></canvas>
+        </div>
+    </div>
+</div>
 
-<!-- Código JavaScript para las gráficas -->
-<script>
-    var ctx = document.getElementById('departmentChart').getContext('2d');
-    var departmentChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Departamento 1', 'Departamento 2', 'Departamento 3'],
-            datasets: [{
-                data: [40, 35, 25], // Aquí van los valores de cada departamento
-                backgroundColor: ['#007bff', '#28a745', '#ffc107']
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false // Para ajustar el tamaño
-        }
-    });
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            var departmentChart = new Chart(document.getElementById('departmentChart').getContext('2d'), {
+                type: 'pie',
+                data: {
+                    labels: ['Departamento 1', 'Departamento 2', 'Departamento 3'],
+                    datasets: [{
+                        data: [40, 35, 25], // Estos datos deben ser actualizados
+                        backgroundColor: ['#007bff', '#28a745', '#ffc107']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
 
-    var ctx = document.getElementById('deductionChart').getContext('2d');
-    var deductionChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Enero', 'Febrero', 'Marzo', 'Abril'], // Meses o períodos
-            datasets: [{
-                label: 'ISR, IMSS, INFONAVIT',
-                data: [30, 40, 45, 38], // Datos de deducciones
-                borderColor: '#ff6384',
-                fill: false
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false // Para ajustar el tamaño
-        }
-    });
-</script>
+            var deductionChart = new Chart(document.getElementById('deductionChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
+                    datasets: [{
+                        label: 'ISR, IMSS, INFONAVIT',
+                        data: [30, 40, 45, 38], // Estos datos deben ser actualizados
+                        borderColor: '#ff6384',
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            function updateData() {
+                $.ajax({
+                    url: '@Url.Action("GetDashboardData", "Dashboard")',
+                    type: 'GET',
+                    success: function (data) {
+                        $('#totalPagado').text(`$${data.totalPagado}`);
+                        $('#empleadosActivos').text(data.empleadosActivos);
+                        $('#nominasGeneradas').text(data.nominasGeneradas);
+                        departmentChart.data.datasets[0].data = data.departmentData;
+                        departmentChart.update();
+                        deductionChart.data.datasets[0].data = data.deductionData;
+                        deductionChart.update();
+                    }
+                });
+            }
+
+            // Actualizar cada 10 segundos o según sea necesario
+            setInterval(updateData, 10000);
+        });
+    </script>
+}

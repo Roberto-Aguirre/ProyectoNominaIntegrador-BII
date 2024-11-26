@@ -1,0 +1,318 @@
+﻿@model IEnumerable<ProyectoNominaINTBII.Models.Trabajador>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoPaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoMaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroExt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroInt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Colonia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoMovil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoFijo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rfc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Curp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaIngreso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaBaja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CuentaBanco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clabe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioDiario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioDiarioInte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CumpleReqDisminucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PorcentajePresFed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MontoPropio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NominaGen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstatusTimbrado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Banco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseCotizacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpresaRegimenPat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCivil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormaPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotivoNoTimbrar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Municipio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrigenRecurso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeriocidadPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoContrato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoJornada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoRegimen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoPaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoMaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroExt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroInt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colonia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoMovil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoFijo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rfc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaIngreso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaBaja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CuentaBanco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clabe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalarioDiario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalarioDiarioInte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CumpleReqDisminucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PorcentajePresFed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoPropio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NominaGen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstatusTimbrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Banco.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseCotizacion.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpresaRegimenPat.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCivil.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaPago.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotivoNoTimbrar.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Municipio.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrigenRecurso.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PeriocidadPago.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puesto.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoContrato.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoEmpleado.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoJornada.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoRegimen.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

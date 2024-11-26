@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProyectoNominaINTBII.Data;
@@ -22,7 +18,11 @@ namespace ProyectoNominaINTBII.Controllers
         // GET: NominaDetalle
         public async Task<IActionResult> Index()
         {
-            var proyDb2bContext = _context.NominaDetalles.Include(n => n.Empresa).Include(n => n.Incidencia).Include(n => n.Periodo).Include(n => n.Trabajador);
+            var proyDb2bContext = _context.NominaDetalles
+                .Include(n => n.Empresa)
+                .Include(n => n.Incidencia)
+                .Include(n => n.Periodo)
+                .Include(n => n.Trabajador);
             return View(await proyDb2bContext.ToListAsync());
         }
 
@@ -65,12 +65,13 @@ namespace ProyectoNominaINTBII.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,EmpresaId,PeriodoId,TrabajadorId,IncidenciaId,TipoIncapacidadId,DiasPagados,HorasExtra,Importe,Gravado,Exento,IsraPagar,BaseImpuesto,TipoCaptura,Comentarios,Estatus")] NominaDetalle nominaDetalle)
         {
-            if (ModelState.IsValid)
-            {
+
+            Trabajador trabajador = await _context.Trabajadors.FindAsync(nominaDetalle.TrabajadorId);
+            nominaDetalle.Importe = trabajador.SalarioDiario * nominaDetalle.DiasPagados;
                 _context.Add(nominaDetalle);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+
             ViewData["EmpresaId"] = new SelectList(_context.Empresas.ToList(), "Id", "Descripcion", nominaDetalle.EmpresaId);
             ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Descripcion", nominaDetalle.IncidenciaId);
             ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Descripcion", nominaDetalle.PeriodoId);
@@ -110,8 +111,7 @@ namespace ProyectoNominaINTBII.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+         
                 try
                 {
                     _context.Update(nominaDetalle);
@@ -129,7 +129,7 @@ namespace ProyectoNominaINTBII.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Id", nominaDetalle.EmpresaId);
             ViewData["IncidenciaId"] = new SelectList(_context.Incidencias, "Id", "Id", nominaDetalle.IncidenciaId);
             ViewData["PeriodoId"] = new SelectList(_context.Periodos, "Id", "Id", nominaDetalle.PeriodoId);
