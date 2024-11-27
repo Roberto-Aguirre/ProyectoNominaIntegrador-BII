@@ -86,7 +86,7 @@ namespace ProyectoNominaINTBII.Controllers
             ViewData["TipoContratoId"] = new SelectList(_context.SatTipoContratos, "Id", "Descripcion");
             ViewData["TipoEmpleadoId"] = new SelectList(_context.TipoEmpleados, "Id", "Descipcion");
             ViewData["TipoJornadaId"] = new SelectList(_context.SatTipoJornada, "Id", "DescripcionSat");
-            //ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat");
+            ViewData["TipoRegimenId"] = new SelectList(_context.SatTipoRegimen, "Id", "DescripcionSat");
             return View();
         }
 
