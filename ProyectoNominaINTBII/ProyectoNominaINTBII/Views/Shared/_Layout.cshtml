@@ -41,8 +41,9 @@
                             <i id="payrollArrow" class="fas fa-chevron-right arrow-right"></i>
                         </a>
                         <ul id="payroll" class="submenu">
+                            <li><a href="@Url.Action("Index", "Nomina")"><i class="fas fa-plus-circle icon-left"></i> Ver Nóminas</a></li>
                             <li><a href="@Url.Action("Create", "Nomina")"><i class="fas fa-plus-circle icon-left"></i> Generar Nómina</a></li>
-                            <li><a href="@Url.Action("Index", "NominaDetalle")"><i class="fas fa-list icon-left"></i> Detalle Nomina</a></li>
+                            <li><a href="@Url.Action("Index", "NominaDetalle")"><i class="fas fa-list icon-left"></i> Detalle Nominas</a></li>
                         </ul>
                     </li>
                     <!-- Sección de Gestión con su menú desplegable -->
@@ -52,8 +53,7 @@
                             <i id="gestionArrow" class="fas fa-chevron-right arrow-right"></i>
                         </a>
                         <ul id="gestion" class="submenu">
-                            <li><a href="@Url.Action("Index", "Trabajadores", new { id = 1 })"><i class="fas fa-user icon-left"></i> Ver Usuario</a></li>
-                            <li><a href="@Url.Action("CompanyInfo", "Admin")"><i class="fas fa-building icon-left"></i> Información de la Empresa</a></li>
+                            <li><a href="@Url.Action("Index", "Empresas")"><i class="fas fa-building icon-left"></i> Información de la Empresa</a></li>
                         </ul>
                     </li>
                     <li>
@@ -62,7 +62,7 @@
                             <i id="gestionArrow" class="fas fa-chevron-right arrow-right"></i>
                         </a>
                         <ul id="gestion-empresa" class="submenu">
-                            <li><a href="@Url.Action("Index", "Empresas")"><i class="fas fa-building icon-left"></i>Empresa</a></li>
+                            <li><a href="@Url.Action("Index", "Trabajadores")"><i class="fas fa-building icon-left"></i>Trabajadores</a></li>
                     </li>
                 </ul>
 

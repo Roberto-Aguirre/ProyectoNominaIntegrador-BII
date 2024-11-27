@@ -185,8 +185,8 @@ namespace ProyectoNominaINTBII.Controllers
 
                 }
                 _context.Add(nominaEstandar);
-                _context.SaveChanges();
             }
+                _context.SaveChanges();
 
             nomina.TotalTrabajadores = trabajadoresNomina.Count;
             List<NominaDetalle> trabajadoresAlta = await _context.NominaDetalles.ToListAsync();
@@ -199,8 +199,6 @@ namespace ProyectoNominaINTBII.Controllers
                 totalPersepciones = item.Importe;
                 
             }
-
-
 
             nomina.TotalDeducciones = deducion;
             nomina.TotalPercepciones = totalPersepciones;

@@ -20,6 +20,7 @@
 
 <style>
     .fiscal {
+        margin:auto;
         width: 50vw;
     }
     .nomina-container {
@@ -46,7 +47,7 @@
         background-color: #007bff;
         color: white;
         padding: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         text-align: center;
@@ -136,14 +137,6 @@
                 <div class="data-item"><span class="data-label">Estatus:</span> @Html.DisplayFor(modelItem => item.Estatus)</div>
             </div>
         </div>
-        <div class="section">
-            <div class="section-header">Información Relacionada</div>
-            <div class="data fiscal">
-                <div class="data-item"><span class="data-label">Empresa:</span> @Html.DisplayFor(modelItem => item.Empresa.Nombre)</div>
-                <div class="data-item"><span class="data-label">Incidencia:</span> @Html.DisplayFor(modelItem => item.Incidencia.Descripcion)</div>
-                <div class="data-item"><span class="data-label">Periodo:</span> @Html.DisplayFor(modelItem => item.Periodo.Descripcion)</div>
-                <div class="data-item"><span class="data-label">Trabajador:</span> @Html.DisplayFor(modelItem => item.Trabajador.Nombre)</div>
-            </div>
-        </div>
+        
     </div>
 }

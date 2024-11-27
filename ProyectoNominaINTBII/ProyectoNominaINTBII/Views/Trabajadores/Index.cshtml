@@ -13,6 +13,9 @@
 </p>
 
 <style>
+    .fiscal {
+        width: 50vw;
+    }
     .worker-container {
         display: flex;
         flex-wrap: wrap;
@@ -133,13 +136,6 @@
                 <div class="data-item"><span class="data-label">Código Postal:</span> @Html.DisplayFor(modelItem => item.Cp)</div>
             </div>
         </div>
-        <div class="section">
-            <div class="section-header">Datos de Contacto</div>
-            <div class="data">
-                <div class="data-item"><span the "data-label">Teléfono Móvil:</span> @Html.DisplayFor(modelItem => item.TelefonoMovil)</div>
-                <div class="data-item"><span class="data-label">Teléfono Fijo:</span> @Html.DisplayFor(modelItem => item.TelefonoFijo)</div>
-                <div class="data-item"><span class="data-label">Email:</span> @Html.DisplayFor(modelItem => item.Email)</div>
-            </div>
-        </div>
+       
     </div>
 }
