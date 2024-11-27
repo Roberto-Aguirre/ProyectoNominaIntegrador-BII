@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
+    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
+    "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "projectUniqueName": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
         "projectName": "ProyectoNominaINTBII",
-        "projectPath": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
-        "packagesPath": "C:\\Users\\ext_riaguirres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ext_riaguirres\\Desktop\\Code\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
+        "projectPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\ProyectoNominaINTBII.csproj",
+        "packagesPath": "C:\\Users\\Ivan Aguirre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ivan Aguirre\\Desktop\\Codes\\ProyectoNominaIntegrador-BII\\ProyectoNominaINTBII\\ProyectoNominaINTBII\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ext_riaguirres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ivan Aguirre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

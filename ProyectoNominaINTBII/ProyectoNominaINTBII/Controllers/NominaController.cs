@@ -71,7 +71,6 @@ namespace ProyectoNominaINTBII.Controllers
             nomina.FechaFinal = periodo.FechaFinal;
             nomina.Ejercicio = DateTime.UtcNow.Year;
             Trabajador trabajadordummy = await _context.Trabajadors.FirstOrDefaultAsync(e => e.EmpresaId == nomina.EmpresaId);
-            List<Trabajador> trabajadoresNomina = await _context.Trabajadors.ToListAsync();
             nomina.SatPeriocidadPagoId = trabajadordummy.PeriocidadPagoId;
             nomina.SatTipoContratoId = trabajadordummy.TipoContratoId;
 
@@ -80,52 +79,131 @@ namespace ProyectoNominaINTBII.Controllers
             else
                 nomina.NominaExtraordinariaId = 0;
 
-            nomina.TotalTrabajadores = trabajadoresNomina.Count;
 
        NominaDetalle baseNomina = new NominaDetalle();
-            baseNomina.PeriodoId = nomina.PeriodoId;
-            baseNomina.DiasPagados = 5;
             baseNomina.EmpresaId = nomina.EmpresaId;
+            baseNomina.PeriodoId = nomina.PeriodoId;
+            baseNomina.TipoIncapacidadId = 0;
+            baseNomina.DiasPagados = 10;
+            baseNomina.Comentarios = "";
             baseNomina.Estatus = "I";
-            baseNomina.
+            baseNomina.HorasExtra = 0;
+            baseNomina.TipoCaptura = 0;
             //baseNomina.BaseImpuesto =
             //baseNomina.
 
             //baseNomina.BaseImpuesto 
 
+            List<Trabajador> trabajadoresNomina = await _context.Trabajadors.ToListAsync();
 
             foreach (var item in trabajadoresNomina)
             {
-                var salario = item.SalarioDiario;
 
-                NominaDetalle nominaEstandar = new NominaDetalle();
-                NominaDetalle Imss = new NominaDetalle();
-                NominaDetalle Isr = new NominaDetalle();
-                NominaDetalle nominaDetalle = new NominaDetalle();
+                NominaDetalle nominaEstandar = baseNomina;
+                nominaEstandar.TrabajadorId = item.Id;
+                nominaEstandar.IncidenciaId = 1;
+                nominaEstandar.Gravado = item.SalarioDiario * nominaEstandar.DiasPagados;
+                nominaEstandar.Exento = 0;
+                double salario = Double.Parse(nominaEstandar.Gravado.ToString());
+                if (salario >= 0.01  && salario <= 368.1)
+                {
+                    nominaEstandar.BaseImpuesto =(decimal)1.92;
+                    nominaEstandar.IsraPagar = (decimal)(((salario-0.01)*0.0192)+0);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >=368.11 && salario<=3124.35)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)6.4;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 368.11) * 0.064)+ 7.05);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
 
 
+                }
+                else if (salario>=3124.36 && salario<=5490.75)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)10.88;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 3124.36) * 0.1088)+ 183.45);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 5490.76 && salario <= 6382.8)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)16;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 5490.76) * 0.16)+ 441);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 6382.81 && salario <= 7641.9)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)17.92;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 6382.81) * 0.1792)+ 583.65);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 7641.91 && salario <= 15412.8)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)21.36;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 7641.91) * 0.2136)+ 809.25);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 15412.81 && salario <= 24292.65)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)23.52;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 15412.81) * 0.2352)+ 2469.15);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 24292.66 && salario <= 46378.5)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)30;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 24292.66) * 0.30)+ 4557.75);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+
+                }
+                else if (salario >= 46378.51 && salario <= 61838.1)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal)32 ;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 46378.51) * 0.32)+ 11183.4);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 61838.11 && salario <= 185514.3)
+                {
+                    nominaEstandar.BaseImpuesto = (decimal) 34;
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 61838.11) * 0.34)+ 16130.55);
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                else if (salario >= 185514.31)
+                {
+                    nominaEstandar.IsraPagar = (decimal)(((salario- 61838.11) * 0.35)+ 58180.35);
+                    nominaEstandar.BaseImpuesto = (decimal) 35;
+                    nominaEstandar.Importe = nominaEstandar.Gravado - nominaEstandar.IsraPagar;
+
+                }
+                _context.Add(nominaEstandar);
+                _context.SaveChanges();
             }
 
-            //nominaDetalle.IncidenciaId = 
-            //nominaDetalle.TipoIncapacidadId 
-            //nominaDetalle.DiasPagados 
-            //nominaDetalle.HorasExtra 
-            //nominaDetalle.Importe 
-            //nominaDetalle.Gravado 
-            //nominaDetalle.Exento 
-            //nominaDetalle.IsraPagar 
-            //nominaDetalle.BaseImpuesto 
-            //nominaDetalle.TipoCaptura 
-            //nominaDetalle.Comentarios 
-            //nominaDetalle.Estatus
+            nomina.TotalTrabajadores = trabajadoresNomina.Count;
+            List<NominaDetalle> trabajadoresAlta = await _context.NominaDetalles.ToListAsync();
+            trabajadoresAlta = trabajadoresAlta.FindAll(tra => tra.PeriodoId == nomina.PeriodoId);
+            decimal deducion = 0;
+            decimal totalPersepciones = 0;
+            foreach (var item in trabajadoresAlta)
+            {
+                deducion += item.IsraPagar;
+                totalPersepciones = item.Importe;
+                
+            }
 
 
 
-
-
-
-            nomina.TotalDeducciones = 0;
-            nomina.TotalPercepciones = 0;
+            nomina.TotalDeducciones = deducion;
+            nomina.TotalPercepciones = totalPersepciones;
             nomina.Generada = true;
             nomina.Estatus = "I";
 

@@ -17,199 +17,199 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoNominaINTBII
 build_property.RootNamespace = ProyectoNominaINTBII
-build_property.ProjectDir = C:\Users\ext_riaguirres\Desktop\Code\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\
+build_property.ProjectDir = C:\Users\Ivan Aguirre\Desktop\Codes\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ext_riaguirres\Desktop\Code\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII
+build_property.MSBuildProjectDirectory = C:\Users\Ivan Aguirre\Desktop\Codes\ProyectoNominaIntegrador-BII\ProyectoNominaINTBII\ProyectoNominaINTBII
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Account/Login.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/AdminDashboard.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/AdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/CompanyInfo.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/CompanyInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tcGFueUluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/CreateUser.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/CreateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/EditAllUsersInfo.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/EditAllUsersInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFsbFVzZXJzSW5mby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/EditUserInfo.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/EditUserInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXJJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/ListUsers.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/ListUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/MainMenu.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/MainMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbk1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/MenuPrincipal.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/MenuPrincipal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVudVByaW5jaXBhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/ViewUserInfo.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Admin/ViewUserInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1VzZXJJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Create.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Delete.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Details.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Departamentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Create.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Delete.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Details.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Empresas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Privacy.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Create.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Delete.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Details.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/NominaDetalle/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hRGV0YWxsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Create.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Delete.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Details.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Nomina/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5hXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Detail.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Generate.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Generate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxHZW5lcmF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Payroll/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/Error.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Create.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqYWRvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Delete.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqYWRvcmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Details.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqYWRvcmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Edit.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqYWRvcmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Trabajadores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqYWRvcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/UserManagement/Index.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/UserManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewImports.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewStart.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ext_riaguirres/Desktop/Code/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_Layout.cshtml]
+[C:/Users/Ivan Aguirre/Desktop/Codes/ProyectoNominaIntegrador-BII/ProyectoNominaINTBII/ProyectoNominaINTBII/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-05ttjah1y0
